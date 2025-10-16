@@ -12,20 +12,20 @@ export default function ChatbaseWidget({ botId }: { botId?: string }) {
     // Inline bootstrapper (mirrors provided embed)
     (function(){
       // Guard for re-entry
-      // @ts-expect-error
+      // @ts-expect-error - window.chatbase is dynamically added by Chatbase script
       if (!window.chatbase || window.chatbase('getState') !== 'initialized') {
-        // @ts-expect-error
+        // @ts-expect-error - window.chatbase is dynamically added by Chatbase script
         window.chatbase = (...args: unknown[]) => {
-          // @ts-expect-error
+          // @ts-expect-error - window.chatbase is dynamically added by Chatbase script
           if (!window.chatbase.q) { window.chatbase.q = [] }
-          // @ts-expect-error
+          // @ts-expect-error - window.chatbase is dynamically added by Chatbase script
           window.chatbase.q.push(args)
         }
-        // @ts-expect-error
+        // @ts-expect-error - window.chatbase is dynamically added by Chatbase script
         window.chatbase = new Proxy(window.chatbase, {
           get(target: unknown, prop: string) {
             if (prop === 'q') { return (target as { q: unknown[] }).q }
-            return (...args: unknown[]) => (target as Function)(prop, ...args)
+            return (...args: unknown[]) => (target as (...args: unknown[]) => unknown)(prop, ...args)
           }
         })
       }
@@ -33,7 +33,7 @@ export default function ChatbaseWidget({ botId }: { botId?: string }) {
         const script = document.createElement('script')
         script.src = 'https://www.chatbase.co/embed.min.js'
         script.id = id
-        // @ts-expect-error
+        // @ts-expect-error - domain is a custom attribute for Chatbase
         script.domain = 'www.chatbase.co'
         document.body.appendChild(script)
       }
