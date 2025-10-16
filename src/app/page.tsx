@@ -216,7 +216,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">AI Customer Assistant</h3>
             <p className="text-[#8B92A7] leading-[1.7] mb-4">
-              24/7 chatbot for customer support. Answer questions, schedule appointments, and provide instant help to your customers even when you're busy.
+              24/7 chatbot for customer support. Answer questions, schedule appointments, and provide instant help to your customers even when you&apos;re busy.
             </p>
             <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
               <li className="flex items-center gap-2">✓ 24/7 customer support</li>
