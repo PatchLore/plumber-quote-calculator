@@ -3,21 +3,14 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 
-export const metadata = {
-  title: "QuoteFlow - Instant Quote Calculator for Tradespeople",
-  description: "Turn website visitors into paying customers with instant, transparent quotes. Capture qualified leads automatically and manage everything from your dashboard. Built specifically for tradespeople.",
-  openGraph: {
-    title: "QuoteFlow - Instant Quote Calculator for Tradespeople",
-    description: "Turn website visitors into paying customers with instant, transparent quotes. Built for tradespeople.",
-    url: "https://www.fixblox.com/quoteflow",
-    images: ["/images/og-fixblox.png"],
-  },
-}
-
 export default function QuoteFlowLandingPage() {
-  // Set document title
+  // Set document title and meta description
   useEffect(() => {
     document.title = "QuoteFlow - Instant Quote Calculator for Tradespeople | FixBlox"
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Turn website visitors into paying customers with instant, transparent quotes. Capture qualified leads automatically and manage everything from your dashboard. Built specifically for tradespeople.')
+    }
   }, [])
   return (
     <div className="overflow-x-hidden bg-white">
