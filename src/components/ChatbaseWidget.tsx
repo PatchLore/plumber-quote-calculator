@@ -12,20 +12,20 @@ export default function ChatbaseWidget({ botId }: { botId?: string }) {
     // Inline bootstrapper (mirrors provided embed)
     (function(){
       // Guard for re-entry
-      // @ts-ignore
+      // @ts-expect-error
       if (!window.chatbase || window.chatbase('getState') !== 'initialized') {
-        // @ts-ignore
-        window.chatbase = (...args: any[]) => {
-          // @ts-ignore
+        // @ts-expect-error
+        window.chatbase = (...args: unknown[]) => {
+          // @ts-expect-error
           if (!window.chatbase.q) { window.chatbase.q = [] }
-          // @ts-ignore
+          // @ts-expect-error
           window.chatbase.q.push(args)
         }
-        // @ts-ignore
+        // @ts-expect-error
         window.chatbase = new Proxy(window.chatbase, {
-          get(target: any, prop: string) {
-            if (prop === 'q') { return target.q }
-            return (...args: any[]) => target(prop, ...args)
+          get(target: unknown, prop: string) {
+            if (prop === 'q') { return (target as { q: unknown[] }).q }
+            return (...args: unknown[]) => (target as Function)(prop, ...args)
           }
         })
       }
@@ -33,7 +33,7 @@ export default function ChatbaseWidget({ botId }: { botId?: string }) {
         const script = document.createElement('script')
         script.src = 'https://www.chatbase.co/embed.min.js'
         script.id = id
-        // @ts-ignore
+        // @ts-expect-error
         script.domain = 'www.chatbase.co'
         document.body.appendChild(script)
       }
