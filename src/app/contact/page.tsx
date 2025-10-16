@@ -1,286 +1,499 @@
 'use client'
 
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
-
 export default function ContactPage() {
-  // Set document metadata on mount
-  useEffect(() => {
-    document.title = "Contact Us - Get Your Custom Trade Web App | FixBlox"
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Get in touch with FixBlox to discuss your trade business web application needs. QuoteFlow, JobTracker, and custom solutions for all tradespeople.')
-    }
-  }, [])
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    business: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setSubmitted(true)
-    setIsSubmitting(false)
-  }
-
-  if (submitted) {
-    return (
-      <div className="antialiased text-slate-800 bg-gradient-to-b from-white via-slate-50 to-white min-h-screen">
-        <header className="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 text-slate-900 hover:opacity-80 transition">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shadow rounded-full p-1 bg-white">
-              <path d="M3 12h18" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" />
-              <path d="M3 6h18" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" opacity="0.9"/>
-            </svg>
-            <span className="text-lg font-semibold">FixBlox</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link href="/" className="text-sm text-slate-600 hover:text-slate-900">Home</Link>
-            <Link href="/quoteflow" className="text-sm text-slate-600 hover:text-slate-900">QuoteFlow</Link>
-            <Link href="/contact" className="text-sm text-slate-900 font-medium">Contact</Link>
-          </nav>
-        </header>
-
-        <main className="max-w-3xl mx-auto px-6 py-16 text-center">
-          <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 flex items-center justify-center mx-auto mb-6">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                <path d="M20 6L9 17l-5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <h1 className="text-3xl font-bold mb-4">Thanks for reaching out!</h1>
-            <p className="text-lg text-slate-600 mb-8">
-              We&apos;ll get back to you within 24 hours. Looking forward to helping you with QuoteFlow!
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Link href="/quoteflow" className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-sky-600 to-indigo-600 text-white font-semibold shadow-lg transform transition hover:-translate-y-0.5">
-                Explore QuoteFlow
-              </Link>
-              <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border-2 border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition">
-                Back to Home
-              </Link>
-            </div>
-          </div>
-        </main>
-      </div>
-    )
-  }
-
   return (
-    <div className="antialiased text-slate-800 bg-gradient-to-b from-white via-slate-50 to-white min-h-screen">
-      {/* Header */}
-      <header className="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 text-slate-900 hover:opacity-80 transition">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shadow rounded-full p-1 bg-white">
-            <path d="M3 12h18" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" />
-            <path d="M3 6h18" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" opacity="0.9"/>
-          </svg>
-          <span className="text-lg font-semibold">FixBlox</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-4">
-          <Link href="/" className="text-sm text-slate-600 hover:text-slate-900">Home</Link>
-          <Link href="/quoteflow" className="text-sm text-slate-600 hover:text-slate-900">QuoteFlow</Link>
-          <Link href="/contact" className="text-sm text-slate-900 font-medium">Contact</Link>
-        </nav>
-        <div className="md:hidden">
-          <Link href="/" className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-gray-700 hover:bg-gray-50 transition text-sm">Menu</Link>
+    <>
+      <div dangerouslySetInnerHTML={{
+        __html: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact FixBlox - Get in Touch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .contact-wrapper {
+            margin-top: -30px;
+            padding: 0 20px 80px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Contact Form Card */
+        .form-card {
+            background: white;
+            border-radius: 16px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-card h2 {
+            font-size: 1.8rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+
+        .form-card .subtitle {
+            color: #6c757d;
+            margin-bottom: 35px;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Contact Info Card */
+        .info-card {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .info-box {
+            background: white;
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .info-box-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .info-box h3 {
+            font-size: 1.3rem;
+            color: #2d3748;
+        }
+
+        .info-box p {
+            color: #6c757d;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .contact-detail:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-icon {
+            font-size: 1.2rem;
+        }
+
+        .contact-detail a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: #5568d3;
+        }
+
+        .contact-detail span {
+            color: #495057;
+            font-weight: 500;
+        }
+
+        /* Response Timeline */
+        .timeline-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .timeline-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .timeline-step {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .step-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .step-content p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            background: white;
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .quick-actions h3 {
+            font-size: 1.3rem;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+
+        .action-btn {
+            display: block;
+            width: 100%;
+            padding: 16px 20px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .action-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .action-btn:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Badge */
+        .response-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #d4edda;
+            color: #155724;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .form-card,
+            .info-box,
+            .timeline-box,
+            .quick-actions {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Let's Build Something Amazing Together</h1>
+            <p>Whether you're ready to set up QuoteFlow, need a custom solution, or just want to chat about your business — we're here to help.</p>
         </div>
-      </header>
+    </section>
 
-      <main className="max-w-6xl mx-auto px-6">
-        {/* Hero */}
-        <section className="py-16 text-center">
-          <div className="inline-block px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium mb-6">
-            Get in touch
-          </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight max-w-4xl mx-auto">
-            Let&apos;s build something <span className="bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent">amazing together</span>
-          </h1>
-          <p className="mt-6 text-xl text-slate-600 max-w-2xl mx-auto">
-            Whether you&apos;re ready to set up QuoteFlow, need a custom solution, or just want to chat about your business — we&apos;re here to help.
-          </p>
-        </section>
-
-        {/* Contact Form & Info */}
-        <section className="py-12 grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-            <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Your Name *</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition"
-                  placeholder="John Smith"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Email Address *</label>
-                <input
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition"
-                  placeholder="john@plumbing.co.uk"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Phone Number</label>
-                <input
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition"
-                  placeholder="+44 7700 900000"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Business Name</label>
-                <input
-                  type="text"
-                  value={formData.business}
-                  onChange={(e) => setFormData({ ...formData, business: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition"
-                  placeholder="Smith Plumbing Ltd"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">How can we help? *</label>
-                <textarea
-                  required
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition resize-none"
-                  placeholder="I'd like to set up QuoteFlow for my plumbing business..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-600 to-indigo-600 text-white text-lg font-semibold shadow-lg transform transition hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-                {!isSubmitting && (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                )}
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-gradient-to-br from-sky-50 to-indigo-50 rounded-3xl p-8 border border-gray-100">
-              <h3 className="text-2xl font-bold mb-4">Quick response times</h3>
-              <p className="text-slate-600 mb-6">
-                We typically respond within 24 hours. For urgent QuoteFlow setup questions, we&apos;ll get back to you even faster.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-slate-900">Email</div>
-                    <div className="text-slate-600">info@fixblox.com</div>
-                  </div>
+    <!-- Contact Content -->
+    <section class="contact-wrapper">
+        <div class="contact-grid">
+            <!-- Left Column: Contact Form -->
+            <div class="form-card">
+                <div class="response-badge">
+                    ⚡ Quick Response Times
                 </div>
+                <h2>Send Us a Message</h2>
+                <p class="subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-slate-900">Phone</div>
-                    <div className="text-slate-600">07925990923</div>
-                  </div>
-                </div>
-              </div>
+                <form action="/submit-contact" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="07123 456789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="trade">Your Trade</label>
+                        <select id="trade" name="trade">
+                            <option value="">Select your trade...</option>
+                            <option value="plumber">Plumber</option>
+                            <option value="electrician">Electrician</option>
+                            <option value="builder">Builder</option>
+                            <option value="contractor">General Contractor</option>
+                            <option value="hvac">HVAC</option>
+                            <option value="carpenter">Carpenter</option>
+                            <option value="decorator">Decorator</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">What can we help with? *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose a topic...</option>
+                            <option value="quoteflow">QuoteFlow Setup</option>
+                            <option value="ai-assistant">AI Assistant Add-on</option>
+                            <option value="whatsapp">WhatsApp Integration</option>
+                            <option value="custom">Custom Solution</option>
+                            <option value="support">Technical Support</option>
+                            <option value="pricing">Pricing Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your business and how we can help..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-              <h3 className="text-xl font-bold mb-4">What happens next?</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-                    1
-                  </div>
-                  <div>
-                    <div className="font-semibold">We review your message</div>
-                    <div className="text-sm text-slate-600">Usually within a few hours</div>
-                  </div>
+            <!-- Right Column: Contact Info -->
+            <div class="info-card">
+                <!-- Contact Details Box -->
+                <div class="info-box">
+                    <div class="info-box-header">
+                        <div class="info-icon">📞</div>
+                        <h3>Get in Touch</h3>
+                    </div>
+                    <p>Prefer to reach out directly? We're available through multiple channels.</p>
+                    
+                    <div class="contact-detail">
+                        <span class="detail-icon">📧</span>
+                        <a href="mailto:info@fixblox.com">info@fixblox.com</a>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="detail-icon">📱</span>
+                        <a href="tel:07925990923">07925 990923</a>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="detail-icon">💬</span>
+                        <span>WhatsApp Available</span>
+                    </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-                    2
-                  </div>
-                  <div>
-                    <div className="font-semibold">We send a personalized reply</div>
-                    <div className="text-sm text-slate-600">With answers and next steps</div>
-                  </div>
+                <!-- Response Timeline Box -->
+                <div class="timeline-box">
+                    <h3>⏱️ What Happens Next?</h3>
+                    <div class="timeline-steps">
+                        <div class="timeline-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>We Review Your Message</h4>
+                                <p>Our team reads your inquiry within a few hours</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Personal Response</h4>
+                                <p>Get a detailed reply within 24 hours (often faster)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Schedule Setup Call</h4>
+                                <p>Book a time to discuss your needs and get started</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-                    3
-                  </div>
-                  <div>
-                    <div className="font-semibold">We schedule a quick call</div>
-                    <div className="text-sm text-slate-600">If needed, to discuss your setup</div>
-                  </div>
+                <!-- Quick Actions Box -->
+                <div class="quick-actions">
+                    <h3>Or Explore on Your Own</h3>
+                    <a href="/quoteflow/calculator" class="action-btn">🧮 Try the Calculator</a>
+                    <a href="/#apps" class="action-btn">📱 View All Apps</a>
+                    <a href="/pricing" class="action-btn">💰 See Pricing</a>
                 </div>
-              </div>
             </div>
-
-            <div className="text-center">
-              <p className="text-sm text-slate-500 mb-4">Or explore QuoteFlow yourself</p>
-              <Link href="/quoteflow/calculator" className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border-2 border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition">
-                Try the calculator
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <footer className="mt-16 py-8 text-sm text-slate-500">
-          <div className="border-t pt-6 flex flex-col md:flex-row items-center justify-between">
-            <div>© <strong>FixBlox</strong> — Web app solutions for tradespeople</div>
-            <div className="mt-4 md:mt-0">
-              <Link href="/" className="hover:text-slate-700 transition">View all solutions</Link>
-            </div>
-          </div>
-        </footer>
-      </main>
-    </div>
+        </div>
+    </section>
+</body>
+</html>
+        `
+      }} />
+    </>
   )
 }
-
