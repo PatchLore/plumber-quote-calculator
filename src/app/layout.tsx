@@ -131,9 +131,7 @@ export default function RootLayout({
           id="chatbase-embed"
           src="https://www.chatbase.co/embed.min.js"
           strategy="afterInteractive"
-          // @ts-expect-error custom attributes used by Chatbase
           chatbot-id="b49ebYilvzFBCqUyLLCAi"
-          // @ts-expect-error custom attributes used by Chatbase
           domain="www.chatbase.co"
         />
       </body>
