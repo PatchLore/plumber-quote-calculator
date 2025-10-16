@@ -1,8 +1,18 @@
 'use client'
 
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function TermsOfService() {
+  // Set document metadata on mount
+  useEffect(() => {
+    document.title = "Terms of Service | FixBlox"
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Read FixBlox terms of service. Understand the terms and conditions for using our trade business web applications.')
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -42,7 +52,7 @@ export default function TermsOfService() {
               FixBlox provides white-label web application solutions designed specifically for tradespeople and trade businesses. We develop, customize, and deploy professional web applications that you can brand and operate as your own. Our white-label solutions include:
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li><strong>QuoteFlow:</strong> An instant quote calculator for plumbers with lead capture, email notifications, and admin dashboard functionality</li>
+              <li><strong>QuoteFlow:</strong> An instant quote calculator for tradespeople with lead capture, email notifications, and admin dashboard functionality</li>
               <li><strong>JobTracker:</strong> Job management and scheduling tools (coming soon)</li>
               <li><strong>TradeHub:</strong> All-in-one business management platform (coming soon)</li>
               <li><strong>Custom Branding:</strong> Your business name, logo, colors, and domain</li>

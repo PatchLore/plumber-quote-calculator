@@ -1,8 +1,24 @@
 'use client'
 
 import Link from 'next/link'
+import { useEffect } from 'react'
+
+export const metadata = {
+  title: "QuoteFlow - Instant Quote Calculator for Tradespeople",
+  description: "Turn website visitors into paying customers with instant, transparent quotes. Capture qualified leads automatically and manage everything from your dashboard. Built specifically for tradespeople.",
+  openGraph: {
+    title: "QuoteFlow - Instant Quote Calculator for Tradespeople",
+    description: "Turn website visitors into paying customers with instant, transparent quotes. Built for tradespeople.",
+    url: "https://www.fixblox.com/quoteflow",
+    images: ["/images/og-fixblox.png"],
+  },
+}
 
 export default function QuoteFlowLandingPage() {
+  // Set document title
+  useEffect(() => {
+    document.title = "QuoteFlow - Instant Quote Calculator for Tradespeople | FixBlox"
+  }, [])
   return (
     <div className="overflow-x-hidden bg-white">
       {/* Navigation */}
@@ -30,7 +46,7 @@ export default function QuoteFlowLandingPage() {
               QuoteFlow by FixBlox
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-tight text-white mb-6">
-              The Plumber&apos;s Lead <span className="bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent">Generation System</span>
+              The Tradesperson&apos;s Lead <span className="bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent">Generation System</span>
             </h1>
             <p className="text-xl text-white/85 mb-8">
               Turn website visitors into paying customers with instant, transparent quotes. Capture qualified leads automatically and manage everything from your dashboard.
@@ -78,7 +94,7 @@ export default function QuoteFlowLandingPage() {
         </div>
       </section>
 
-      {/* How It Works for Plumbers */}
+      {/* How It Works for Tradespeople */}
       <section className="py-24 px-[5%] bg-[#F5F7FA]">
         <div className="text-center max-w-[800px] mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#0A0E27]">How QuoteFlow Works for You</h2>
@@ -132,7 +148,7 @@ export default function QuoteFlowLandingPage() {
       {/* Plumber Testimonials */}
       <section className="py-24 px-[5%] bg-[#F5F7FA]">
         <div className="text-center max-w-[800px] mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#0A0E27]">Trusted by Professional Plumbers</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#0A0E27]">Trusted by Professional Tradespeople</h2>
           <p className="text-xl text-[#8B92A7]">See what tradespeople are saying about QuoteFlow</p>
                   </div>
 
@@ -193,7 +209,7 @@ export default function QuoteFlowLandingPage() {
           <div>
             <h4 className="mb-4 text-lg font-semibold">Our Apps</h4>
             <ul className="space-y-2 list-none">
-              <li><Link href="/quoteflow" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">QuoteFlow (Plumbers)</Link></li>
+              <li><Link href="/quoteflow" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">QuoteFlow (Tradespeople)</Link></li>
               <li><Link href="/contact" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">JobTracker (Soon)</Link></li>
               <li><Link href="/contact" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">TradeHub (Soon)</Link></li>
             </ul>

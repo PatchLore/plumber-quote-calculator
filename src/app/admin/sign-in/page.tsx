@@ -77,8 +77,8 @@ export default function AdminSignIn() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
       <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-blue-600 mb-2">QuoteFlow</h1>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Admin Sign In</h2>
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent mb-2">QuoteFlow by FixBlox</h1>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Tradesperson Login</h2>
           <p className="text-gray-600">Access your lead management dashboard</p>
         </div>
 
@@ -146,27 +146,26 @@ export default function AdminSignIn() {
               type="button"
               onClick={handleSignUp}
               disabled={loading}
-              className="w-full flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-[#0066FF] to-[#00D9FF] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
             >
-              Create Admin Account
+              Sign Up as a Tradesperson
             </button>
           </div>
         </form>
 
         <div className="mt-6 text-center">
           <Link
-            href="/"
+            href="/quoteflow"
             className="text-blue-600 hover:text-blue-700 text-sm"
           >
-            ← Back to Quote Calculator
+            ← Back to QuoteFlow
           </Link>
         </div>
 
-        <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-          <h3 className="text-sm font-medium text-gray-900 mb-2">Demo Credentials</h3>
+        <div className="mt-8 p-4 bg-gradient-to-r from-sky-50 to-indigo-50 rounded-lg border border-gray-100">
+          <h3 className="text-sm font-medium text-gray-900 mb-2">✨ Start Your Free Trial</h3>
           <p className="text-xs text-gray-600">
-            For demo purposes, you can create an admin account by signing up with any email and password.
-            In production, you would set up proper admin accounts through Supabase Auth.
+            Create your QuoteFlow account and start receiving qualified plumbing leads today. 14-day free trial, no credit card required.
           </p>
         </div>
       </div>

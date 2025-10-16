@@ -1,9 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function ContactPage() {
+  // Set document metadata on mount
+  useEffect(() => {
+    document.title = "Contact Us - Get Your Custom Trade Web App | FixBlox"
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Get in touch with FixBlox to discuss your trade business web application needs. QuoteFlow, JobTracker, and custom solutions for all tradespeople.')
+    }
+  }, [])
   const [formData, setFormData] = useState({
     name: '',
     email: '',

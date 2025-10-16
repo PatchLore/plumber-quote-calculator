@@ -5,6 +5,17 @@ import { useState, useEffect } from 'react'
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
 import { useForm } from 'react-hook-form'
+
+// Add document title in component
+const setDocumentMetadata = () => {
+  if (typeof window !== 'undefined') {
+    document.title = "Get Instant Plumbing Quote | QuoteFlow Calculator | FixBlox"
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Get an instant, accurate plumbing quote in 30 seconds. Free online calculator for emergency repairs, boiler service, bathroom installation, and more.')
+    }
+  }
+}
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Calculator, CheckCircle } from 'lucide-react'
@@ -46,6 +57,11 @@ export default function CalculatorPage() {
   const [showLeadCapture, setShowLeadCapture] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  // Set document metadata on mount
+  useEffect(() => {
+    setDocumentMetadata()
+  }, [])
 
   const form = useForm<FormData>({
     resolver: zodResolver(schema),
@@ -201,9 +217,9 @@ export default function CalculatorPage() {
               </div>
             </div>
 
-            {/* Plumber CTA */}
+            {/* Tradesperson CTA */}
             <div className="bg-gradient-to-br from-[#0A0E27] to-[#1a1f3a] rounded-xl shadow-lg p-8 text-center text-white">
-              <div className="text-sm font-medium mb-3 text-[#00D9FF]">Are you a plumber?</div>
+              <div className="text-sm font-medium mb-3 text-[#00D9FF]">Are you a tradesperson?</div>
               <h2 className="text-2xl font-bold mb-3">Want leads like this sent to your dashboard?</h2>
               <p className="text-white/80 mb-6">
                 Sign up for QuoteFlow and start receiving qualified leads automatically. Get notified instantly when customers request quotes in your area.

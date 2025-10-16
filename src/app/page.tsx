@@ -3,8 +3,105 @@
 import Link from 'next/link'
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FixBlox",
+    "description": "Professional web applications designed for tradespeople. Instant quote calculators, job management, and custom trade-focused web apps.",
+    "url": "https://www.fixblox.com",
+    "logo": "https://www.fixblox.com/icon.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+447925990923",
+      "contactType": "Customer Service",
+      "areaServed": "GB",
+      "availableLanguage": ["en"]
+    },
+    "sameAs": [],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    }
+  };
+
+  const softwareApplicationData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "QuoteFlow by FixBlox",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP"
+    },
+    "description": "Instant quote calculator for tradespeople. Give customers transparent pricing in 30 seconds, capture qualified leads, and manage jobs from your admin dashboard.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1000"
+    }
+  };
+
+  const serviceData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Web Application Development for Tradespeople",
+    "provider": {
+      "@type": "Organization",
+      "name": "FixBlox"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Trade Business Software Solutions",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "QuoteFlow - Instant Quote Calculator",
+            "description": "Instant quote calculator for tradespeople with lead capture and admin dashboard"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "JobTracker - Job Management System",
+            "description": "Job management and scheduling for electricians and builders"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "TradeHub - Business Management Platform",
+            "description": "All-in-one business management for trade contractors"
+          }
+        }
+      ]
+    }
+  };
+
   return (
-    <div className="overflow-x-hidden bg-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceData) }}
+      />
+      <div className="overflow-x-hidden bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md px-[5%] py-6 flex justify-between items-center z-[1000] shadow-[0_2px_20px_rgba(0,0,0,0.05)]">
         <Link href="/" className="text-[1.8rem] font-extrabold bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent">
@@ -96,7 +193,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">QuoteFlow</h3>
             <p className="text-[#8B92A7] leading-[1.7] mb-4">
-              Instant quote calculator for plumbers. Give customers transparent pricing in 30 seconds, capture qualified leads, and manage jobs from your admin dashboard.
+              Instant quote calculator for tradespeople. Give customers transparent pricing in 30 seconds, capture qualified leads, and manage jobs from your admin dashboard.
             </p>
             <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
               <li className="flex items-center gap-2">✓ Instant quote calculator</li>
@@ -260,7 +357,7 @@ export default function HomePage() {
           <div>
             <h4 className="mb-4 text-lg font-semibold">Our Apps</h4>
             <ul className="space-y-2 list-none">
-              <li><Link href="/quoteflow" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">QuoteFlow (Plumbers)</Link></li>
+              <li><Link href="/quoteflow" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">QuoteFlow (Tradespeople)</Link></li>
               <li><Link href="/contact" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">JobTracker (Soon)</Link></li>
               <li><Link href="/contact" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">TradeHub (Soon)</Link></li>
             </ul>
@@ -299,5 +396,6 @@ export default function HomePage() {
         }
       `}</style>
     </div>
+    </>
   )
 }

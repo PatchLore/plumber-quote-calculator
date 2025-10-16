@@ -1,8 +1,18 @@
 'use client'
 
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function PrivacyPolicy() {
+  // Set document metadata on mount
+  useEffect(() => {
+    document.title = "Privacy Policy | FixBlox"
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Read FixBlox privacy policy. Learn how we collect, use, and protect your data when using our trade business web applications.')
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}

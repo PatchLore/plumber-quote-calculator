@@ -27,7 +27,6 @@ export default function AdminDashboard() {
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [serviceFilter, setServiceFilter] = useState<string>('all')
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [user, setUser] = useState<{ email?: string } | null>(null)
 
   useEffect(() => {
     checkAuth()
@@ -57,7 +56,6 @@ export default function AdminDashboard() {
       return
     }
 
-    setUser(user)
     setIsAuthenticated(true)
   }
 
