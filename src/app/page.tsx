@@ -33,7 +33,7 @@ export default function HomePage() {
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -91,7 +91,7 @@ export default function HomePage() {
 
         .btn-primary {
             background: white;
-            color: #667eea;
+            color: #0066FF;
         }
 
         .btn-primary:hover {
@@ -107,7 +107,7 @@ export default function HomePage() {
 
         .btn-secondary:hover {
             background: white;
-            color: #667eea;
+            color: #0066FF;
         }
 
         /* Stats Section */
@@ -128,7 +128,7 @@ export default function HomePage() {
 
         .stat-item h3 {
             font-size: 2.5rem;
-            color: #667eea;
+            color: #0066FF;
             margin-bottom: 5px;
         }
 
@@ -267,22 +267,22 @@ export default function HomePage() {
         }
 
         .cta-primary {
-            background: #667eea;
+            background: #0066FF;
             color: white;
         }
 
         .cta-primary:hover {
-            background: #5568d3;
+            background: #0052CC;
         }
 
         .cta-secondary {
             background: #f8f9fa;
-            color: #667eea;
-            border: 2px solid #667eea;
+            color: #0066FF;
+            border: 2px solid #0066FF;
         }
 
         .cta-secondary:hover {
-            background: #667eea;
+            background: #0066FF;
             color: white;
         }
 
@@ -365,7 +365,7 @@ export default function HomePage() {
 
         /* Final CTA */
         .final-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;

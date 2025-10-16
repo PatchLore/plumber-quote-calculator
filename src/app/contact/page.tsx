@@ -33,7 +33,7 @@ export default function ContactPage() {
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
             color: white;
             padding: 80px 20px 100px;
             text-align: center;
@@ -116,8 +116,8 @@ export default function ContactPage() {
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #0066FF;
+            box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
         }
 
         .form-group textarea {
@@ -128,7 +128,7 @@ export default function ContactPage() {
         .submit-btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
             color: white;
             border: none;
             border-radius: 8px;
@@ -140,7 +140,7 @@ export default function ContactPage() {
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
         }
 
         /* Contact Info Card */
@@ -173,7 +173,7 @@ export default function ContactPage() {
         .info-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -211,14 +211,14 @@ export default function ContactPage() {
         }
 
         .contact-detail a {
-            color: #667eea;
+            color: #0066FF;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .contact-detail a:hover {
-            color: #5568d3;
+            color: #0052CC;
         }
 
         .contact-detail span {
@@ -228,11 +228,11 @@ export default function ContactPage() {
 
         /* Response Timeline */
         .timeline-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
             color: white;
             border-radius: 16px;
             padding: 35px 30px;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
         }
 
         .timeline-box h3 {
@@ -309,9 +309,9 @@ export default function ContactPage() {
         }
 
         .action-btn:hover {
-            background: #667eea;
+            background: #0066FF;
             color: white;
-            border-color: #667eea;
+            border-color: #0066FF;
             transform: translateX(5px);
         }
 
