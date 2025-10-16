@@ -24,8 +24,8 @@ export default function TestChatbasePage() {
           chatbot-id="b49ebYilvzFBCqUyLLCAi"
           domain="www.chatbase.co"
           defer
-          onLoad="console.log('[chatbase-test] embed.min.js loaded')"
-          onError="console.error('[chatbase-test] failed to load embed.min.js')"
+          onLoad={() => console.log('[chatbase-test] embed.min.js loaded')}
+          onError={() => console.error('[chatbase-test] failed to load embed.min.js')}
         />
       </body>
     </html>
