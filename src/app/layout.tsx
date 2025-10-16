@@ -129,10 +129,16 @@ export default function RootLayout({
         />
         <Script
           id="chatbase-embed"
-          src="https://www.chatbase.co/embed.min.js"
           strategy="afterInteractive"
-          chatbot-id="b49ebYilvzFBCqUyLLCAi"
-          domain="www.chatbase.co"
+          dangerouslySetInnerHTML={{
+            __html: `
+              const script = document.createElement('script');
+              script.src = 'https://www.chatbase.co/embed.min.js';
+              script.setAttribute('chatbot-id', 'b49ebYilvzFBCqUyLLCAi');
+              script.setAttribute('domain', 'www.chatbase.co');
+              document.body.appendChild(script);
+            `,
+          }}
         />
       </body>
     </html>
