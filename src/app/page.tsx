@@ -1,447 +1,622 @@
 'use client'
 
-import Link from 'next/link'
-
 export default function HomePage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "FixBlox",
-    "description": "Professional web applications designed for tradespeople. Instant quote calculators, job management, and custom trade-focused web apps.",
-    "url": "https://www.fixblox.com",
-    "logo": "https://www.fixblox.com/icon.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+447925990923",
-      "contactType": "Customer Service",
-      "areaServed": "GB",
-      "availableLanguage": ["en"]
-    },
-    "sameAs": [],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "GB"
-    }
-  };
-
-  const softwareApplicationData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "QuoteFlow by FixBlox",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "GBP"
-    },
-    "description": "Instant quote calculator for tradespeople. Give customers transparent pricing in 30 seconds, capture qualified leads, and manage jobs from your admin dashboard.",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "1000"
-    }
-  };
-
-  const serviceData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Web Application Development for Tradespeople",
-    "provider": {
-      "@type": "Organization",
-      "name": "FixBlox"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Trade Business Software Solutions",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "QuoteFlow - Instant Quote Calculator",
-            "description": "Instant quote calculator for tradespeople with lead capture and admin dashboard"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "JobTracker - Job Management System",
-            "description": "Job management and scheduling for electricians and builders"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "TradeHub - Business Management Platform",
-            "description": "All-in-one business management for trade contractors"
-          }
-        }
-      ]
-    }
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceData) }}
-      />
-      <div className="overflow-x-hidden bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md px-[5%] py-6 flex justify-between items-center z-[1000] shadow-[0_2px_20px_rgba(0,0,0,0.05)]">
-        <Link href="/" className="text-[1.8rem] font-extrabold bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent">
-          FixBlox
-        </Link>
-        <ul className="hidden md:flex gap-10 list-none">
-          <li><a href="#apps" className="text-[#0A0E27] no-underline font-medium hover:after:w-full relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#0066FF] after:to-[#00D9FF] after:transition-all">Apps</a></li>
-          <li><a href="#how-it-works" className="text-[#0A0E27] no-underline font-medium hover:after:w-full relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#0066FF] after:to-[#00D9FF] after:transition-all">How It Works</a></li>
-          <li><Link href="/contact" className="text-[#0A0E27] no-underline font-medium hover:after:w-full relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#0066FF] after:to-[#00D9FF] after:transition-all">Contact</Link></li>
-        </ul>
-        <Link href="/quoteflow" className="bg-gradient-to-r from-[#0066FF] to-[#00D9FF] text-white px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 shadow-[0_4px_15px_rgba(0,102,255,0.3)] hover:shadow-[0_6px_25px_rgba(0,102,255,0.4)]">
-          Explore Apps
-        </Link>
-      </nav>
+      <div dangerouslySetInnerHTML={{
+        __html: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixBlox - Our Applications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      {/* Hero Section */}
-      <section className="mt-20 min-h-[95vh] flex items-center px-[5%] py-16 bg-gradient-to-br from-[#0A0E27] to-[#1a1f3a] relative overflow-hidden">
-        <div className="absolute w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(0,102,255,0.3)_0%,transparent_70%)] top-[-300px] right-[-300px] animate-[pulse_4s_ease-in-out_infinite]"></div>
-        <div className="absolute w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(0,217,255,0.2)_0%,transparent_70%)] bottom-[-200px] left-[-200px] animate-[pulse_5s_ease-in-out_infinite]"></div>
-        
-        <div className="max-w-[1400px] mx-auto text-center relative z-10 w-full">
-          <h1 className="text-5xl md:text-6xl lg:text-[4rem] font-extrabold leading-tight text-white mb-6">
-            Complete Customer System for <span className="bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent">Tradespeople</span>
-            </h1>
-          <p className="text-xl md:text-2xl text-white/85 mb-10 max-w-[800px] mx-auto">
-            Professional web applications designed to streamline trade businesses. From instant quotes to AI customer support and WhatsApp integration — built specifically for the trades industry.
-          </p>
-          
-          <div className="flex flex-wrap gap-6 justify-center mb-12">
-            <div className="bg-white/10 backdrop-blur-md px-8 py-4 rounded-full text-white font-semibold border border-white/20">
-              💻 Modern Tech Stack
-            </div>
-            <div className="bg-white/10 backdrop-blur-md px-8 py-4 rounded-full text-white font-semibold border border-white/20">
-              📱 Mobile-First Design
-            </div>
-            <div className="bg-white/10 backdrop-blur-md px-8 py-4 rounded-full text-white font-semibold border border-white/20">
-              🚀 Quick Setup
-            </div>
-            <div className="bg-white/10 backdrop-blur-md px-8 py-4 rounded-full text-white font-semibold border border-white/20">
-              💼 Trade-Specific
-            </div>
-          </div>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="#apps" className="bg-gradient-to-r from-[#0066FF] to-[#00D9FF] text-white px-14 py-5 rounded-full font-semibold text-lg transition-all hover:-translate-y-1 shadow-[0_10px_30px_rgba(0,102,255,0.4)] hover:shadow-[0_15px_40px_rgba(0,102,255,0.5)] inline-block">
-              Explore Our Apps
-            </a>
-            <Link href="/contact" className="bg-transparent text-white px-14 py-5 rounded-full border-2 border-white font-semibold text-lg transition-all hover:bg-white hover:text-[#0A0E27] inline-block text-center">
-              Get in Touch
-            </Link>
-          </div>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 40px 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        /* Apps Section */
+        .apps-section {
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Primary Apps Grid */
+        .apps-grid-primary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-bottom: 50px;
+        }
+
+        /* Secondary Apps Grid (JobTracker & TradeHub) */
+        .apps-grid-secondary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .app-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-live {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-addon {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-soon {
+            background: #e7e7e7;
+            color: #666;
+        }
+
+        .app-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .app-card h3 {
+            font-size: 1.6rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .app-card p {
+            color: #6c757d;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .app-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .app-features li {
+            padding: 10px 0;
+            color: #495057;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .app-features li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .app-cta {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .cta-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background: #5568d3;
+        }
+
+        .cta-secondary {
+            background: #f8f9fa;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .cta-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .cta-disabled {
+            background: #e9ecef;
+            color: #6c757d;
+            cursor: not-allowed;
+        }
+
+        /* Why Section */
+        .why-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .why-card {
+            text-align: center;
+        }
+
+        .why-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-size: 1.4rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            color: #6c757d;
+            line-height: 1.7;
+        }
+
+        /* Trades Section */
+        .trades-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .trades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .trade-badge {
+            background: white;
+            padding: 25px 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .trade-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .trade-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .trade-badge p {
+            color: #495057;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .apps-grid-primary,
+            .apps-grid-secondary {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Complete Customer System for Tradespeople</h1>
+            <p>Professional web applications designed to streamline trade businesses. From instant quotes to AI customer support and WhatsApp integration — built specifically for the trades industry.</p>
+            
+            <div class="hero-badges">
+                <span class="badge">💻 Modern Tech Stack</span>
+                <span class="badge">📱 Mobile-First Design</span>
+                <span class="badge">🚀 Quick Setup</span>
+                <span class="badge">💼 Trade-Specific</span>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#apps" class="btn btn-primary">Explore Our Apps</a>
+                <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
         </div>
-      </section>
+    </section>
 
-      {/* Trust Bar */}
-      <section className="bg-white py-12 px-[5%] shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-          {[
-            { number: '1000+', label: 'Active Tradespeople' },
-            { number: '24/7', label: 'Platform Uptime' },
-            { number: '100%', label: 'Cloud-Based' },
-            { number: '4.9★', label: 'User Rating' }
-          ].map((item, index) => (
-            <div key={index}>
-              <h3 className="text-[2.5rem] font-extrabold bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent mb-2">
-                {item.number}
-                </h3>
-              <p className="text-[#8B92A7] font-medium">{item.label}</p>
-              </div>
-            ))}
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>1000+</h3>
+                <p>Active Tradespeople</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Platform Uptime</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Cloud-Based</p>
+            </div>
+            <div class="stat-item">
+                <h3>4.9★</h3>
+                <p>User Rating</p>
+            </div>
         </div>
-      </section>
+    </section>
 
-      {/* Our Apps Section */}
-      <section id="apps" className="py-24 px-[5%] bg-[#F5F7FA]">
-        <div className="text-center max-w-[800px] mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#0A0E27]">Our Web Applications</h2>
-          <p className="text-xl text-[#8B92A7]">Industry-specific solutions designed to help your trade business grow</p>
+    <!-- Apps Section -->
+    <section class="apps-section" id="apps">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Web Applications</h2>
+                <p>Industry-specific solutions designed to help your trade business grow</p>
+            </div>
+
+            <!-- Primary Apps (QuoteFlow + Add-ons) -->
+            <div class="apps-grid-primary">
+                <!-- QuoteFlow -->
+                <div class="app-card">
+                    <span class="app-badge badge-live">LIVE NOW</span>
+                    <span class="app-icon">📊</span>
+                    <h3>QuoteFlow</h3>
+                    <p>Instant quote calculator for tradespeople. Give customers transparent pricing in 30 seconds, capture qualified leads, and manage jobs from your admin dashboard.</p>
+                    <ul class="app-features">
+                        <li>Instant quote calculator</li>
+                        <li>Lead capture & notifications</li>
+                        <li>Admin dashboard included</li>
+                        <li>Mobile responsive</li>
+                    </ul>
+                    <a href="/quoteflow" class="app-cta cta-primary">Learn More →</a>
+                </div>
+
+                <!-- AI Assistant -->
+                <div class="app-card">
+                    <span class="app-badge badge-addon">ADD-ON</span>
+                    <span class="app-icon">🤖</span>
+                    <h3>AI Customer Assistant</h3>
+                    <p>24/7 chatbot for customer support. Answer questions, schedule appointments, and provide instant help to your customers even when you're busy.</p>
+                    <ul class="app-features">
+                        <li>24/7 customer support</li>
+                        <li>Instant responses</li>
+                        <li>Appointment booking</li>
+                        <li>FAQ automation</li>
+                    </ul>
+                    <a href="/contact" class="app-cta cta-secondary">Add to Quote →</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="app-card">
+                    <span class="app-badge badge-addon">ADD-ON</span>
+                    <span class="app-icon">💬</span>
+                    <h3>WhatsApp Integration</h3>
+                    <p>Direct messaging with customers through WhatsApp. Send quotes, updates, and communicate seamlessly with your clients on their preferred platform.</p>
+                    <ul class="app-features">
+                        <li>Direct WhatsApp messaging</li>
+                        <li>Quote delivery</li>
+                        <li>Status updates</li>
+                        <li>Customer notifications</li>
+                    </ul>
+                    <a href="/contact" class="app-cta cta-secondary">Add to Quote →</a>
+                </div>
+            </div>
+
+            <!-- Secondary Apps (Coming Soon) -->
+            <div class="apps-grid-secondary">
+                <!-- JobTracker -->
+                <div class="app-card">
+                    <span class="app-badge badge-soon">COMING SOON</span>
+                    <span class="app-icon">🔧</span>
+                    <h3>JobTracker</h3>
+                    <p>Job management and scheduling for electricians and builders. Track jobs, manage teams, and keep customers updated in real-time.</p>
+                    <ul class="app-features">
+                        <li>Job scheduling calendar</li>
+                        <li>Team management</li>
+                        <li>Customer notifications</li>
+                        <li>Real-time updates</li>
+                    </ul>
+                    <a href="/contact" class="app-cta cta-disabled">Get Notified</a>
+                </div>
+
+                <!-- TradeHub -->
+                <div class="app-card">
+                    <span class="app-badge badge-soon">COMING SOON</span>
+                    <span class="app-icon">💼</span>
+                    <h3>TradeHub</h3>
+                    <p>All-in-one business management for trade contractors. Quotes, jobs, invoicing, payments, and customer management in one platform.</p>
+                    <ul class="app-features">
+                        <li>Complete business suite</li>
+                        <li>Invoicing & payments</li>
+                        <li>Customer CRM</li>
+                        <li>Financial reporting</li>
+                    </ul>
+                    <a href="/contact" class="app-cta cta-disabled">Get Notified</a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-[1600px] mx-auto">
-          {/* QuoteFlow - Live */}
-          <div className="bg-white p-10 rounded-[20px] border-2 border-[#0066FF] relative overflow-hidden">
-            <div className="absolute top-4 right-4 bg-gradient-to-r from-[#0066FF] to-[#00D9FF] text-white px-3 py-1 rounded-full text-xs font-bold">
-              LIVE NOW
-            </div>
-            <div className="w-[70px] h-[70px] bg-gradient-to-r from-[#0066FF] to-[#00D9FF] rounded-[18px] flex items-center justify-center text-[2.2rem] mb-6">
-              📊
-            </div>
-            <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">QuoteFlow</h3>
-            <p className="text-[#8B92A7] leading-[1.7] mb-4">
-              Instant quote calculator for tradespeople. Give customers transparent pricing in 30 seconds, capture qualified leads, and manage jobs from your admin dashboard.
-            </p>
-            <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
-              <li className="flex items-center gap-2">✓ Instant quote calculator</li>
-              <li className="flex items-center gap-2">✓ Lead capture & notifications</li>
-              <li className="flex items-center gap-2">✓ Admin dashboard included</li>
-              <li className="flex items-center gap-2">✓ Mobile responsive</li>
-            </ul>
-            <Link href="/quoteflow" className="block w-full text-center bg-gradient-to-r from-[#0066FF] to-[#00D9FF] text-white px-6 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 shadow-lg">
-              Learn More →
-            </Link>
-          </div>
-
-          {/* AI Customer Assistant - Add-on */}
-          <div className="bg-white p-10 rounded-[20px] border-2 border-[#00D9FF] relative overflow-hidden">
-            <div className="absolute top-4 right-4 bg-gradient-to-r from-[#00D9FF] to-[#0066FF] text-white px-3 py-1 rounded-full text-xs font-bold">
-              ADD-ON
-            </div>
-            <div className="w-[70px] h-[70px] bg-gradient-to-r from-[#00D9FF] to-[#0066FF] rounded-[18px] flex items-center justify-center text-[2.2rem] mb-6">
-              🤖
-            </div>
-            <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">AI Customer Assistant</h3>
-            <p className="text-[#8B92A7] leading-[1.7] mb-4">
-              24/7 chatbot for customer support. Answer questions, schedule appointments, and provide instant help to your customers even when you&apos;re busy.
-            </p>
-            <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
-              <li className="flex items-center gap-2">✓ 24/7 customer support</li>
-              <li className="flex items-center gap-2">✓ Instant responses</li>
-              <li className="flex items-center gap-2">✓ Appointment booking</li>
-              <li className="flex items-center gap-2">✓ FAQ automation</li>
-            </ul>
-            <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#00D9FF] to-[#0066FF] text-white px-6 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 shadow-lg">
-              Add to Quote →
-            </Link>
-          </div>
-
-          {/* WhatsApp Integration - Add-on */}
-          <div className="bg-white p-10 rounded-[20px] border-2 border-[#00D9FF] relative overflow-hidden">
-            <div className="absolute top-4 right-4 bg-gradient-to-r from-[#00D9FF] to-[#0066FF] text-white px-3 py-1 rounded-full text-xs font-bold">
-              ADD-ON
-            </div>
-            <div className="w-[70px] h-[70px] bg-gradient-to-r from-[#00D9FF] to-[#0066FF] rounded-[18px] flex items-center justify-center text-[2.2rem] mb-6">
-              💬
-            </div>
-            <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">WhatsApp Integration</h3>
-            <p className="text-[#8B92A7] leading-[1.7] mb-4">
-              Direct messaging with customers through WhatsApp. Send quotes, updates, and communicate seamlessly with your clients on their preferred platform.
-            </p>
-            <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
-              <li className="flex items-center gap-2">✓ Direct WhatsApp messaging</li>
-              <li className="flex items-center gap-2">✓ Quote delivery</li>
-              <li className="flex items-center gap-2">✓ Status updates</li>
-              <li className="flex items-center gap-2">✓ Customer notifications</li>
-            </ul>
-            <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#00D9FF] to-[#0066FF] text-white px-6 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 shadow-lg">
-              Add to Quote →
-            </Link>
-          </div>
-          
-          {/* JobTracker - Coming Soon */}
-          <div className="bg-white p-10 rounded-[20px] border-2 border-gray-200 relative opacity-75">
-            <div className="absolute top-4 right-4 bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-bold">
-              COMING SOON
-              </div>
-            <div className="w-[70px] h-[70px] bg-gradient-to-r from-[#0066FF] to-[#00D9FF] rounded-[18px] flex items-center justify-center text-[2.2rem] mb-6">
-              🔧
-            </div>
-            <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">JobTracker</h3>
-            <p className="text-[#8B92A7] leading-[1.7] mb-4">
-              Job management and scheduling for electricians and builders. Track jobs, manage teams, and keep customers updated in real-time.
-            </p>
-            <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
-              <li className="flex items-center gap-2">✓ Job scheduling calendar</li>
-              <li className="flex items-center gap-2">✓ Team management</li>
-              <li className="flex items-center gap-2">✓ Customer notifications</li>
-              <li className="flex items-center gap-2">✓ Real-time updates</li>
-            </ul>
-            <Link href="/contact" className="block w-full text-center bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-semibold transition-all hover:bg-gray-200">
-              Get Notified
-            </Link>
+    <!-- Why FixBlox -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Tradespeople Choose FixBlox</h2>
+                <p>We build powerful tools that help you win more jobs and run your business efficiently</p>
             </div>
             
-          {/* TradeHub - Coming Soon */}
-          <div className="bg-white p-10 rounded-[20px] border-2 border-gray-200 relative opacity-75">
-            <div className="absolute top-4 right-4 bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-bold">
-              COMING SOON
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🎯</div>
+                    <h3>Built for Traders</h3>
+                    <p>Industry-specific solutions designed by people who understand your business. Each app is tailored to the unique needs of your trade.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⚡</div>
+                    <h3>Complete Solutions</h3>
+                    <p>From lead generation to job completion and invoicing. Everything you need to run a modern trade business in one place.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>Simple One-Time Pricing</h3>
+                    <p>Pay once, own it forever. No subscriptions, no hidden fees. Add AI assistant and WhatsApp integration as optional add-ons.</p>
+                </div>
             </div>
-            <div className="w-[70px] h-[70px] bg-gradient-to-r from-[#0066FF] to-[#00D9FF] rounded-[18px] flex items-center justify-center text-[2.2rem] mb-6">
-              💼
+        </div>
+    </section>
+
+    <!-- Trades Section -->
+    <section class="trades-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Every Trade</h2>
+                <p>Whether you're a plumber, electrician, builder, or contractor — we have solutions for you</p>
             </div>
-            <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">TradeHub</h3>
-            <p className="text-[#8B92A7] leading-[1.7] mb-4">
-              All-in-one business management for trade contractors. Quotes, jobs, invoicing, payments, and customer management in one platform.
-            </p>
-            <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
-              <li className="flex items-center gap-2">✓ Complete business suite</li>
-              <li className="flex items-center gap-2">✓ Invoicing & payments</li>
-              <li className="flex items-center gap-2">✓ Customer CRM</li>
-              <li className="flex items-center gap-2">✓ Financial reporting</li>
-            </ul>
-            <Link href="/contact" className="block w-full text-center bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-semibold transition-all hover:bg-gray-200">
-              Get Notified
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Value Props */}
-      <section className="py-24 px-[5%] bg-white">
-        <div className="text-center max-w-[800px] mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#0A0E27]">Why Tradespeople Choose FixBlox</h2>
-          <p className="text-xl text-[#8B92A7]">We build powerful tools that help you win more jobs and run your business efficiently</p>
-          </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[1400px] mx-auto">
-          {[
-            { icon: '🎯', title: 'Built for Traders', desc: 'Industry-specific solutions designed by people who understand your business. Each app is tailored to the unique needs of your trade.' },
-            { icon: '⚡', title: 'Complete Solutions', desc: 'From lead generation to job completion and invoicing. Everything you need to run a modern trade business in one place.' },
-            { icon: '💰', title: 'Simple One-Time Pricing', desc: 'Pay once, own it forever. No subscriptions, no hidden fees. Add AI assistant and WhatsApp integration as optional add-ons to your complete customer system.' }
-          ].map((prop, index) => (
-            <div key={index} className="text-center p-8">
-              <div className="w-[90px] h-[90px] bg-gradient-to-r from-[#0066FF] to-[#00D9FF] rounded-full flex items-center justify-center text-[2.5rem] mx-auto mb-6 shadow-[0_10px_30px_rgba(0,102,255,0.3)]">
-                {prop.icon}
+            
+            <div class="trades-grid">
+                <div class="trade-badge">
+                    <div class="trade-icon">🔧</div>
+                    <p>Plumbers</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">⚡</div>
+                    <p>Electricians</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🏗️</div>
+                    <p>Builders</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🛠️</div>
+                    <p>Contractors</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🏠</div>
+                    <p>Renovators</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🌡️</div>
+                    <p>HVAC</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🪟</div>
+                    <p>Glaziers</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🎨</div>
+                    <p>Decorators</p>
+                </div>
             </div>
-              <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">{prop.title}</h3>
-              <p className="text-[#8B92A7] leading-[1.7]">{prop.desc}</p>
-            </div>
-          ))}
         </div>
-      </section>
+    </section>
 
-      {/* How It Works */}
-      <section id="how-it-works" className="py-24 px-[5%] bg-[#F5F7FA]">
-        <div className="text-center max-w-[800px] mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#0A0E27]">How FixBlox Works</h2>
-          <p className="text-xl text-[#8B92A7]">Get started with our platform in three simple steps</p>
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Modernize Your Trade Business?</h2>
+            <p>Start generating more leads and streamline your trade business operations with professional web solutions</p>
+            <a href="/quoteflow" class="btn btn-primary">Start with QuoteFlow</a>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[1400px] mx-auto">
-          {[
-            { num: '1', title: 'Built for Tradesmen', desc: 'Industry-specific solutions created by people who understand your trade. Each tool is crafted to help you quote faster, look more professional, and win more work.' },
-            { num: '2', title: 'Complete Solutions', desc: 'From instant quoting to lead management and client communication — everything you need to run a modern trade business in one place.' },
-            { num: '3', title: 'Grow Your Business', desc: 'Start generating leads, managing jobs, and scaling your operations. All your tools in one powerful platform.' }
-          ].map((step, index) => (
-            <div key={index} className="text-center">
-              <div className="w-[90px] h-[90px] bg-gradient-to-r from-[#0066FF] to-[#00D9FF] rounded-full flex items-center justify-center text-[2.5rem] font-extrabold text-white mx-auto mb-6 shadow-[0_10px_30px_rgba(0,102,255,0.3)]">
-                {step.num}
-          </div>
-              <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">{step.title}</h3>
-              <p className="text-[#8B92A7] leading-[1.7]">{step.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Who It's For */}
-      <section className="py-24 px-[5%] bg-white">
-        <div className="text-center max-w-[800px] mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#0A0E27]">Built for Every Trade</h2>
-          <p className="text-xl text-[#8B92A7]">Whether you&apos;re a plumber, electrician, builder, or contractor — we have solutions for you</p>
-            </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1000px] mx-auto">
-          {[
-            { icon: '🔧', name: 'Plumbers' },
-            { icon: '⚡', name: 'Electricians' },
-            { icon: '🏗️', name: 'Builders' },
-            { icon: '🛠️', name: 'Contractors' },
-            { icon: '🏠', name: 'Renovators' },
-            { icon: '🌡️', name: 'HVAC' },
-            { icon: '🪟', name: 'Glaziers' },
-            { icon: '🎨', name: 'Decorators' }
-          ].map((trade, index) => (
-            <div key={index} className="bg-[#F5F7FA] p-6 rounded-2xl text-center hover:bg-gradient-to-r hover:from-[#0066FF] hover:to-[#00D9FF] hover:text-white transition-all cursor-pointer group">
-              <div className="text-4xl mb-2">{trade.icon}</div>
-              <p className="font-semibold text-[#0A0E27] group-hover:text-white">{trade.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-24 px-[5%] bg-gradient-to-br from-[#0A0E27] to-[#1a1f3a] text-center text-white relative overflow-hidden">
-        <div className="absolute w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(0,217,255,0.2)_0%,transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[pulse_3s_ease-in-out_infinite]"></div>
-        
-        <div className="relative z-10">
-          <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold mb-4">Ready to Modernize Your Trade Business?</h2>
-          <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-[700px] mx-auto">
-            Start generating more leads and streamline your trade business operations with professional web solutions
-          </p>
-          <Link href="/quoteflow" className="inline-block bg-gradient-to-r from-[#0066FF] to-[#00D9FF] text-white px-14 py-5 rounded-full font-semibold text-lg transition-all hover:-translate-y-1 shadow-[0_10px_30px_rgba(0,102,255,0.4)] hover:shadow-[0_15px_40px_rgba(0,102,255,0.5)]">
-            Start with QuoteFlow
-          </Link>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-[#0A0E27] text-white py-16 px-[5%]">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
-          <div>
-            <h3 className="text-[1.8rem] font-extrabold bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent mb-4">
-              FixBlox
-            </h3>
-            <p className="opacity-70 leading-[1.7]">
-              Building powerful web applications for tradespeople. Modern solutions that help you win more jobs and grow your business.
-            </p>
-          </div>
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">Our Apps</h4>
-            <ul className="space-y-2 list-none">
-              <li><Link href="/quoteflow" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">QuoteFlow (Tradespeople)</Link></li>
-              <li><Link href="/contact" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">JobTracker (Soon)</Link></li>
-              <li><Link href="/contact" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">TradeHub (Soon)</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">Company</h4>
-            <ul className="space-y-2 list-none">
-              <li><a href="#how-it-works" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">How It Works</a></li>
-              <li><a href="#apps" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">Our Apps</a></li>
-              <li><Link href="/contact" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">Contact</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">Support</h4>
-            <ul className="space-y-2 list-none">
-              <li><Link href="/contact" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">Get in Touch</Link></li>
-              <li><a href="mailto:info@fixblox.com" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">info@fixblox.com</a></li>
-              <li><a href="tel:+447925990923" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">07925990923</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-white/10 pt-8 text-center opacity-70">
-          <p className="mb-3">&copy; 2025 FixBlox. Web app solutions for tradespeople.</p>
-          <div className="space-x-4">
-            <Link href="/terms" className="text-white/70 hover:text-white transition-colors text-sm">Terms of Service</Link>
-            <Link href="/privacy" className="text-white/70 hover:text-white transition-colors text-sm">Privacy Policy</Link>
-          </div>
-        </div>
-      </footer>
-
-      <style jsx>{`
-        @keyframes pulse {
-          0%, 100% { transform: scale(1); opacity: 0.5; }
-          50% { transform: scale(1.1); opacity: 0.8; }
-        }
-      `}</style>
-    </div>
+    </section>
+</body>
+</html>
+        `
+      }} />
     </>
   )
 }
