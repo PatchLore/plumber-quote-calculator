@@ -124,10 +124,10 @@ export default function HomePage() {
         
         <div className="max-w-[1400px] mx-auto text-center relative z-10 w-full">
           <h1 className="text-5xl md:text-6xl lg:text-[4rem] font-extrabold leading-tight text-white mb-6">
-            Web App Solutions for <span className="bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent">Tradespeople</span>
+            Complete Customer System for <span className="bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent">Tradespeople</span>
             </h1>
           <p className="text-xl md:text-2xl text-white/85 mb-10 max-w-[800px] mx-auto">
-            Professional web applications designed to streamline trade businesses. From instant quotes to job management — built specifically for the trades industry.
+            Professional web applications designed to streamline trade businesses. From instant quotes to AI customer support and WhatsApp integration — built specifically for the trades industry.
           </p>
           
           <div className="flex flex-wrap gap-6 justify-center mb-12">
@@ -182,7 +182,7 @@ export default function HomePage() {
           <p className="text-xl text-[#8B92A7]">Industry-specific solutions designed to help your trade business grow</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-[1600px] mx-auto">
           {/* QuoteFlow - Live */}
           <div className="bg-white p-10 rounded-[20px] border-2 border-[#0066FF] relative overflow-hidden">
             <div className="absolute top-4 right-4 bg-gradient-to-r from-[#0066FF] to-[#00D9FF] text-white px-3 py-1 rounded-full text-xs font-bold">
@@ -203,6 +203,52 @@ export default function HomePage() {
             </ul>
             <Link href="/quoteflow" className="block w-full text-center bg-gradient-to-r from-[#0066FF] to-[#00D9FF] text-white px-6 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 shadow-lg">
               Learn More →
+            </Link>
+          </div>
+
+          {/* AI Customer Assistant - Add-on */}
+          <div className="bg-white p-10 rounded-[20px] border-2 border-[#00D9FF] relative overflow-hidden">
+            <div className="absolute top-4 right-4 bg-gradient-to-r from-[#00D9FF] to-[#0066FF] text-white px-3 py-1 rounded-full text-xs font-bold">
+              ADD-ON
+            </div>
+            <div className="w-[70px] h-[70px] bg-gradient-to-r from-[#00D9FF] to-[#0066FF] rounded-[18px] flex items-center justify-center text-[2.2rem] mb-6">
+              🤖
+            </div>
+            <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">AI Customer Assistant</h3>
+            <p className="text-[#8B92A7] leading-[1.7] mb-4">
+              24/7 chatbot for customer support. Answer questions, schedule appointments, and provide instant help to your customers even when you're busy.
+            </p>
+            <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
+              <li className="flex items-center gap-2">✓ 24/7 customer support</li>
+              <li className="flex items-center gap-2">✓ Instant responses</li>
+              <li className="flex items-center gap-2">✓ Appointment booking</li>
+              <li className="flex items-center gap-2">✓ FAQ automation</li>
+            </ul>
+            <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#00D9FF] to-[#0066FF] text-white px-6 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 shadow-lg">
+              Add to Quote →
+            </Link>
+          </div>
+
+          {/* WhatsApp Integration - Add-on */}
+          <div className="bg-white p-10 rounded-[20px] border-2 border-[#00D9FF] relative overflow-hidden">
+            <div className="absolute top-4 right-4 bg-gradient-to-r from-[#00D9FF] to-[#0066FF] text-white px-3 py-1 rounded-full text-xs font-bold">
+              ADD-ON
+            </div>
+            <div className="w-[70px] h-[70px] bg-gradient-to-r from-[#00D9FF] to-[#0066FF] rounded-[18px] flex items-center justify-center text-[2.2rem] mb-6">
+              💬
+            </div>
+            <h3 className="text-2xl mb-4 text-[#0A0E27] font-bold">WhatsApp Integration</h3>
+            <p className="text-[#8B92A7] leading-[1.7] mb-4">
+              Direct messaging with customers through WhatsApp. Send quotes, updates, and communicate seamlessly with your clients on their preferred platform.
+            </p>
+            <ul className="space-y-2 text-sm text-[#8B92A7] mb-6">
+              <li className="flex items-center gap-2">✓ Direct WhatsApp messaging</li>
+              <li className="flex items-center gap-2">✓ Quote delivery</li>
+              <li className="flex items-center gap-2">✓ Status updates</li>
+              <li className="flex items-center gap-2">✓ Customer notifications</li>
+            </ul>
+            <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#00D9FF] to-[#0066FF] text-white px-6 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 shadow-lg">
+              Add to Quote →
             </Link>
           </div>
           
@@ -265,7 +311,7 @@ export default function HomePage() {
           {[
             { icon: '🎯', title: 'Built for Traders', desc: 'Industry-specific solutions designed by people who understand your business. Each app is tailored to the unique needs of your trade.' },
             { icon: '⚡', title: 'Complete Solutions', desc: 'From lead generation to job completion and invoicing. Everything you need to run a modern trade business in one place.' },
-            { icon: '💰', title: 'Simple One-Time Pricing', desc: 'Pay once, own it forever. No subscriptions, no hidden fees, and full access to your customised web app solution.' }
+            { icon: '💰', title: 'Simple One-Time Pricing', desc: 'Pay once, own it forever. No subscriptions, no hidden fees. Add AI assistant and WhatsApp integration as optional add-ons to your complete customer system.' }
           ].map((prop, index) => (
             <div key={index} className="text-center p-8">
               <div className="w-[90px] h-[90px] bg-gradient-to-r from-[#0066FF] to-[#00D9FF] rounded-full flex items-center justify-center text-[2.5rem] mx-auto mb-6 shadow-[0_10px_30px_rgba(0,102,255,0.3)]">
