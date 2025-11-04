@@ -23,7 +23,7 @@ export default function IndustryInteractive({ title, videoUrl }: { title: string
         onClick={() => posthog.capture('quote_button_clicked', { page: title })} 
         className="inline-block mt-8 px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
       >
-        Get Your Free Quote →
+        Contact Us →
       </Link>
     </div>
   )

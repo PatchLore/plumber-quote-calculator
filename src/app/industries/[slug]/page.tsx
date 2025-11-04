@@ -48,19 +48,21 @@ export default function IndustryPage({ params }: Props) {
       <IndustryInteractive title={title} videoUrl={resolvedVideoUrl} />
 
       {/* Features */}
-      {features?.length ? (
-        <div className="mt-8">
-          <h2 className="text-xl font-semibold mb-3">Why FixBlox</h2>
-          <ul className="grid sm:grid-cols-2 gap-3">
-            {features.map((f, idx) => (
-              <li key={idx} className="flex items-start gap-2 p-3 rounded-lg bg-white border border-transparent hover:border-blue-500 hover:shadow-md transition-all">
-                <span className="text-blue-600">✅</span>
-                <span className="text-gray-800">{f}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
+      <div className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Why FixBlox</h2>
+        <ul className="grid sm:grid-cols-2 gap-3">
+          {features?.map((f, idx) => (
+            <li key={idx} className="flex items-start gap-2 p-3 rounded-lg bg-white border border-transparent hover:border-blue-500 hover:shadow-md transition-all">
+              <span className="text-blue-600">✅</span>
+              <span className="text-gray-800">{f}</span>
+            </li>
+          ))}
+          <li className="flex items-start gap-2 p-3 rounded-lg bg-white border border-transparent hover:border-blue-500 hover:shadow-md transition-all">
+            <span className="text-blue-600">✅</span>
+            <span className="text-gray-800">WhatsApp Integration</span>
+          </li>
+        </ul>
+      </div>
 
       
 
