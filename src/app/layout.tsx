@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@/lib/posthog";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -119,6 +121,7 @@ export default function RootLayout({
       >
         {GA_MEASUREMENT_ID && <GoogleAnalytics GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />}
         {children}
+        <WhatsAppButton />
         {/* Chatbase embed using Next.js Script */}
         <Script
           id="chatbase-config"

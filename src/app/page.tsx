@@ -371,9 +371,10 @@ export default function HomePage() {
 
         .trades-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 20px;
             margin-top: 40px;
+            justify-items: center;
         }
 
         .trade-badge {
@@ -383,11 +384,13 @@ export default function HomePage() {
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
 
         .trade-badge:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 24px rgba(0,102,255,0.15);
+            border-color: #0066FF;
         }
 
         .trade-icon {
@@ -523,7 +526,7 @@ export default function HomePage() {
                         <li>Appointment booking</li>
                         <li>FAQ automation</li>
                     </ul>
-                    <a href="/contact" class="app-cta cta-secondary">Add to Quote →</a>
+                    <a href="/contact" class="app-cta cta-secondary">Contact Us →</a>
                 </div>
 
                 <!-- WhatsApp -->
@@ -538,7 +541,7 @@ export default function HomePage() {
                         <li>Status updates</li>
                         <li>Customer notifications</li>
                     </ul>
-                    <a href="/contact" class="app-cta cta-secondary">Add to Quote →</a>
+                    <a href="/contact" class="app-cta cta-secondary">Contact Us →</a>
                 </div>
             </div>
 
@@ -613,7 +616,7 @@ export default function HomePage() {
                 <p>Whether you're a plumber, electrician, builder, or contractor — we have solutions for you</p>
             </div>
             
-            <div class="trades-grid">
+                <div class="trades-grid">
                 <div class="trade-badge">
                     <div class="trade-icon">🔧</div>
                     <p>Plumbers</p>
@@ -645,6 +648,30 @@ export default function HomePage() {
                 <div class="trade-badge">
                     <div class="trade-icon">🎨</div>
                     <p>Decorators</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🚿</div>
+                    <p>Bathroom Fitters</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🚪</div>
+                    <p>Joiners / Carpenters</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🌳</div>
+                    <p>Landscapers / Gardeners</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🧱</div>
+                    <p>Bricklayers / Masons</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🧹</div>
+                    <p>Cleaners</p>
+                </div>
+                <div class="trade-badge">
+                    <div class="trade-icon">🪜</div>
+                    <p>Roofers</p>
                 </div>
             </div>
         </div>
