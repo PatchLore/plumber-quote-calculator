@@ -471,20 +471,20 @@ export default function HomePage() {
     <section class="stats">
         <div class="stats-grid">
             <div class="stat-item">
-                <h3>1000+</h3>
-                <p>Active Tradespeople</p>
+                <h3>Built for Trades</h3>
+                <p>Across the UK</p>
             </div>
             <div class="stat-item">
                 <h3>24/7</h3>
-                <p>Platform Uptime</p>
+                <p>Always Available</p>
             </div>
             <div class="stat-item">
                 <h3>100%</h3>
-                <p>Cloud-Based</p>
+                <p>Cloud-Powered</p>
             </div>
             <div class="stat-item">
-                <h3>4.9★</h3>
-                <p>User Rating</p>
+                <h3>New</h3>
+                <p>Platform</p>
             </div>
         </div>
     </section>

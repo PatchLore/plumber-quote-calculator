@@ -161,10 +161,10 @@ export default function HomePage() {
       <section className="bg-white py-12 px-[5%] shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
         <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
-            { number: '1000+', label: 'Active Tradespeople' },
-            { number: '24/7', label: 'Platform Uptime' },
-            { number: '100%', label: 'Cloud-Based' },
-            { number: '4.9★', label: 'User Rating' }
+            { number: 'Built for Trades', label: 'Across the UK' },
+            { number: '24/7', label: 'Always Available' },
+            { number: '100%', label: 'Cloud-Powered' },
+            { number: 'New', label: 'Platform' }
           ].map((item, index) => (
             <div key={index}>
               <h3 className="text-[2.5rem] font-extrabold bg-gradient-to-r from-[#0066FF] to-[#00D9FF] bg-clip-text text-transparent mb-2">
