@@ -665,14 +665,7 @@ export default function HomePage() {
                     <div class="trade-icon">🧱</div>
                     <p>Bricklayers / Masons</p>
                 </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🧹</div>
-                    <p>Cleaners</p>
-                </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🪜</div>
-                    <p>Roofers</p>
-                </div>
+                
             </div>
         </div>
     </section>
