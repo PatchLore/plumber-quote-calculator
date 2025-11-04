@@ -371,37 +371,63 @@ export default function HomePage() {
 
         .trades-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
             margin-top: 40px;
-            justify-items: center;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 640px) {
+            .trades-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .trades-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
 
         .trade-badge {
             background: white;
-            padding: 25px 15px;
+            padding: 24px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            height: 100%;
         }
 
         .trade-badge:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 24px rgba(0,102,255,0.15);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
             border-color: #0066FF;
         }
 
         .trade-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 8px;
         }
 
         .trade-badge p {
-            color: #495057;
+            color: #1f2937;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        @media (min-width: 640px) {
+            .trade-badge p {
+                font-size: 1rem;
+            }
         }
 
         /* Final CTA */
@@ -490,7 +516,7 @@ export default function HomePage() {
     </section>
 
     <!-- Apps Section -->
-    <section class="apps-section" id="apps">
+    <section class="apps-section" id="apps" style="scroll-margin-top: 100px;">
         <div class="container">
             <div class="section-header">
                 <h2>Our Web Applications</h2>

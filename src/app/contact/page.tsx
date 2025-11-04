@@ -541,7 +541,6 @@ export default function ContactPage() {
                     <h3>Or Explore on Your Own</h3>
                     <a href="/quoteflow/calculator" class="action-btn">🧮 Try the Calculator</a>
                     <a href="/#apps" class="action-btn">📱 View All Apps</a>
-                    <a href="/pricing" class="action-btn">💰 See Pricing</a>
                 </div>
             </div>
         </div>
