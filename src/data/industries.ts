@@ -88,7 +88,7 @@ export const industries: Industry[] = [
     videoUrl: '/videos/fixblox-demo.mp4',
     keywords: ['decorator website', 'painting leads'],
     features: ['Portfolio ready', 'Quote intake', 'AI assistant'],
-    related: ['renovators', 'cleaners']
+    related: ['renovators']
   },
   {
     slug: 'bathroom-fitters',
@@ -118,7 +118,7 @@ export const industries: Industry[] = [
     videoUrl: '/videos/fixblox-demo.mp4',
     keywords: ['landscaping website', 'gardener leads'],
     features: ['Seasonal CTAs', 'Photo galleries', 'Lead capture'],
-    related: ['bricklayers-masons', 'roofers']
+    related: ['bricklayers-masons']
   },
   {
     slug: 'bricklayers-masons',
@@ -130,26 +130,7 @@ export const industries: Industry[] = [
     features: ['Project gallery', 'Quote intake', 'Mobile-first'],
     related: ['builders', 'landscapers-gardeners']
   },
-  {
-    slug: 'cleaners',
-    title: 'Cleaners',
-    icon: '🧹',
-    description: 'Cleaning business websites with fast booking prompts and recurring service options.',
-    videoUrl: '/videos/fixblox-demo.mp4',
-    keywords: ['cleaning website', 'cleaning quotes'],
-    features: ['Booking prompts', 'Recurring options', 'Lead capture'],
-    related: ['decorators', 'roofers']
-  },
-  {
-    slug: 'roofers',
-    title: 'Roofers',
-    icon: '🪜',
-    description: 'Roofing websites that drive enquiries with trust signals and instant quote flows.',
-    videoUrl: '/videos/fixblox-demo.mp4',
-    keywords: ['roofer website', 'roofing leads', 'roof repair quotes'],
-    features: ['Instant quotes', 'Status updates', 'Photo uploads'],
-    related: ['builders', 'landscapers-gardeners']
-  }
+  
 ];
 
 export function getIndustryBySlug(slug: string): Industry | undefined {
