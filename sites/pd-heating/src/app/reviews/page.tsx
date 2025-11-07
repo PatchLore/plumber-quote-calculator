@@ -1,6 +1,6 @@
 'use client'
 
-export default function ServicesPage() {
+export default function ReviewsPage() {
   return (
     <>
       <div dangerouslySetInnerHTML={{
@@ -10,8 +10,8 @@ export default function ServicesPage() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | PD Heating & Plumbing</title>
-    <meta name="description" content="Professional heating and plumbing services including boiler installation, plumbing repairs, and heating services. Get instant quotes from PD Heating & Plumbing.">
+    <title>Customer Reviews | PD Heating & Plumbing</title>
+    <meta name="description" content="Read real customer reviews for PD Heating & Plumbing. See what our customers say about our professional heating and plumbing services across Surrey.">
     <style>
         * {
             margin: 0;
@@ -121,9 +121,19 @@ export default function ServicesPage() {
         .hero {
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
-            padding: 140px 20px 80px;
+            padding-top: 7rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 100px;
             text-align: center;
-            margin-top: 80px;
+            position: relative;
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding-top: 8rem;
+            }
         }
 
         .hero h1 {
@@ -139,112 +149,148 @@ export default function ServicesPage() {
             margin: 0 auto;
         }
 
-        /* Services Section */
-        .services-section {
+        /* Reviews Section */
+        .reviews-section {
             padding: 80px 20px;
             background: white;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
+        .page-header {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 50px;
         }
 
-        .section-header h1 {
+        @media (min-width: 768px) {
+            .page-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .page-header-content h1 {
             font-size: 2.2rem;
             color: #2d3748;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
-        .section-header p {
+        .page-header-content p {
             font-size: 1.1rem;
             color: #6c757d;
-            max-width: 700px;
-            margin: 0 auto;
         }
 
-        /* Services Grid */
-        .services-grid {
+        .checkatrade-btn {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 16px 24px;
+            text-decoration: none;
+            color: #1E3A8A;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .checkatrade-btn:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #1E3A8A;
+            transform: translateY(-2px);
+        }
+
+        /* Reviews Grid */
+        .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+            grid-template-columns: 1fr;
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .service-card {
+        @media (min-width: 640px) {
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .reviews-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .review-card {
             background: white;
             border-radius: 16px;
-            padding: 40px 30px;
+            padding: 30px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.07);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             height: 100%;
         }
 
-        .service-card:hover {
+        .review-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 24px rgba(0,0,0,0.12);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
+        .review-rating {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #10b981;
+            margin-bottom: 15px;
             line-height: 1;
-            height: 3rem;
         }
 
-        .service-card h3 {
-            font-size: 1.6rem;
+        .review-title {
+            font-size: 1.25rem;
             color: #2d3748;
-            margin-bottom: 15px;
-            font-weight: 700;
+            margin-bottom: 10px;
+            font-weight: 600;
             line-height: 1.3;
         }
 
-        .service-card p {
+        .review-date {
             color: #6c757d;
-            margin-bottom: 25px;
+            font-size: 0.875rem;
+            margin-bottom: 15px;
+        }
+
+        .review-body {
+            color: #495057;
             line-height: 1.7;
+            margin-bottom: 15px;
             flex-grow: 1;
         }
 
-        .service-price {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            margin-bottom: 25px;
+        .review-meta {
+            color: #6c757d;
+            font-size: 0.875rem;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
         }
 
-        .price-current {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1E3A8A;
-            line-height: 1;
+        .review-meta p {
+            margin-bottom: 5px;
         }
 
-        .service-cta {
-            padding: 12px 24px;
-            background: #1E3A8A;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-align: center;
-            display: block;
-            margin-top: auto;
+        .review-meta p:last-child {
+            margin-bottom: 0;
         }
 
-        .service-cta:hover {
-            background: #1e40af;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+        .review-reply {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+            font-style: italic;
+            color: #6c757d;
+            font-size: 0.9rem;
         }
 
         /* Footer */
@@ -311,46 +357,17 @@ export default function ServicesPage() {
             .hero h1 {
                 font-size: 2rem;
             }
-            
-            .services-section {
+
+            .reviews-section {
                 padding: 60px 20px;
             }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
 
-            .section-header {
-                margin-bottom: 40px;
-            }
-
-            .section-header h1 {
+            .page-header-content h1 {
                 font-size: 1.8rem;
             }
 
-            .service-card {
-                padding: 30px 25px;
-            }
-
-            .service-icon {
-                font-size: 2.5rem;
-                height: 2.5rem;
-                margin-bottom: 15px;
-            }
-
-            .service-card h3 {
-                font-size: 1.4rem;
-                margin-bottom: 12px;
-            }
-
-            .service-card p {
-                margin-bottom: 20px;
-                font-size: 0.95rem;
-            }
-
-            .price-current {
-                font-size: 1.75rem;
+            .review-card {
+                padding: 25px;
             }
         }
     </style>
@@ -363,8 +380,8 @@ export default function ServicesPage() {
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/services" class="active">Services</a></li>
-                    <li><a href="/reviews">Reviews</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/reviews" class="active">Reviews</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
@@ -375,51 +392,95 @@ export default function ServicesPage() {
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Our Services</h1>
-            <p>We offer most plumbing and heating services, from boiler fitting and maintenance to bathroom design and installation.</p>
+            <h1>Customer Reviews</h1>
+            <p>Real feedback from customers across Surrey and surrounding areas.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section">
+    <!-- Reviews Section -->
+    <section class="reviews-section">
         <div class="container">
-            <div class="section-header">
-                <h1>Professional Heating & Plumbing Services</h1>
-                <p>Comprehensive solutions for all your heating and plumbing needs</p>
+            <div class="page-header">
+                <div class="page-header-content">
+                    <h1>Customer Reviews</h1>
+                    <p>Real feedback from customers across Surrey and surrounding areas.</p>
+                </div>
+                <a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer" class="checkatrade-btn">
+                    ⭐ View Reviews on Checkatrade
+                </a>
             </div>
 
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <span class="service-icon">🔥</span>
-                    <h3>Gas Boiler Installation and Servicing</h3>
-                    <p>Professional gas boiler installation, servicing, and repairs. Expert engineers ensure your heating system runs safely and efficiently.</p>
-                    <div class="service-price">
-                        <span class="price-current">£0.00</span>
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-rating">10</div>
+                    <h3 class="review-title">Good communication. Swift service.</h3>
+                    <p class="review-date">Posted 14 October</p>
+                    <p class="review-body">Great quick and friendly service. Would recommend.</p>
+                    <div class="review-meta">
+                        <p>Job location: RH6</p>
+                        <p>Reviewer: Mobeen T</p>
                     </div>
-                    <a href="/quoteflow/calculator" class="service-cta">Get a Quote</a>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <span class="service-icon">🔧</span>
-                    <h3>Plumbing Services</h3>
-                    <p>Complete plumbing solutions including repairs, installations, and maintenance. From leak fixes to full bathroom installations.</p>
-                    <div class="service-price">
-                        <span class="price-current">£0.00</span>
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-rating">10</div>
+                    <h3 class="review-title">Helpful and reliable</h3>
+                    <p class="review-date">Posted 06 October</p>
+                    <p class="review-body">In two visits, Phil fitted a stop cock and did an assessment of my boiler. He was really helpful, explained everything that needed doing and was reliable.</p>
+                    <div class="review-meta">
+                        <p>Job location: RH8</p>
                     </div>
-                    <a href="/quoteflow/calculator" class="service-cta">Get a Quote</a>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <span class="service-icon">❄️</span>
-                    <h3>Heating Installation</h3>
-                    <p>Full heating system installation and upgrades. Radiators, underfloor heating, and complete heating solutions for your home.</p>
-                    <div class="service-price">
-                        <span class="price-current">£0.00</span>
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-rating">10</div>
+                    <h3 class="review-title">Professional and efficient response</h3>
+                    <p class="review-date">Posted 03 September</p>
+                    <p class="review-body">Excellent service as always - quick to respond to call out requests for emergencies. Would highly recommend Phil for any plumbing emergencies. We had also used Phil for a previous call-out where several plumbers failed to explore a major leak but he was able to find it and fix it with minimal hassle.</p>
+                    <div class="review-meta">
+                        <p>Verified reviewer</p>
+                        <p>Job location: RH2</p>
                     </div>
-                    <a href="/quoteflow/calculator" class="service-cta">Get a Quote</a>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-rating">10</div>
+                    <h3 class="review-title">Boiler leak repair</h3>
+                    <p class="review-date">Posted 02 September</p>
+                    <p class="review-body">Phil came round to fix a leak from my boiler. His quote was reasonable, which is why I went with him. When he arrived for the job, he was very nice and professional. Gave great advice and fixed the problem in no time. I'm glad I followed my instinct and went with him. Will be using him again and would definitely recommend him.</p>
+                    <div class="review-meta">
+                        <p>Job location: RH1</p>
+                    </div>
+                    <div class="review-reply">
+                        "Thank you for your kind words. I look forward to assisting you again in the future."
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-rating">10</div>
+                    <h3 class="review-title">Bathroom fitting</h3>
+                    <p class="review-date">Posted 18 May</p>
+                    <p class="review-body">Phil was recommended to us by friends and recently fitted our new bathroom. Phil is so friendly and professional and his workmanship is excellent. We're very pleased with our new bathroom and would highly recommend Phil.</p>
+                    <div class="review-meta">
+                        <p>Verified reviewer</p>
+                        <p>Job location: RH2</p>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-rating">10</div>
+                    <h3 class="review-title">Gas boiler install</h3>
+                    <p class="review-date">Posted 26 April</p>
+                    <p class="review-body">I was looking for someone to install a boiler as my original installer had health issues. Phil came round and quoted very reasonably and on impression I decided to go with him. I'm so glad I did, I read his reviews and his work and tidyness was great, very impressed with the way he communicated and after finishing a very long day he left the job in a very clean and tidy way. I will definitely be using Phil again and would 100% recommend him.</p>
+                    <div class="review-meta">
+                        <p>Verified reviewer</p>
+                    </div>
                 </div>
             </div>
         </div>
