@@ -21,7 +21,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* Accounts for fixed header height */
+  scroll-padding-top: 100px; /* Accounts for fixed header height (70px desktop) */
 }
 
 body {
@@ -32,18 +32,22 @@ body {
 
 /* Scroll margin for sections with IDs to prevent header overlap */
 section[id],
-div[id] {
+div[id],
+h1[id],
+h2[id] {
   scroll-margin-top: 100px;
 }
 
 /* Responsive scroll padding adjustments */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   html {
-    scroll-padding-top: 80px; /* Smaller header on mobile */
+    scroll-padding-top: 80px; /* Smaller header on mobile (64px) */
   }
   
   section[id],
-  div[id] {
+  div[id],
+  h1[id],
+  h2[id] {
     scroll-margin-top: 80px;
   }
 }

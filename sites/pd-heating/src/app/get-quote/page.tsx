@@ -19,6 +19,17 @@ export default function GetQuotePage() {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        @media (max-width: 640px) {
+            html {
+                scroll-padding-top: 80px;
+            }
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
@@ -32,6 +43,12 @@ export default function GetQuotePage() {
             padding: 0 20px;
         }
 
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 16px;
+            }
+        }
+
         /* Header/Navigation */
         .header {
             position: fixed;
@@ -40,18 +57,34 @@ export default function GetQuotePage() {
             right: 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 20px 0;
+            padding: 16px 0;
             z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            height: 70px;
+        }
+
+        @media (max-width: 640px) {
+            .header {
+                padding: 12px 0;
+                height: 64px;
+            }
         }
 
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 100%;
+        }
+
+        @media (max-width: 640px) {
+            .header-content {
+                padding: 0 16px;
+            }
         }
 
         .logo {
@@ -60,6 +93,18 @@ export default function GetQuotePage() {
             color: #1E3A8A;
             text-decoration: none;
             transition: all 0.3s ease;
+        }
+
+        @media (max-width: 640px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .logo {
+                font-size: 1.3rem;
+            }
         }
 
         .logo:hover {
@@ -115,38 +160,79 @@ export default function GetQuotePage() {
             .nav-links {
                 display: none;
             }
+
+            .nav-cta {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
         }
 
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
-            padding-top: 7rem;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 80px;
+            padding-top: 100px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 60px;
             text-align: center;
             position: relative;
             margin-top: 0;
+            scroll-margin-top: 100px;
+        }
+
+        @media (min-width: 640px) {
+            .hero {
+                padding-top: 7rem;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 80px;
+                scroll-margin-top: 7rem;
+            }
         }
 
         @media (min-width: 768px) {
             .hero {
                 padding-top: 8rem;
+                scroll-margin-top: 8rem;
             }
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 16px;
             font-weight: 700;
+            line-height: 1.2;
+            scroll-margin-top: 100px;
+        }
+
+        @media (min-width: 640px) {
+            .hero h1 {
+                font-size: 2.8rem;
+                margin-bottom: 20px;
+                scroll-margin-top: 7rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 {
+                scroll-margin-top: 8rem;
+            }
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             opacity: 0.95;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 24px;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 640px) {
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 0;
+            }
         }
 
         /* Quote Form Section */
@@ -249,8 +335,14 @@ export default function GetQuotePage() {
         .footer {
             background: #2d3748;
             color: white;
-            padding: 40px 20px;
+            padding: 40px 16px;
             text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .footer {
+                padding: 40px 20px;
+            }
         }
 
         .footer-content {
@@ -305,11 +397,17 @@ export default function GetQuotePage() {
             fill: currentColor;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        @media (max-width: 640px) {
+            .quote-section {
+                padding: 40px 16px;
             }
 
+            .form-card {
+                padding: 24px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
             .quote-section {
                 padding: 60px 20px;
             }
@@ -338,9 +436,9 @@ export default function GetQuotePage() {
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="quote">
         <div class="container">
-            <h1>Get a Fast Quote</h1>
+            <h1 id="quote-heading">Get a Fast Quote</h1>
             <p>Send us a few details and we'll respond within 1 hour.</p>
         </div>
     </section>
@@ -448,4 +546,5 @@ export default function GetQuotePage() {
     </>
   )
 }
+
 
