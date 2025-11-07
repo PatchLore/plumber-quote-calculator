@@ -155,38 +155,16 @@ export default function ReviewsPage() {
             background: white;
         }
 
-        .page-header {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        @media (min-width: 768px) {
-            .page-header {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-            }
-        }
-
-        .page-header-content h1 {
-            font-size: 2.2rem;
-            color: #2d3748;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .page-header-content p {
-            font-size: 1.1rem;
-            color: #6c757d;
+        .checkatrade-cta-wrapper {
+            text-align: center;
+            margin: 50px 0 60px;
         }
 
         .checkatrade-btn {
             background: white;
             border: 2px solid #e9ecef;
             border-radius: 12px;
-            padding: 16px 24px;
+            padding: 16px 32px;
             text-decoration: none;
             color: #1E3A8A;
             font-weight: 600;
@@ -362,8 +340,8 @@ export default function ReviewsPage() {
                 padding: 60px 20px;
             }
 
-            .page-header-content h1 {
-                font-size: 1.8rem;
+            .checkatrade-cta-wrapper {
+                margin: 40px 0 50px;
             }
 
             .review-card {
@@ -400,11 +378,7 @@ export default function ReviewsPage() {
     <!-- Reviews Section -->
     <section class="reviews-section">
         <div class="container">
-            <div class="page-header">
-                <div class="page-header-content">
-                    <h1>Customer Reviews</h1>
-                    <p>Real feedback from customers across Surrey and surrounding areas.</p>
-                </div>
+            <div class="checkatrade-cta-wrapper">
                 <a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer" class="checkatrade-btn">
                     ⭐ View Reviews on Checkatrade
                 </a>
@@ -513,9 +487,6 @@ export default function ReviewsPage() {
             </div>
             <p>&copy; 2025 PD Heating & Plumbing. All rights reserved.</p>
             <p>Powered by <a href="https://www.fixblox.com" target="_blank" rel="noopener noreferrer">FixBlox</a></p>
-            <p style="margin-top: 15px;">
-                <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 600;">📱 WhatsApp: 07739 120349</a>
-            </p>
         </div>
     </footer>
 </body>
