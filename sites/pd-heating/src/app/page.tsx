@@ -125,9 +125,19 @@ export default function HomePage() {
         .hero {
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
-            padding: 120px 20px 80px;
+            padding-top: 7rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 80px;
             text-align: center;
-            margin-top: 80px;
+            position: relative;
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding-top: 8rem;
+            }
         }
 
         .hero h1 {
@@ -483,35 +493,193 @@ export default function HomePage() {
             }
         }
 
-        /* Reviews Section */
-        .reviews-section {
+        /* Services Preview Section */
+        .services-preview-section {
             background: white;
             padding: 80px 20px;
-            text-align: center;
         }
 
-        .reviews-section h2 {
-            font-size: 2.2rem;
+        .services-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-preview-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-preview-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .service-preview-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+            line-height: 1;
+            height: 3rem;
+        }
+
+        .service-preview-card h3 {
+            font-size: 1.6rem;
             color: #2d3748;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.3;
         }
 
-        .reviews-link {
-            display: inline-block;
-            padding: 16px 32px;
+        .service-preview-card p {
+            color: #6c757d;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .service-preview-cta {
+            padding: 12px 24px;
             background: #1E3A8A;
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 1.1rem;
             transition: all 0.3s ease;
+            text-align: center;
+            display: block;
+            margin-top: auto;
         }
 
-        .reviews-link:hover {
+        .service-preview-cta:hover {
             background: #1e40af;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: #f8f9fa;
+            padding: 80px 20px;
+        }
+
+        .reviews-preview-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        @media (min-width: 640px) {
+            .reviews-preview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .review-preview-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .review-preview-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .review-preview-rating {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #10b981;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .review-preview-title {
+            font-size: 1.25rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .review-preview-date {
+            color: #6c757d;
+            font-size: 0.875rem;
+            margin-bottom: 15px;
+        }
+
+        .review-preview-body {
+            color: #495057;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .review-preview-meta {
+            color: #6c757d;
+            font-size: 0.875rem;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .reviews-cta-wrapper {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .reviews-cta-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1E3A8A;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .reviews-cta-btn:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        .checkatrade-cta {
+            display: inline-block;
+            padding: 16px 32px;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1E3A8A;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .checkatrade-cta:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #1E3A8A;
+            transform: translateY(-2px);
         }
 
         /* QuoteFlow Section */
@@ -594,37 +762,47 @@ export default function HomePage() {
             fill: currentColor;
         }
 
-        /* Final CTA */
-        .final-cta {
-            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-
-        .final-cta p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
 
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
             
-            .apps-grid-primary,
-            .apps-grid-secondary {
+            .services-preview-section,
+            .reviews-section {
+                padding: 60px 20px;
+            }
+
+            .services-preview-grid {
                 grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .service-preview-card {
+                padding: 30px 25px;
+            }
+
+            .service-preview-icon {
+                font-size: 2.5rem;
+                height: 2.5rem;
+                margin-bottom: 15px;
+            }
+
+            .service-preview-card h3 {
+                font-size: 1.4rem;
+                margin-bottom: 12px;
             }
 
             .section-header h2 {
                 font-size: 1.8rem;
+            }
+
+            .reviews-preview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .review-preview-card {
+                padding: 25px;
             }
         }
     </style>
@@ -659,32 +837,80 @@ export default function HomePage() {
         </div>
     </section>
 
-    <!-- QuoteFlow Section -->
-    <section class="quoteflow-section">
+    <!-- Services Preview Section -->
+    <section class="services-preview-section">
         <div class="container">
-            <h2>Get an Instant Quote</h2>
-            <p>Use our instant quote calculator to get a transparent price for your heating and plumbing needs. No hidden fees, no surprises.</p>
-            <a href="/quoteflow/calculator" class="btn btn-primary">Try the Calculator</a>
+            <div class="section-header">
+                <h2>Our Main Services</h2>
+                <p>Professional heating and plumbing work across Surrey and surrounding areas.</p>
+            </div>
+
+            <div class="services-preview-grid">
+                <!-- Service 1 -->
+                <div class="service-preview-card">
+                    <span class="service-preview-icon">🔥</span>
+                    <h3>Gas Boiler Installation & Servicing</h3>
+                    <p>Professional gas boiler installation, servicing, and repairs. Expert engineers ensure your heating system runs safely and efficiently.</p>
+                    <a href="/services" class="service-preview-cta">Learn More</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-preview-card">
+                    <span class="service-preview-icon">🔧</span>
+                    <h3>Plumbing Repairs & General Plumbing</h3>
+                    <p>Complete plumbing solutions including repairs, installations, and maintenance. From leak fixes to full bathroom installations.</p>
+                    <a href="/services" class="service-preview-cta">Learn More</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-preview-card">
+                    <span class="service-preview-icon">❄️</span>
+                    <h3>Heating Installation & Upgrades</h3>
+                    <p>Full heating system installation and upgrades. Radiators, underfloor heating, and complete heating solutions for your home.</p>
+                    <a href="/services" class="service-preview-cta">Learn More</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Reviews Section -->
     <section class="reviews-section">
         <div class="container">
-            <h2>Read Our Reviews</h2>
-            <p style="margin-bottom: 30px; color: #6c757d;">See what our customers say about PD Heating & Plumbing</p>
-            <a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer" class="reviews-link">View Our Checkatrade Reviews →</a>
-        </div>
-    </section>
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real feedback from customers across Surrey and surrounding areas.</p>
+            </div>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Need Professional Heating & Plumbing Services?</h2>
-            <p>Get an instant quote or message us on WhatsApp for fast, reliable service</p>
-            <div class="hero-cta">
-                <a href="/quoteflow/calculator" class="btn btn-primary">Get an Instant Quote</a>
-                <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Message on WhatsApp</a>
+            <div class="reviews-preview-grid">
+                <!-- Featured Review 1 -->
+                <div class="review-preview-card">
+                    <div class="review-preview-rating">10</div>
+                    <h3 class="review-preview-title">Professional and efficient response</h3>
+                    <p class="review-preview-date">Posted 03 September</p>
+                    <p class="review-preview-body">Excellent service as always - quick to respond to call out requests for emergencies. Would highly recommend Phil for any plumbing emergencies.</p>
+                    <div class="review-preview-meta">
+                        <p>Verified reviewer • Job location: RH2</p>
+                    </div>
+                </div>
+
+                <!-- Featured Review 2 -->
+                <div class="review-preview-card">
+                    <div class="review-preview-rating">10</div>
+                    <h3 class="review-preview-title">Gas boiler install</h3>
+                    <p class="review-preview-date">Posted 26 April</p>
+                    <p class="review-preview-body">I'm so glad I did, I read his reviews and his work and tidyness was great, very impressed with the way he communicated and after finishing a very long day he left the job in a very clean and tidy way.</p>
+                    <div class="review-preview-meta">
+                        <p>Verified reviewer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-cta-wrapper">
+                <a href="/reviews" class="reviews-cta-btn">View All Reviews</a>
+                <br>
+                <a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer" class="checkatrade-cta">
+                    ⭐ View Reviews on Checkatrade
+                </a>
             </div>
         </div>
     </section>
@@ -716,9 +942,6 @@ export default function HomePage() {
             </div>
             <p>&copy; 2025 PD Heating & Plumbing. All rights reserved.</p>
             <p>Powered by <a href="https://www.fixblox.com" target="_blank" rel="noopener noreferrer">FixBlox</a></p>
-            <p style="margin-top: 15px;">
-                <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 600;">📱 WhatsApp: 07739 120349</a>
-            </p>
         </div>
     </footer>
 </body>
