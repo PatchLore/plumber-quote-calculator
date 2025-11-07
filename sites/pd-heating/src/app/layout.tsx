@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "@/lib/posthog";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
 import WhatsAppButton from "@/components/WhatsAppButton";
