@@ -206,15 +206,16 @@ export default function ReviewsPage() {
             border-radius: 16px;
             padding: 30px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.07);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             display: flex;
             flex-direction: column;
             height: 100%;
         }
 
         .review-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            background: #f9fafb;
         }
 
         .review-rating {
