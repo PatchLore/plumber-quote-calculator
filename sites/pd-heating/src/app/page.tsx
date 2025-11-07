@@ -19,6 +19,17 @@ export default function HomePage() {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        @media (max-width: 640px) {
+            html {
+                scroll-padding-top: 80px;
+            }
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
@@ -50,13 +61,13 @@ export default function HomePage() {
             z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            min-height: 70px;
+            height: 70px;
         }
 
         @media (max-width: 640px) {
             .header {
                 padding: 12px 0;
-                min-height: 64px;
+                height: 64px;
             }
         }
 
