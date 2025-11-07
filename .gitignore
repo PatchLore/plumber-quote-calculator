@@ -65,3 +65,9 @@ Thumbs.db
 
 # Large documentation files
 *.htm
+
+# Prevent accidental large commits from demo sites
+sites/*/.next/
+sites/*/node_modules/
+sites/*/.vercel/
+sites/*/tsconfig.tsbuildinfo
