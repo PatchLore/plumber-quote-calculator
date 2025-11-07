@@ -363,7 +363,7 @@ export default function ReviewsPage() {
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="/quoteflow/calculator" class="nav-cta">Get Quote</a>
+            <a href="/get-quote" class="nav-cta">Get Quote</a>
         </div>
     </header>
 

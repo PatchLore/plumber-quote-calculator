@@ -820,7 +820,7 @@ export default function HomePage() {
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="/quoteflow/calculator" class="nav-cta">Get Quote</a>
+            <a href="/get-quote" class="nav-cta">Get Quote</a>
         </div>
     </header>
 
@@ -831,7 +831,7 @@ export default function HomePage() {
             <p>Fast, reliable and affordable plumbing with instant online quotes.</p>
             
             <div class="hero-cta">
-                <a href="/quoteflow/calculator" class="btn btn-primary">Get an Instant Quote</a>
+                <a href="/get-quote" class="btn btn-primary">Get an Instant Quote</a>
                 <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Message on WhatsApp</a>
             </div>
         </div>

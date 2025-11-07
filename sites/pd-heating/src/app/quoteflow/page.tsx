@@ -21,10 +21,10 @@ export default function QuoteFlowLandingPage() {
         </Link>
         <ul className="hidden md:flex gap-10 list-none">
           <li><Link href="/" className="text-[#0A0E27] no-underline font-medium hover:after:w-full relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#1E3A8A] after:transition-all">Home</Link></li>
-          <li><Link href="/quoteflow" className="text-[#1E3A8A] no-underline font-semibold">Get a Quote</Link></li>
+          <li><Link href="/get-quote" className="text-[#1E3A8A] no-underline font-semibold">Get a Quote</Link></li>
           <li><Link href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" className="text-[#0A0E27] no-underline font-medium hover:after:w-full relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#1E3A8A] after:transition-all">Contact</Link></li>
         </ul>
-        <Link href="/quoteflow/calculator" className="bg-[#1E3A8A] text-white px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 hover:bg-[#1e40af] shadow-[0_4px_15px_rgba(30,58,138,0.3)] hover:shadow-[0_6px_25px_rgba(30,58,138,0.4)]">
+        <Link href="/get-quote" className="bg-[#1E3A8A] text-white px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-0.5 hover:bg-[#1e40af] shadow-[0_4px_15px_rgba(30,58,138,0.3)] hover:shadow-[0_6px_25px_rgba(30,58,138,0.4)]">
           Get Instant Quote
         </Link>
       </nav>
@@ -43,7 +43,7 @@ export default function QuoteFlowLandingPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Link href="/quoteflow/calculator" className="bg-white text-[#1E3A8A] px-10 py-4 rounded-full font-semibold text-lg transition-all hover:-translate-y-1 shadow-[0_10px_30px_rgba(255,255,255,0.3)] hover:shadow-[0_15px_40px_rgba(255,255,255,0.4)] text-center">
+              <Link href="/get-quote" className="bg-white text-[#1E3A8A] px-10 py-4 rounded-full font-semibold text-lg transition-all hover:-translate-y-1 shadow-[0_10px_30px_rgba(255,255,255,0.3)] hover:shadow-[0_15px_40px_rgba(255,255,255,0.4)] text-center">
                 Get an Instant Quote
             </Link>
               <Link href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white px-10 py-4 rounded-full border-2 border-white font-semibold text-lg transition-all hover:bg-white hover:text-[#1E3A8A] text-center">
@@ -175,7 +175,7 @@ export default function QuoteFlowLandingPage() {
             Get an instant quote for your heating and plumbing needs, or message us on WhatsApp
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/quoteflow/calculator" className="inline-block bg-white text-[#1E3A8A] px-12 py-5 rounded-full font-semibold text-lg transition-all hover:-translate-y-1 shadow-[0_10px_30px_rgba(255,255,255,0.3)]">
+            <Link href="/get-quote" className="inline-block bg-white text-[#1E3A8A] px-12 py-5 rounded-full font-semibold text-lg transition-all hover:-translate-y-1 shadow-[0_10px_30px_rgba(255,255,255,0.3)]">
               Get an Instant Quote
             </Link>
             <Link href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" className="inline-block bg-transparent text-white px-12 py-5 rounded-full border-2 border-white font-semibold text-lg transition-all hover:bg-white hover:text-[#1E3A8A]">
@@ -199,7 +199,7 @@ export default function QuoteFlowLandingPage() {
           <div>
             <h4 className="mb-4 text-lg font-semibold">Services</h4>
             <ul className="space-y-2 list-none">
-              <li><Link href="/quoteflow/calculator" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">Get a Quote</Link></li>
+              <li><Link href="/get-quote" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">Get a Quote</Link></li>
               <li><a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">Reviews</a></li>
               <li><Link href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" className="text-white/70 no-underline block transition-all hover:text-white hover:pl-1">Contact</Link></li>
             </ul>

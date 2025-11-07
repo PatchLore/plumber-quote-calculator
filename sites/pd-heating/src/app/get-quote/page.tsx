@@ -1,6 +1,6 @@
 'use client'
 
-export default function ServicesPage() {
+export default function GetQuotePage() {
   return (
     <>
       <div dangerouslySetInnerHTML={{
@@ -10,8 +10,8 @@ export default function ServicesPage() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | PD Heating & Plumbing</title>
-    <meta name="description" content="Professional heating and plumbing services including boiler installation, plumbing repairs, and heating services. Get instant quotes from PD Heating & Plumbing.">
+    <title>Get a Fast Quote | PD Heating & Plumbing</title>
+    <meta name="description" content="Get a fast quote for your heating and plumbing needs. Send us a few details and we'll respond within 1 hour.">
     <style>
         * {
             margin: 0;
@@ -121,9 +121,19 @@ export default function ServicesPage() {
         .hero {
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
-            padding: 140px 20px 80px;
+            padding-top: 7rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 80px;
             text-align: center;
-            margin-top: 80px;
+            position: relative;
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding-top: 8rem;
+            }
         }
 
         .hero h1 {
@@ -139,112 +149,100 @@ export default function ServicesPage() {
             margin: 0 auto;
         }
 
-        /* Services Section */
-        .services-section {
+        /* Quote Form Section */
+        .quote-section {
             padding: 80px 20px;
             background: white;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h1 {
-            font-size: 2.2rem;
-            color: #2d3748;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: #6c757d;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
+        .form-card {
             background: white;
             border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+            padding: 50px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-            line-height: 1;
-            height: 3rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.6rem;
+        .form-card h2 {
+            font-size: 1.8rem;
             color: #2d3748;
-            margin-bottom: 15px;
-            font-weight: 700;
-            line-height: 1.3;
+            margin-bottom: 10px;
+            margin-top: 0;
         }
 
-        .service-card p {
+        .form-card .subtitle {
             color: #6c757d;
-            margin-bottom: 25px;
-            line-height: 1.7;
-            flex-grow: 1;
+            margin-bottom: 35px;
+            font-size: 1rem;
         }
 
-        .service-price {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
+        .form-group {
             margin-bottom: 25px;
         }
 
-        .price-current {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1E3A8A;
-            line-height: 1;
-        }
-
-        .service-cta {
-            padding: 12px 24px;
-            background: #1E3A8A;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-align: center;
+        .form-group label {
             display: block;
-            margin-top: auto;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
-        .service-cta:hover {
-            background: #1e40af;
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1E3A8A;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        .response-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #d4edda;
+            color: #155724;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         /* Footer */
@@ -311,46 +309,13 @@ export default function ServicesPage() {
             .hero h1 {
                 font-size: 2rem;
             }
-            
-            .services-section {
+
+            .quote-section {
                 padding: 60px 20px;
             }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
 
-            .section-header {
-                margin-bottom: 40px;
-            }
-
-            .section-header h1 {
-                font-size: 1.8rem;
-            }
-
-            .service-card {
+            .form-card {
                 padding: 30px 25px;
-            }
-
-            .service-icon {
-                font-size: 2.5rem;
-                height: 2.5rem;
-                margin-bottom: 15px;
-            }
-
-            .service-card h3 {
-                font-size: 1.4rem;
-                margin-bottom: 12px;
-            }
-
-            .service-card p {
-                margin-bottom: 20px;
-                font-size: 0.95rem;
-            }
-
-            .price-current {
-                font-size: 1.75rem;
             }
         }
     </style>
@@ -363,7 +328,7 @@ export default function ServicesPage() {
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/services" class="active">Services</a></li>
+                    <li><a href="/services">Services</a></li>
                     <li><a href="/reviews">Reviews</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
@@ -375,43 +340,74 @@ export default function ServicesPage() {
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Our Services</h1>
-            <p>We offer most plumbing and heating services, from boiler fitting and maintenance to bathroom design and installation.</p>
+            <h1>Get a Fast Quote</h1>
+            <p>Send us a few details and we'll respond within 1 hour.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section">
+    <!-- Quote Form Section -->
+    <section class="quote-section">
         <div class="container">
-            <div class="section-header">
-                <h1>Professional Heating & Plumbing Services</h1>
-                <p>Comprehensive solutions for all your heating and plumbing needs</p>
-            </div>
-
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <span class="service-icon">🔥</span>
-                    <h3>Gas Boiler Installation and Servicing</h3>
-                    <p>Professional gas boiler installation, servicing, and repairs. Expert engineers ensure your heating system runs safely and efficiently.</p>
-                    <a href="/get-quote" class="service-cta">Get a Quote</a>
+            <div class="form-card">
+                <div class="response-badge">
+                    ⚡ Quick Response Times
                 </div>
+                <h2>Request Your Quote</h2>
+                <p class="subtitle">Fill out the form below and we'll get back to you within 1 hour</p>
 
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <span class="service-icon">🔧</span>
-                    <h3>Plumbing Services</h3>
-                    <p>Complete plumbing solutions including repairs, installations, and maintenance. From leak fixes to full bathroom installations.</p>
-                    <a href="/get-quote" class="service-cta">Get a Quote</a>
-                </div>
+                <form action="/submit-quote" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
 
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <span class="service-icon">❄️</span>
-                    <h3>Heating Installation</h3>
-                    <p>Full heating system installation and upgrades. Radiators, underfloor heating, and complete heating solutions for your home.</p>
-                    <a href="/get-quote" class="service-cta">Get a Quote</a>
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="07739 120349">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode *</label>
+                        <input type="text" id="postcode" name="postcode" required placeholder="RH1 1AA">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">What service do you need? *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Choose a service...</option>
+                            <option value="boiler-repair">Boiler Repair</option>
+                            <option value="boiler-installation">Boiler Installation</option>
+                            <option value="boiler-service">Boiler Service</option>
+                            <option value="plumbing-repair">Plumbing Repairs</option>
+                            <option value="heating-service">Heating Service</option>
+                            <option value="bathroom-installation">Bathroom Installation</option>
+                            <option value="emergency">Emergency Call Out</option>
+                            <option value="other">Other Service</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">When do you need this? *</label>
+                        <select id="urgency" name="urgency" required>
+                            <option value="">Select urgency...</option>
+                            <option value="standard">Standard (1-3 days)</option>
+                            <option value="same-day">Same Day</option>
+                            <option value="emergency">Emergency</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell us about your job *</label>
+                        <textarea id="message" name="message" required placeholder="Please describe your heating or plumbing issue and any specific requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Get My Quote</button>
+                </form>
             </div>
         </div>
     </section>
@@ -443,9 +439,6 @@ export default function ServicesPage() {
             </div>
             <p>&copy; 2025 PD Heating & Plumbing. All rights reserved.</p>
             <p>Powered by <a href="https://www.fixblox.com" target="_blank" rel="noopener noreferrer">FixBlox</a></p>
-            <p style="margin-top: 15px;">
-                <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 600;">📱 WhatsApp: 07739 120349</a>
-            </p>
         </div>
     </footer>
 </body>

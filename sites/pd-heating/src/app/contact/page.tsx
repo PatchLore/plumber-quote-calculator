@@ -460,7 +460,7 @@ export default function ContactPage() {
                     <li><a href="/contact" class="active">Contact</a></li>
                 </ul>
             </nav>
-            <a href="/quoteflow/calculator" class="nav-cta">Get Quote</a>
+            <a href="/get-quote" class="nav-cta">Get Quote</a>
         </div>
     </header>
 
@@ -582,7 +582,7 @@ export default function ContactPage() {
                 <!-- Quick Actions Box -->
                 <div class="quick-actions">
                     <h3>Quick Actions</h3>
-                    <a href="/quoteflow/calculator" class="action-btn">🧮 Get an Instant Quote</a>
+                    <a href="/get-quote" class="action-btn">🧮 Get an Instant Quote</a>
                     <a href="tel:07739120349" class="action-btn">📞 Call Us</a>
                     <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" class="action-btn">💬 WhatsApp</a>
                 </div>
