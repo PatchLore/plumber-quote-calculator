@@ -120,10 +120,19 @@ export default function ContactPage() {
         .hero {
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
-            padding: 120px 20px 100px;
+            padding-top: 7rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 100px;
             text-align: center;
             position: relative;
-            margin-top: 80px;
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding-top: 8rem;
+            }
         }
 
         .hero h1 {
