@@ -53,3 +53,15 @@ next-env.d.ts
 .DS_Store
 Thumbs.db
 
+# Media files (videos, large images)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.wav
+
+# Large documentation files
+*.htm
+
