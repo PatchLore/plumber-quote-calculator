@@ -32,6 +32,12 @@ export default function HomePage() {
             padding: 0 20px;
         }
 
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 16px;
+            }
+        }
+
         /* Header/Navigation */
         .header {
             position: fixed;
@@ -40,18 +46,33 @@ export default function HomePage() {
             right: 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 20px 0;
+            padding: 16px 0;
             z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            min-height: 70px;
+        }
+
+        @media (max-width: 640px) {
+            .header {
+                padding: 12px 0;
+                min-height: 64px;
+            }
         }
 
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        @media (max-width: 640px) {
+            .header-content {
+                padding: 0 16px;
+            }
         }
 
         .nav-links {
@@ -107,6 +128,11 @@ export default function HomePage() {
             .nav-links {
                 display: none;
             }
+
+            .nav-cta {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
         }
 
         .logo {
@@ -117,6 +143,18 @@ export default function HomePage() {
             transition: all 0.3s ease;
         }
 
+        @media (max-width: 640px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+        }
+
         .logo:hover {
             transform: scale(1.05);
         }
@@ -125,13 +163,22 @@ export default function HomePage() {
         .hero {
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
-            padding-top: 7rem;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 80px;
+            padding-top: 100px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 60px;
             text-align: center;
             position: relative;
             margin-top: 0;
+        }
+
+        @media (min-width: 640px) {
+            .hero {
+                padding-top: 7rem;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 80px;
+            }
         }
 
         @media (min-width: 768px) {
@@ -141,18 +188,34 @@ export default function HomePage() {
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 16px;
             font-weight: 700;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-size: 1rem;
+            margin-bottom: 24px;
             opacity: 0.95;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 640px) {
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
         }
 
         .hero-badges {
@@ -173,21 +236,37 @@ export default function HomePage() {
 
         .hero-cta {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .hero-cta {
+                gap: 15px;
+                margin-top: 0;
+            }
         }
 
         .btn {
-            padding: 14px 32px;
+            padding: 12px 24px;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
             border: none;
             cursor: pointer;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 640px) {
+            .btn {
+                padding: 14px 32px;
+                font-size: 1rem;
+            }
         }
 
         .btn-primary {
@@ -245,20 +324,41 @@ export default function HomePage() {
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 640px) {
+            .section-header {
+                margin-bottom: 60px;
+            }
         }
 
         .section-header h2 {
-            font-size: 2.2rem;
+            font-size: 1.75rem;
             color: #2d3748;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        @media (min-width: 640px) {
+            .section-header h2 {
+                font-size: 2.2rem;
+                margin-bottom: 15px;
+            }
         }
 
         .section-header p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #6c757d;
             max-width: 700px;
             margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 640px) {
+            .section-header p {
+                font-size: 1.1rem;
+            }
         }
 
         /* Primary Apps Grid */
@@ -496,15 +596,28 @@ export default function HomePage() {
         /* Services Preview Section */
         .services-preview-section {
             background: white;
-            padding: 80px 20px;
+            padding: 60px 16px;
+        }
+
+        @media (min-width: 640px) {
+            .services-preview-section {
+                padding: 80px 20px;
+            }
         }
 
         .services-preview-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+            grid-template-columns: 1fr;
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        @media (min-width: 640px) {
+            .services-preview-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 35px;
+            }
         }
 
         .service-preview-card {
@@ -570,7 +683,13 @@ export default function HomePage() {
         /* Reviews Section */
         .reviews-section {
             background: #f8f9fa;
-            padding: 80px 20px;
+            padding: 60px 16px;
+        }
+
+        @media (min-width: 640px) {
+            .reviews-section {
+                padding: 80px 20px;
+            }
         }
 
         .reviews-preview-grid {
@@ -685,29 +804,58 @@ export default function HomePage() {
         /* QuoteFlow Section */
         .quoteflow-section {
             background: #f8f9fa;
-            padding: 80px 20px;
+            padding: 60px 16px;
             text-align: center;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 640px) {
+            .quoteflow-section {
+                padding: 80px 20px;
+            }
         }
 
         .quoteflow-section h2 {
-            font-size: 2.2rem;
+            font-size: 1.75rem;
             color: #2d3748;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        @media (min-width: 640px) {
+            .quoteflow-section h2 {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
         }
 
         .quoteflow-section p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #6c757d;
             max-width: 700px;
-            margin: 0 auto 30px;
+            margin: 0 auto 24px;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 640px) {
+            .quoteflow-section p {
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+            }
         }
 
         /* Footer */
         .footer {
             background: #2d3748;
             color: white;
-            padding: 40px 20px;
+            padding: 40px 16px;
             text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .footer {
+                padding: 40px 20px;
+            }
         }
 
         .footer-content {
@@ -763,23 +911,9 @@ export default function HomePage() {
         }
 
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .services-preview-section,
-            .reviews-section {
-                padding: 60px 20px;
-            }
-
-            .services-preview-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
+        @media (max-width: 640px) {
             .service-preview-card {
-                padding: 30px 25px;
+                padding: 24px 20px;
             }
 
             .service-preview-icon {
@@ -789,20 +923,65 @@ export default function HomePage() {
             }
 
             .service-preview-card h3 {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
                 margin-bottom: 12px;
+                line-height: 1.3;
             }
 
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .reviews-preview-grid {
-                grid-template-columns: 1fr;
+            .service-preview-card p {
+                font-size: 0.95rem;
             }
 
             .review-preview-card {
-                padding: 25px;
+                padding: 20px;
+            }
+
+            .review-preview-rating {
+                font-size: 1.75rem;
+            }
+
+            .review-preview-title {
+                font-size: 1.1rem;
+            }
+
+            .review-preview-body {
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .reviews-cta-btn,
+            .checkatrade-cta {
+                width: 100%;
+                max-width: 300px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .checkatrade-cta {
+                margin-top: 16px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .service-preview-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
