@@ -5,13 +5,15 @@ import React from 'react'
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/447000000000"
+      href="https://wa.me/447739120349"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 left-5 z-50 flex items-center justify-center w-12 h-12 rounded-full text-white shadow-lg hover:scale-105 transition-all"
-      style={{ backgroundColor: '#1E3A8A' }}
-      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1e40af'}
-      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#1E3A8A'}
+      className="fixed bottom-5 left-5 z-50 flex items-center justify-center w-14 h-14 rounded-full text-white shadow-lg hover:scale-110 transition-all"
+      style={{ backgroundColor: '#25D366' }}
+      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#20BA5A'}
+      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#25D366'}
+      aria-label="Message us on WhatsApp"
+      title="Message us on WhatsApp: 07739 120349"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

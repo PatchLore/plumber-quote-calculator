@@ -10,7 +10,7 @@ export default function ContactPage() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact FixBlox - Get in Touch</title>
+    <title>Contact PD Heating & Plumbing - Get in Touch</title>
     <style>
         * {
             margin: 0;
@@ -53,13 +53,61 @@ export default function ContactPage() {
             justify-content: space-between;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #1E3A8A;
+        }
+
+        .nav-links a.active:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #1E3A8A;
+        }
+
+        .nav-cta {
+            background: #1E3A8A;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #1E3A8A;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -70,7 +118,7 @@ export default function ContactPage() {
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
             padding: 120px 20px 100px;
             text-align: center;
@@ -154,8 +202,8 @@ export default function ContactPage() {
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #0066FF;
-            box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+            border-color: #1E3A8A;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
         }
 
         .form-group textarea {
@@ -166,7 +214,7 @@ export default function ContactPage() {
         .submit-btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
             border: none;
             border-radius: 8px;
@@ -178,7 +226,7 @@ export default function ContactPage() {
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
         }
 
         /* Contact Info Card */
@@ -211,7 +259,7 @@ export default function ContactPage() {
         .info-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -249,14 +297,14 @@ export default function ContactPage() {
         }
 
         .contact-detail a {
-            color: #0066FF;
+            color: #1E3A8A;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .contact-detail a:hover {
-            color: #0052CC;
+            color: #3B82F6;
         }
 
         .contact-detail span {
@@ -266,11 +314,11 @@ export default function ContactPage() {
 
         /* Response Timeline */
         .timeline-box {
-            background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             color: white;
             border-radius: 16px;
             padding: 35px 30px;
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
         }
 
         .timeline-box h3 {
@@ -347,9 +395,9 @@ export default function ContactPage() {
         }
 
         .action-btn:hover {
-            background: #0066FF;
+            background: #1E3A8A;
             color: white;
-            border-color: #0066FF;
+            border-color: #1E3A8A;
             transform: translateX(5px);
         }
 
@@ -394,15 +442,23 @@ export default function ContactPage() {
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <a href="/" class="logo">FixBlox</a>
+            <a href="/" class="logo">PD Heating & Plumbing</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="/quoteflow/calculator" class="nav-cta">Get Quote</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Let's Build Something Amazing Together</h1>
-            <p>Whether you're ready to set up QuoteFlow, need a custom solution, or just want to chat about your business — we're here to help.</p>
+            <h1>Get in Touch with PD Heating & Plumbing</h1>
+            <p>Need professional heating and plumbing services? Get an instant quote, request a call back, or message us on WhatsApp — we're here to help.</p>
         </div>
     </section>
 
@@ -433,44 +489,30 @@ export default function ContactPage() {
                         <input type="tel" id="phone" name="phone" placeholder="07123 456789">
                     </div>
 
-                    <div class="form-group">
-                        <label for="trade">Your Trade</label>
-                        <select id="trade" name="trade">
-                            <option value="">Select your trade...</option>
-                            <option value="plumber">Plumber</option>
-                            <option value="electrician">Electrician</option>
-                            <option value="builder">Builder</option>
-                            <option value="contractor">General Contractor</option>
-                            <option value="hvac">HVAC</option>
-                            <option value="carpenter">Carpenter</option>
-                            <option value="decorator">Decorator</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
 
                     <div class="form-group">
-                        <label for="subject">What can we help with? *</label>
+                        <label for="subject">What service do you need? *</label>
                         <select id="subject" name="subject" required>
-                            <option value="">Choose a topic...</option>
-                            <option value="quoteflow">QuoteFlow Setup</option>
-                            <option value="ai-assistant">AI Assistant Add-on</option>
-                            <option value="whatsapp">WhatsApp Integration</option>
-                            <option value="custom">Custom Solution</option>
-                            <option value="support">Technical Support</option>
-                            <option value="pricing">Pricing Inquiry</option>
-                            <option value="other">Other</option>
+                            <option value="">Choose a service...</option>
+                            <option value="boiler-repair">Boiler Repair</option>
+                            <option value="boiler-installation">Boiler Installation</option>
+                            <option value="plumbing-repair">Plumbing Repairs</option>
+                            <option value="heating-service">Heating Service</option>
+                            <option value="emergency">Emergency Call Out</option>
+                            <option value="quote">Get a Quote</option>
+                            <option value="other">Other Service</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Your Message *</label>
-                        <textarea id="message" name="message" required placeholder="Tell us about your business and how we can help..."></textarea>
+                        <textarea id="message" name="message" required placeholder="Tell us about your heating or plumbing issue and we'll get back to you as soon as possible..."></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">Send Message</button>
                     <div style="margin-top:16px; text-align:center;">
                       <a
-                        href="https://wa.me/447925990923"
+                        href="https://wa.me/447739120349"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-green-500 text-white font-medium hover:bg-green-600 transition-all shadow-md"
@@ -479,7 +521,7 @@ export default function ContactPage() {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
                           <path d="M12.04 2c-5.51 0-9.98 4.47-9.98 9.98 0 1.76.46 3.47 1.33 4.99L2 22l5.18-1.35a9.94 9.94 0 004.86 1.24h.01c5.5 0 9.97-4.47 9.97-9.98S17.54 2 12.04 2zm0 18.17h-.01c-1.57 0-3.11-.42-4.46-1.22l-.32-.19-3.07.8.82-2.99-.21-.31a8.26 8.26 0 01-1.28-4.41c0-4.56 3.71-8.27 8.28-8.27a8.24 8.24 0 018.27 8.27c0 4.56-3.71 8.27-8.27 8.27zm4.57-6.2c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.18-.55.06-.25-.12-1.05-.39-2.01-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.12-.12.25-.31.37-.46.12-.15.15-.25.23-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.21-.5-.42-.43-.57-.43-.15 0-.32-.02-.49-.02s-.45.06-.68.32c-.23.25-.89.87-.89 2.12 0 1.25.91 2.45 1.04 2.62.12.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.43.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
                         </svg>
-                        <span>Message us on WhatsApp</span>
+                        <span>Message us on WhatsApp: 07739 120349</span>
                       </a>
                     </div>
                 </form>
@@ -496,13 +538,18 @@ export default function ContactPage() {
                     <p>Prefer to reach out directly? We're available through multiple channels.</p>
                     
                     <div class="contact-detail">
-                        <span class="detail-icon">📧</span>
-                        <a href="mailto:info@fixblox.com">info@fixblox.com</a>
+                        <span class="detail-icon">📱</span>
+                        <a href="tel:07739120349">07739 120349</a>
                     </div>
                     
                     <div class="contact-detail">
-                        <span class="detail-icon">📱</span>
-                        <a href="tel:07925990923">07925 990923</a>
+                        <span class="detail-icon">💬</span>
+                        <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer">WhatsApp: 07739 120349</a>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="detail-icon">⭐</span>
+                        <a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer">View our Reviews on Checkatrade</a>
                     </div>
                     
                     
@@ -529,8 +576,8 @@ export default function ContactPage() {
                         <div class="timeline-step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h4>Schedule Setup Call</h4>
-                                <p>Book a time to discuss your needs and get started</p>
+                                <h4>We Arrange a Visit</h4>
+                                <p>We'll schedule a convenient time to assess your needs and provide a quote</p>
                             </div>
                         </div>
                     </div>
@@ -538,9 +585,10 @@ export default function ContactPage() {
 
                 <!-- Quick Actions Box -->
                 <div class="quick-actions">
-                    <h3>Or Explore on Your Own</h3>
-                    <a href="/quoteflow/calculator" class="action-btn">🧮 Try the Calculator</a>
-                    <a href="/#apps" class="action-btn">📱 View All Apps</a>
+                    <h3>Quick Actions</h3>
+                    <a href="/quoteflow/calculator" class="action-btn">🧮 Get an Instant Quote</a>
+                    <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" class="action-btn">💬 Message on WhatsApp</a>
+                    <a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer" class="action-btn">⭐ Read Our Reviews</a>
                 </div>
             </div>
         </div>
