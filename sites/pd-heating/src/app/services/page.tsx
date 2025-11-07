@@ -150,10 +150,11 @@ export default function ServicesPage() {
             margin-bottom: 60px;
         }
 
-        .section-header h2 {
+        .section-header h1 {
             font-size: 2.2rem;
             color: #2d3748;
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .section-header p {
@@ -179,19 +180,23 @@ export default function ServicesPage() {
             box-shadow: 0 4px 6px rgba(0,0,0,0.07);
             transition: all 0.3s ease;
             position: relative;
-            border: 2px solid #f0f0f0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .service-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-            border-color: #1E3A8A;
         }
 
         .service-icon {
             font-size: 3rem;
             margin-bottom: 20px;
             display: block;
+            line-height: 1;
+            height: 3rem;
         }
 
         .service-card h3 {
@@ -199,13 +204,20 @@ export default function ServicesPage() {
             color: #2d3748;
             margin-bottom: 15px;
             font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .service-card p {
+            color: #6c757d;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            flex-grow: 1;
         }
 
         .service-price {
             display: flex;
             align-items: baseline;
             gap: 10px;
-            margin-top: 20px;
             margin-bottom: 25px;
         }
 
@@ -213,10 +225,10 @@ export default function ServicesPage() {
             font-size: 2rem;
             font-weight: 700;
             color: #1E3A8A;
+            line-height: 1;
         }
 
         .service-cta {
-            display: inline-block;
             padding: 12px 24px;
             background: #1E3A8A;
             color: white;
@@ -224,8 +236,9 @@ export default function ServicesPage() {
             border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s ease;
-            width: 100%;
             text-align: center;
+            display: block;
+            margin-top: auto;
         }
 
         .service-cta:hover {
@@ -299,12 +312,45 @@ export default function ServicesPage() {
                 font-size: 2rem;
             }
             
+            .services-section {
+                padding: 60px 20px;
+            }
+            
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 25px;
             }
 
-            .section-header h2 {
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            .section-header h1 {
                 font-size: 1.8rem;
+            }
+
+            .service-card {
+                padding: 30px 25px;
+            }
+
+            .service-icon {
+                font-size: 2.5rem;
+                height: 2.5rem;
+                margin-bottom: 15px;
+            }
+
+            .service-card h3 {
+                font-size: 1.4rem;
+                margin-bottom: 12px;
+            }
+
+            .service-card p {
+                margin-bottom: 20px;
+                font-size: 0.95rem;
+            }
+
+            .price-current {
+                font-size: 1.75rem;
             }
         }
     </style>
@@ -337,7 +383,7 @@ export default function ServicesPage() {
     <section class="services-section">
         <div class="container">
             <div class="section-header">
-                <h2>Professional Heating & Plumbing Services</h2>
+                <h1>Professional Heating & Plumbing Services</h1>
                 <p>Comprehensive solutions for all your heating and plumbing needs</p>
             </div>
 
@@ -346,10 +392,10 @@ export default function ServicesPage() {
                 <div class="service-card">
                     <span class="service-icon">🔥</span>
                     <h3>Gas Boiler Installation and Servicing</h3>
+                    <p>Professional gas boiler installation, servicing, and repairs. Expert engineers ensure your heating system runs safely and efficiently.</p>
                     <div class="service-price">
                         <span class="price-current">£0.00</span>
                     </div>
-                    <p>Professional gas boiler installation, servicing, and repairs. Expert engineers ensure your heating system runs safely and efficiently.</p>
                     <a href="/quoteflow/calculator" class="service-cta">Get a Quote</a>
                 </div>
 
@@ -357,10 +403,10 @@ export default function ServicesPage() {
                 <div class="service-card">
                     <span class="service-icon">🔧</span>
                     <h3>Plumbing Services</h3>
+                    <p>Complete plumbing solutions including repairs, installations, and maintenance. From leak fixes to full bathroom installations.</p>
                     <div class="service-price">
                         <span class="price-current">£0.00</span>
                     </div>
-                    <p>Complete plumbing solutions including repairs, installations, and maintenance. From leak fixes to full bathroom installations.</p>
                     <a href="/quoteflow/calculator" class="service-cta">Get a Quote</a>
                 </div>
 
@@ -368,10 +414,10 @@ export default function ServicesPage() {
                 <div class="service-card">
                     <span class="service-icon">❄️</span>
                     <h3>Heating Installation</h3>
+                    <p>Full heating system installation and upgrades. Radiators, underfloor heating, and complete heating solutions for your home.</p>
                     <div class="service-price">
                         <span class="price-current">£0.00</span>
                     </div>
-                    <p>Full heating system installation and upgrades. Radiators, underfloor heating, and complete heating solutions for your home.</p>
                     <a href="/quoteflow/calculator" class="service-cta">Get a Quote</a>
                 </div>
             </div>

@@ -458,7 +458,7 @@ export default function ContactPage() {
     <section class="hero">
         <div class="container">
             <h1>Get in Touch with PD Heating & Plumbing</h1>
-            <p>Need professional heating and plumbing services? Get an instant quote, request a call back, or message us on WhatsApp — we're here to help.</p>
+            <p>Need professional heating or plumbing services? Send us a message or request a call back — our team is here to help.</p>
         </div>
     </section>
 
@@ -510,20 +510,6 @@ export default function ContactPage() {
                     </div>
 
                     <button type="submit" class="submit-btn">Send Message</button>
-                    <div style="margin-top:16px; text-align:center;">
-                      <a
-                        href="https://wa.me/447739120349"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-green-500 text-white font-medium hover:bg-green-600 transition-all shadow-md"
-                        style="text-decoration:none;"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                          <path d="M12.04 2c-5.51 0-9.98 4.47-9.98 9.98 0 1.76.46 3.47 1.33 4.99L2 22l5.18-1.35a9.94 9.94 0 004.86 1.24h.01c5.5 0 9.97-4.47 9.97-9.98S17.54 2 12.04 2zm0 18.17h-.01c-1.57 0-3.11-.42-4.46-1.22l-.32-.19-3.07.8.82-2.99-.21-.31a8.26 8.26 0 01-1.28-4.41c0-4.56 3.71-8.27 8.28-8.27a8.24 8.24 0 018.27 8.27c0 4.56-3.71 8.27-8.27 8.27zm4.57-6.2c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.18-.55.06-.25-.12-1.05-.39-2.01-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.12-.12.25-.31.37-.46.12-.15.15-.25.23-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.21-.5-.42-.43-.57-.43-.15 0-.32-.02-.49-.02s-.45.06-.68.32c-.23.25-.89.87-.89 2.12 0 1.25.91 2.45 1.04 2.62.12.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.43.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
-                        </svg>
-                        <span>Message us on WhatsApp: 07739 120349</span>
-                      </a>
-                    </div>
                 </form>
             </div>
 
@@ -535,7 +521,7 @@ export default function ContactPage() {
                         <div class="info-icon">📞</div>
                         <h3>Get in Touch</h3>
                     </div>
-                    <p>Prefer to reach out directly? We're available through multiple channels.</p>
+                    <p>Prefer to reach out directly? Contact us by phone or email.</p>
                     
                     <div class="contact-detail">
                         <span class="detail-icon">📱</span>
@@ -543,8 +529,8 @@ export default function ContactPage() {
                     </div>
                     
                     <div class="contact-detail">
-                        <span class="detail-icon">💬</span>
-                        <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer">WhatsApp: 07739 120349</a>
+                        <span class="detail-icon">📧</span>
+                        <a href="mailto:info@pdheating.co.uk">info@pdheating.co.uk</a>
                     </div>
                     
                     <div class="contact-detail">
@@ -552,7 +538,7 @@ export default function ContactPage() {
                         <a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer">View our Reviews on Checkatrade</a>
                     </div>
                     
-                    
+                    <p style="margin-top: 20px; margin-bottom: 0; padding-top: 15px; border-top: 1px solid #e9ecef; color: #6c757d; font-size: 0.9rem;">Prefer WhatsApp? You can <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" style="color: #1E3A8A; text-decoration: underline;">message us here</a>.</p>
                 </div>
 
                 <!-- Response Timeline Box -->
@@ -562,22 +548,22 @@ export default function ContactPage() {
                         <div class="timeline-step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>We Review Your Message</h4>
-                                <p>Our team reads your inquiry within a few hours</p>
+                                <h4>We Review Your Inquiry</h4>
+                                <p>Our team carefully reads your message and requirements</p>
                             </div>
                         </div>
                         <div class="timeline-step">
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <h4>Personal Response</h4>
-                                <p>Get a detailed reply within 24 hours (often faster)</p>
+                                <p>You'll receive a detailed response within 24 hours, often sooner</p>
                             </div>
                         </div>
                         <div class="timeline-step">
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <h4>We Arrange a Visit</h4>
-                                <p>We'll schedule a convenient time to assess your needs and provide a quote</p>
+                                <p>We schedule a convenient time to assess your needs and provide a professional quote</p>
                             </div>
                         </div>
                     </div>
@@ -587,8 +573,8 @@ export default function ContactPage() {
                 <div class="quick-actions">
                     <h3>Quick Actions</h3>
                     <a href="/quoteflow/calculator" class="action-btn">🧮 Get an Instant Quote</a>
-                    <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" class="action-btn">💬 Message on WhatsApp</a>
-                    <a href="https://www.checkatrade.com/trades/pdheatingandplumbing" target="_blank" rel="noopener noreferrer" class="action-btn">⭐ Read Our Reviews</a>
+                    <a href="tel:07739120349" class="action-btn">📞 Call Us</a>
+                    <a href="https://wa.me/447739120349" target="_blank" rel="noopener noreferrer" class="action-btn">💬 WhatsApp</a>
                 </div>
             </div>
         </div>
