@@ -828,7 +828,7 @@ export default function HomePage() {
     <section class="hero">
         <div class="container">
             <h1>Professional Heating & Plumbing Services</h1>
-            <p>Fast, reliable and affordable plumbing with instant online quotes.</p>
+            <p>Trusted, qualified and highly rated heating & plumbing services</p>
             
             <div class="hero-cta">
                 <a href="/get-quote" class="btn btn-primary">Get an Instant Quote</a>
