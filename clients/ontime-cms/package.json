@@ -1,0 +1,29 @@
+{
+  "name": "client-ontime-cms",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fixblox/quoteflow-core": "file:../../packages/quoteflow-core",
+    "@fixblox/supabase-client": "file:../../packages/supabase-client",
+    "@fixblox/ui": "file:../../packages/ui",
+    "@hookform/resolvers": "^5.2.2",
+    "clsx": "^2.1.1",
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.63.0",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
