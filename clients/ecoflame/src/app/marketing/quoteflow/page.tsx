@@ -1,13 +1,9 @@
+"use client";
 import dynamic from "next/dynamic";
 
 const QuoteFlowPreview = dynamic(() => import("./quote-flow-preview"), {
   ssr: false,
 });
-
-export const metadata = {
-  title: "QuoteFlow Demo",
-  description: "Interactive quote calculator powered by QuoteFlow core pricing engine.",
-};
 
 export default function QuoteFlowPage() {
   return (
