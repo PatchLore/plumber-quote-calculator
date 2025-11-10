@@ -1,0 +1,7 @@
+{
+  "/icon.png/route": "app/icon.png/route.js",
+  "/page": "app/page.js",
+  "/services/page": "app/services/page.js",
+  "/tradehub/page": "app/tradehub/page.js",
+  "/contact/page": "app/contact/page.js"
+}
