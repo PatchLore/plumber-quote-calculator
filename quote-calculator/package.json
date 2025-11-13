@@ -1,0 +1,17 @@
+{
+  "name": "fixblox-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": {
+    "packages": ["clients/*"]
+  },
+  "scripts": {
+    "dev": "npm --prefix apps/fixblox-web run dev",
+    "dev:web": "npm --prefix apps/fixblox-web run dev",
+    "dev:ontime": "npm run dev --workspace ontime-cms",
+    "build": "npm run build --workspaces --if-present",
+    "build:web": "npm --prefix apps/fixblox-web run build",
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:web": "npm --prefix apps/fixblox-web run lint"
+  }
+}
