@@ -417,7 +417,7 @@ export default function ContactPage() {
                 <h2>Send Us a Message</h2>
                 <p class="subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
 
-                <form action="/submit-contact" method="POST">
+                <form action="/api/contact" method="POST">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="John Smith">
