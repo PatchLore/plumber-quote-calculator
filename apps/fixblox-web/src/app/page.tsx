@@ -583,7 +583,7 @@ export default function HomePage() {
                 </a>
             </div>
 
-            <!-- Secondary Apps (Add-ons & Live Features) -->
+            <!-- Secondary Apps (Add-ons & Coming Soon) -->
             <div class="apps-grid-secondary">
                 <!-- AI Customer Assistant -->
                 <a class="app-card" href="/contact">
@@ -615,25 +615,24 @@ export default function HomePage() {
                     <div class="app-cta cta-secondary">Contact Us →</div>
                 </a>
                 
-                <!-- Full Website Builder (LIVE NOW) -->
-                <a class="app-card" href="/audio-site">
-                    <span class="app-badge badge-live">LIVE NOW</span>
-                    <span class="app-icon">🌐</span>
-                    <h3>Full Website Builder</h3>
+                <!-- JobTracker -->
+                <a class="app-card" href="/contact">
+                    <span class="app-badge badge-soon">COMING SOON</span>
+                    <span class="app-icon">🔧</span>
+                    <h3>JobTracker</h3>
                     <p>
-                        Create a complete business website from a simple voice note.<br>
-                        Record or upload audio describing your services and branding,<br>
-                        and our AI will generate a full multi-page website<br>
-                        tailored to your trade or industry—<br>
-                        instantly ready to customise.
+                        Smart job scheduling and team coordination for tradespeople.<br>
+                        Manage jobs, assign tasks, keep your team organised,<br>
+                        track project progress, and notify customers instantly—<br>
+                        all from one simple dashboard.
                     </p>
                     <ul class="app-features">
-                        <li>Voice-based website generation</li>
-                        <li>Multi-page structure from JSON</li>
-                        <li>Trade and location-aware layouts</li>
-                        <li>Ready to refine in the FixBlox dashboard</li>
+                        <li>Job scheduling calendar</li>
+                        <li>Team management</li>
+                        <li>Real-time updates</li>
+                        <li>Customer notifications</li>
                     </ul>
-                    <div class="app-cta cta-primary">Start Building →</div>
+                    <div class="app-cta cta-disabled">Get Notified →</div>
                 </a>
             </div>
         </div>
