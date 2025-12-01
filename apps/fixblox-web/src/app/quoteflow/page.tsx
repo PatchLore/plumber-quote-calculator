@@ -4,13 +4,27 @@ import Link from 'next/link'
 import { useEffect } from 'react'
 
 export default function QuoteFlowLandingPage() {
-  // Set document title and meta description
+  // Set document title and meta description (client-side metadata)
   useEffect(() => {
     document.title = "QuoteFlow - Instant Quote Calculator for Tradespeople | FixBlox"
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Turn website visitors into paying customers with instant, transparent quotes. Capture qualified leads automatically and manage everything from your dashboard. Built specifically for tradespeople.')
+    
+    // Update or create meta description
+    let metaDescription = document.querySelector('meta[name="description"]')
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta')
+      metaDescription.setAttribute('name', 'description')
+      document.head.appendChild(metaDescription)
     }
+    metaDescription.setAttribute('content', 'Turn website visitors into paying customers with instant, transparent quotes. Capture qualified leads automatically and manage everything from your dashboard. Built specifically for tradespeople.')
+    
+    // Update canonical link
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', 'https://www.fixblox.com/quoteflow')
   }, [])
   return (
     <div className="overflow-x-hidden bg-white">

@@ -31,8 +31,38 @@ export default async function BlogPostPage({ params }: Props) {
 
   const { title, description, date, author, image, content } = post as BlogPost
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.fixblox.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://www.fixblox.com/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: title,
+        item: `https://www.fixblox.com/blog/${slug}`,
+      },
+    ],
+  }
+
   return (
     <div className="max-w-3xl mx-auto p-6 sm:p-8 md:p-12">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       {image ? (
         <div className="w-full h-48 sm:h-56 md:h-72 rounded-xl overflow-hidden shadow-md">
@@ -51,7 +81,10 @@ export default async function BlogPostPage({ params }: Props) {
       </article>
 
       {/* CTA */}
-      <Link href="/contact" className="inline-block mt-10 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <Link
+        href="/contact"
+        className="inline-block mt-10 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+      >
         Get Your Free Website Quote →
       </Link>
     </div>

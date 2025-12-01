@@ -37,8 +37,61 @@ export default async function IndustryPage({ params }: Props) {
   const { title, icon, description, videoUrl, features, related } = industry
   const resolvedVideoUrl = videoUrl || '/videos/fixblox-demo.mp4'
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.fixblox.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Industries',
+        item: 'https://www.fixblox.com/industries',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `Websites for ${title}`,
+        item: `https://www.fixblox.com/industries/${slug}`,
+      },
+    ],
+  }
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: `Websites for ${title} by FixBlox`,
+    description,
+    url: `https://www.fixblox.com/industries/${slug}`,
+    areaServed: {
+      '@type': 'Country',
+      name: 'United Kingdom',
+    },
+    provider: {
+      '@type': 'Organization',
+      name: 'FixBlox',
+      url: 'https://www.fixblox.com',
+    },
+    serviceType: `Trades website builder for ${title}`,
+  }
+
   return (
     <div className="max-w-5xl mx-auto p-6 sm:p-8 md:p-12">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       {/* Hero */}
       <div className="flex flex-col items-center text-center">
         <div className="text-5xl" aria-hidden>{icon}</div>

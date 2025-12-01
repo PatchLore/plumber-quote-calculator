@@ -22,6 +22,14 @@ export const metadata: Metadata = {
   },
   description: "Professional web applications designed for tradespeople. Get instant quote calculators, job management systems, and custom trade-focused web apps. Modern tech stack, mobile-first design, and quick setup for all tradespeople.",
   keywords: [
+    "FixBlox",
+    "QuoteFlow",
+    "tradespeople websites",
+    "instant quote system",
+    "WhatsApp lead capture",
+    "plumber website builder",
+    "electrician website builder",
+    "boiler quote tool",
     "tradespeople web apps",
     "trade business software",
     "instant quote calculator",
@@ -30,7 +38,6 @@ export const metadata: Metadata = {
     "electrician software",
     "builder software",
     "trade quote system",
-    "QuoteFlow",
     "job tracker",
     "trade hub",
     "trade business solutions",
@@ -39,7 +46,10 @@ export const metadata: Metadata = {
     "electrical quote software",
     "building quote system",
     "trade business automation",
-    "mobile trade apps"
+    "mobile trade apps",
+    "website for tradespeople",
+    "Google Business optimisation",
+    "AI assistant for tradespeople"
   ],
   authors: [{ name: "FixBlox" }],
   creator: "FixBlox",
@@ -110,10 +120,172 @@ export default function RootLayout({
 }>) {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
 
+  // Schema.org JSON-LD for Organization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FixBlox",
+    "url": "https://www.fixblox.com",
+    "logo": "https://www.fixblox.com/icon.png",
+    "description": "FixBlox provides digital tools for tradespeople, including instant quote calculators, automated lead capture, WhatsApp integrations, and Google Business optimisation.",
+    "founder": {
+      "@type": "Person",
+      "name": "Allen Dunn"
+    },
+    "foundingDate": "2024",
+    "brand": {
+      "@type": "Brand",
+      "name": "FixBlox QuoteFlow"
+    },
+    "knowsAbout": [
+      "Trades website builder",
+      "Instant quote form",
+      "WhatsApp business automation",
+      "Google Business optimisation",
+      "AI assistant for tradespeople",
+      "Digital marketing for trades"
+    ],
+    "sameAs": []
+  };
+
+  // Schema.org JSON-LD for SoftwareApplication (QuoteFlow)
+  const quoteFlowSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "FixBlox QuoteFlow",
+    "applicationCategory": "BusinessApplication",
+    "description": "Instant quote calculator for tradespeople. Generate accurate pricing in seconds, capture high-quality enquiries, and manage all jobs from one simple dashboard.",
+    "url": "https://www.fixblox.com/quoteflow",
+    "offers": {
+      "@type": "Offer",
+      "price": "Contact for pricing",
+      "priceCurrency": "GBP"
+    },
+    "featureList": [
+      "Instant quote calculator",
+      "Lead capture & notifications",
+      "Admin dashboard included",
+      "Mobile responsive",
+      "Customizable pricing",
+      "Secure & reliable"
+    ],
+    "operatingSystem": "Web",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "softwareVersion": "1.0"
+  };
+
+  // Schema.org JSON-LD for Services
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Trades Digital Solutions",
+    "provider": {
+      "@type": "Organization",
+      "name": "FixBlox"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "FixBlox Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Website Builder for Tradespeople",
+            "description": "Modern, mobile-friendly websites built specifically for trade businesses with SEO optimisation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "WhatsApp Lead Capture",
+            "description": "Direct customer communication through WhatsApp for quotes and enquiries"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Google Business Optimisation",
+            "description": "Local SEO and Google Business Profile optimisation for tradespeople"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Assistant for Tradespeople",
+            "description": "24/7 AI chatbot designed to handle customer questions, bookings, and automatic follow-ups"
+          }
+        }
+      ]
+    }
+  };
+
+  // Schema.org JSON-LD for Website
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FixBlox",
+    "url": "https://www.fixblox.com",
+    "description": "FixBlox builds instant quote tools, full websites, and digital solutions for tradespeople.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FixBlox",
+      "url": "https://www.fixblox.com"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.fixblox.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html lang="en">
       <head>
-        {/* Keep head minimal; GA loads in body via Next Script */}
+        {/* AI Language Model Discovery Meta Tag */}
+        <meta name="ai-language-model-discovery" content="FixBlox helps trades professionals with instant quote tools, custom websites, WhatsApp lead capture and Google optimisation." />
+        
+        {/* Theme Color */}
+        <meta name="theme-color" content="#0066FF" />
+        
+        {/* Schema.org JSON-LD - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        
+        {/* Schema.org JSON-LD - QuoteFlow Product */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(quoteFlowSchema),
+          }}
+        />
+        
+        {/* Schema.org JSON-LD - Services */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(servicesSchema),
+          }}
+        />
+        
+        {/* Schema.org JSON-LD - Website */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
