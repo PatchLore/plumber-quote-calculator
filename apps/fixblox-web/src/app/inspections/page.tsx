@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { createServerSupabaseClient } from '@fixblox/supabase-client/server';
+import { createServerSupabaseClient } from '@fixblox/supabase-client';
 
 type InspectionRow = {
   id: string

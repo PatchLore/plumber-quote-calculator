@@ -1,3 +1,14 @@
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  // Explicitly disable Turbopack so Webpack is used for builds/dev.
+  experimental: {
+    turbopack: false,
+  },
+};
+
+export default nextConfig;
+
 import type { NextConfig } from "next";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
