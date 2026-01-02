@@ -33,8 +33,14 @@ export default function AdminSignIn() {
       if (error) {
         setError(error.message)
       } else if (data.user) {
-        // Redirect to dashboard
-        window.location.href = '/admin/dashboard'
+        // Redirect to original destination if present, otherwise dashboard
+        try {
+          const params = new URLSearchParams(window.location.search)
+          const redirectedFrom = params.get('redirectedFrom')
+          window.location.href = redirectedFrom && redirectedFrom.length ? redirectedFrom : '/admin/dashboard'
+        } catch {
+          window.location.href = '/admin/dashboard'
+        }
       }
     } catch {
       setError('An unexpected error occurred')
