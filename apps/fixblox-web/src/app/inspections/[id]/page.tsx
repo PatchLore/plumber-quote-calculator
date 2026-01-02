@@ -1,16 +1,18 @@
 import React from 'react';
 
 type PageProps = {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function InspectionDetailPage({ params }: PageProps) {
+export default async function InspectionDetailPage({ params }: PageProps) {
+  const resolved = await params
+
   return (
     <main>
       <h1>Inspection Detail</h1>
-      <p>Placeholder: details for inspection with id: {params.id}</p>
+      <p>Placeholder: details for inspection with id: {resolved.id}</p>
     </main>
   );
 }
