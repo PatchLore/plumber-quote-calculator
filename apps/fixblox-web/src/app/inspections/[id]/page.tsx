@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default function InspectionDetailPage({ params }: { params: { id: string } }) {
+type PageProps = {
+  params: {
+    id: string
+  }
+}
+
+export default function InspectionDetailPage({ params }: PageProps) {
   return (
     <main>
       <h1>Inspection Detail</h1>
