@@ -7,6 +7,14 @@
     {
       "source": "/websites/(.*)",
       "destination": "https://fixblox-websites.vercel.app/websites/$1"
+    },
+    {
+      "source": "/listing-hero",
+      "destination": "https://fixblox-websites.vercel.app/websites/listing-hero"
+    },
+    {
+      "source": "/listing-hero/(.*)",
+      "destination": "https://fixblox-websites.vercel.app/websites/listing-hero/$1"
     }
   ]
 }
