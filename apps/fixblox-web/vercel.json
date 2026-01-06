@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/websites",
-      "destination": "https://fixblox-websites.vercel.app/websites"
+      "destination": "https://fixblox-websites.vercel.app/"
     },
     {
       "source": "/websites/(.*)",
-      "destination": "https://fixblox-websites.vercel.app/websites/$1"
+      "destination": "https://fixblox-websites.vercel.app/$1"
     }
   ]
 }
