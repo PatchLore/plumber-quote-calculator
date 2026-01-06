@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/websites",
-      "destination": "https://fixblox-websites.vercel.app/"
+      "destination": "https://fixblox-websites.vercel.app"
     },
     {
       "source": "/websites/(.*)",
