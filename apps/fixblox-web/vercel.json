@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/websites",
+      "destination": "https://fixblox-websites.vercel.app"
+    },
+    {
+      "source": "/websites/(.*)",
+      "destination": "https://fixblox-websites.vercel.app/$1"
+    }
+  ]
+}
