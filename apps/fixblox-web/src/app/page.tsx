@@ -342,6 +342,89 @@ export default function HomePage() {
             color: #6c757d;
         }
 
+        /* Managed Services Section */
+        .managed-services-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .managed-services-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .managed-services-content h2 {
+            font-size: 2.2rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .managed-services-content .intro-line {
+            font-size: 1.2rem;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .managed-services-content .body-text {
+            font-size: 1.1rem;
+            color: #6c757d;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .managed-services-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .managed-services-list li {
+            padding: 12px 0;
+            color: #495057;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .managed-services-list li:before {
+            content: "•";
+            color: #0066FF;
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .managed-services-reassurance {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .managed-services-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: #0066FF;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .managed-services-cta:hover {
+            background: #0052CC;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
         /* Why Section */
         .why-section {
             background: white;
@@ -634,6 +717,26 @@ export default function HomePage() {
                     </ul>
                     <div class="app-cta cta-disabled">Get Notified →</div>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Managed Services Section -->
+    <section class="managed-services-section">
+        <div class="container">
+            <div class="managed-services-content">
+                <h2>Managed Services (Optional)</h2>
+                <p class="intro-line">Don't want to manage enquiries yourself?<br>We can handle them for you.</p>
+                <p class="body-text">FixBlox doesn't just give you tools — we can also run the day-to-day enquiry flow for your business.</p>
+                <p class="body-text">For busy tradespeople who are missing emails, forgetting follow-ups, or double-booking jobs, our managed services ensure enquiries turn into booked, paid work.</p>
+                <ul class="managed-services-list">
+                    <li>We reply to new enquiries</li>
+                    <li>We manage bookings and calendars</li>
+                    <li>We send and chase quotes</li>
+                    <li>We follow up missed enquiries</li>
+                </ul>
+                <p class="managed-services-reassurance">(No admin overload. No general VA work.)</p>
+                <a href="/websites/managed-services" class="managed-services-cta">See how Managed Services work →</a>
             </div>
         </div>
     </section>
