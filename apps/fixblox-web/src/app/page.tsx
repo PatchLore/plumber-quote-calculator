@@ -479,6 +479,165 @@ export default function HomePage() {
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
+        /* Pricing Section */
+        .pricing-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .pricing-header h2 {
+            font-size: 2.2rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .pricing-header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card.popular {
+            border-color: #0066FF;
+            border-width: 3px;
+        }
+
+        .pricing-card.popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0066FF;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pricing-tier-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0066FF;
+            margin-bottom: 5px;
+        }
+
+        .pricing-period {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .pricing-tagline {
+            font-size: 1rem;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            color: #495057;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .pricing-features li:before {
+            content: "•";
+            color: #0066FF;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .pricing-cta {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .pricing-cta-primary {
+            background: #0066FF;
+            color: white;
+        }
+
+        .pricing-cta-primary:hover {
+            background: #0052CC;
+        }
+
+        .pricing-cta-secondary {
+            background: #f8f9fa;
+            color: #0066FF;
+            border: 2px solid #0066FF;
+        }
+
+        .pricing-cta-secondary:hover {
+            background: #0066FF;
+            color: white;
+        }
+
+        .pricing-reassurance {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Why Section */
         .why-section {
             background: white;
@@ -844,6 +1003,69 @@ export default function HomePage() {
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-header">
+                <h2>Simple monthly pricing. No contracts.</h2>
+                <p>Choose the level of support you need. Upgrade or downgrade anytime.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Capture Tier -->
+                <div class="pricing-card">
+                    <div class="pricing-tier-name">Capture</div>
+                    <div class="pricing-price">£199</div>
+                    <div class="pricing-period">/ month</div>
+                    <div class="pricing-tagline">Stop missing enquiries.</div>
+                    <ul class="pricing-features">
+                        <li>Inbox monitoring</li>
+                        <li>Missed call recovery</li>
+                        <li>Basic booking coordination</li>
+                        <li>Quote sending (template or price-list based)</li>
+                    </ul>
+                    <a href="/websites/managed-services" class="pricing-cta pricing-cta-primary">See how Capture works</a>
+                </div>
+
+                <!-- Convert Tier -->
+                <div class="pricing-card popular">
+                    <div class="pricing-tier-name">Convert</div>
+                    <div class="pricing-price">£449</div>
+                    <div class="pricing-period">/ month</div>
+                    <div class="pricing-tagline">Turn more enquiries into booked jobs.</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Capture</li>
+                        <li>Proactive quote chasing</li>
+                        <li>Diary management</li>
+                        <li>CRM updates</li>
+                        <li>Missed enquiry follow-up</li>
+                    </ul>
+                    <a href="/websites/managed-services" class="pricing-cta pricing-cta-primary">See how Convert works</a>
+                </div>
+
+                <!-- Scale Tier -->
+                <div class="pricing-card">
+                    <div class="pricing-tier-name">Scale</div>
+                    <div class="pricing-price">from £899</div>
+                    <div class="pricing-period">/ month</div>
+                    <div class="pricing-tagline">Your outsourced office for growing or multi-van trade businesses.</div>
+                    <ul class="pricing-features">
+                        <li>Full enquiry handling</li>
+                        <li>Phone + inbox takeover</li>
+                        <li>Ongoing follow-ups</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="/websites/managed-services" class="pricing-cta pricing-cta-secondary">Talk to us</a>
+                </div>
+            </div>
+
+            <p class="pricing-reassurance">
+                Pricing depends on enquiry volume and complexity.<br>
+                We'll confirm fit before onboarding.
+            </p>
         </div>
     </section>
 
