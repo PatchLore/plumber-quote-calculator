@@ -626,7 +626,7 @@ export default function HomePage() {
     <section class="hero">
         <div class="container">
             <h1>Turn enquiries into booked jobs — without the admin.</h1>
-            <p>Choose DIY tools — or let FixBlox manage enquiries, bookings, and follow-ups for you.</p>
+            <p>FixBlox is EnquiryOps for trades.<br>We handle enquiries, bookings, quotes, and follow-ups — or give you the tools to do it yourself.</p>
             
             <div class="hero-badges">
                 <span class="badge">💻 Modern Tech Stack</span>
@@ -786,6 +786,7 @@ export default function HomePage() {
         <div class="container">
             <div class="managed-services-content">
                 <h2>Managed Services</h2>
+                <p style="font-size: 1rem; color: #6c757d; margin-bottom: 20px; font-style: italic;">(We run your enquiry and booking flow for you)</p>
                 <p class="intro-line">Choose how hands-on you want to be.</p>
                 <p style="font-size: 1.1rem; color: #0066FF; font-weight: 600; margin-bottom: 20px;">Managed Services from £250/month</p>
                 <p class="body-text">FixBlox doesn't just give you software. We can also handle the day-to-day enquiry flow for your business — replying to customers, managing bookings, sending quotes, and following up so work doesn't slip through the cracks.</p>
@@ -817,6 +818,31 @@ export default function HomePage() {
                 </ul>
                 <p class="managed-services-reassurance">(No general VA work. This is focused on enquiries and bookings only.)</p>
                 <a href="/websites/managed-services" class="managed-services-cta">See how it works</a>
+                
+                <!-- ReviewFlow Teaser -->
+                <div style="margin-top: 50px; padding-top: 40px; border-top: 2px solid #e9ecef; text-align: left;">
+                    <h3 style="font-size: 1.6rem; color: #2d3748; margin-bottom: 15px;">ReviewFlow (Coming Soon)</h3>
+                    <p style="font-size: 1.1rem; color: #6c757d; line-height: 1.7; margin-bottom: 20px;">
+                        After a job is completed, FixBlox can automatically request reviews from happy customers — via SMS and email — helping you build a strong Google and trade-directory presence without chasing anyone.
+                    </p>
+                    <ul style="list-style: none; margin-bottom: 20px; padding-left: 0;">
+                        <li style="padding: 8px 0; color: #495057; font-size: 1rem; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #0066FF; font-weight: bold; font-size: 1.2rem; line-height: 1; margin-top: 2px;">•</span>
+                            <span>Automatic post-job review requests</span>
+                        </li>
+                        <li style="padding: 8px 0; color: #495057; font-size: 1rem; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #0066FF; font-weight: bold; font-size: 1.2rem; line-height: 1; margin-top: 2px;">•</span>
+                            <span>Google and trade-platform friendly</span>
+                        </li>
+                        <li style="padding: 8px 0; color: #495057; font-size: 1rem; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #0066FF; font-weight: bold; font-size: 1.2rem; line-height: 1; margin-top: 2px;">•</span>
+                            <span>Optional managed follow-up</span>
+                        </li>
+                    </ul>
+                    <p style="font-size: 0.85rem; color: #6c757d; font-style: italic; margin-top: 15px;">
+                        Planned upgrade — available to managed clients first.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
