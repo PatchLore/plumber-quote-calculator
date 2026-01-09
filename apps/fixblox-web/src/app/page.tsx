@@ -399,6 +399,60 @@ export default function HomePage() {
             margin-top: 2px;
         }
 
+        .managed-services-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .comparison-column h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .comparison-column.old-way h4 {
+            color: #dc3545;
+        }
+
+        .comparison-column.fixblox-managed h4 {
+            color: #28a745;
+        }
+
+        .comparison-list {
+            list-style: none;
+            margin: 0;
+        }
+
+        .comparison-list li {
+            padding: 8px 0;
+            color: #495057;
+            font-size: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .comparison-list li:before {
+            content: "•";
+            color: inherit;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .comparison-column.old-way .comparison-list li:before {
+            color: #dc3545;
+        }
+
+        .comparison-column.fixblox-managed .comparison-list li:before {
+            color: #28a745;
+        }
+
         .managed-services-reassurance {
             font-size: 0.9rem;
             color: #6c757d;
@@ -571,8 +625,8 @@ export default function HomePage() {
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Complete Customer System for Tradespeople</h1>
-            <p>Professional web applications designed to streamline trade businesses. From instant quotes to AI customer support and WhatsApp integration — built specifically for the trades industry.</p>
+            <h1>Turn enquiries into booked jobs — without the admin.</h1>
+            <p>FixBlox builds modern websites and tools for trades — and can manage enquiries, bookings, and follow-ups for you if you don't want to.</p>
             
             <div class="hero-badges">
                 <span class="badge">💻 Modern Tech Stack</span>
@@ -726,16 +780,35 @@ export default function HomePage() {
         <div class="container">
             <div class="managed-services-content">
                 <h2>Managed Services (Optional)</h2>
-                <p class="intro-line">Don't want to manage enquiries yourself?<br>We can handle them for you.</p>
-                <p class="body-text">FixBlox doesn't just give you tools — we can also run the day-to-day enquiry flow for your business.</p>
-                <p class="body-text">For busy tradespeople who are missing emails, forgetting follow-ups, or double-booking jobs, our managed services ensure enquiries turn into booked, paid work.</p>
+                <p class="intro-line">Too busy on the tools to stay on top of enquiries?</p>
+                <p class="body-text">FixBlox doesn't just give you software. We can also handle the day-to-day enquiry flow for your business — replying to customers, managing bookings, sending quotes, and following up so work doesn't slip through the cracks.</p>
+                
+                <div class="managed-services-comparison">
+                    <div class="comparison-column old-way">
+                        <h4>Old way (DIY):</h4>
+                        <ul class="comparison-list">
+                            <li>Missed or late replies</li>
+                            <li>Forgotten follow-ups</li>
+                            <li>Enquiries that never turn into jobs</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-column fixblox-managed">
+                        <h4>FixBlox Managed:</h4>
+                        <ul class="comparison-list">
+                            <li>Every enquiry handled</li>
+                            <li>Bookings scheduled properly</li>
+                            <li>Quotes sent and chased</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <ul class="managed-services-list">
                     <li>We reply to new enquiries</li>
                     <li>We manage bookings and calendars</li>
                     <li>We send and chase quotes</li>
                     <li>We follow up missed enquiries</li>
                 </ul>
-                <p class="managed-services-reassurance">(No admin overload. No general VA work.)</p>
+                <p class="managed-services-reassurance">(No general VA work. This is focused on enquiries and bookings only.)</p>
                 <a href="/websites/managed-services" class="managed-services-cta">See how Managed Services work →</a>
             </div>
         </div>
