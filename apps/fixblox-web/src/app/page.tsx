@@ -626,7 +626,7 @@ export default function HomePage() {
     <section class="hero">
         <div class="container">
             <h1>Turn enquiries into booked jobs — without the admin.</h1>
-            <p>FixBlox builds modern websites and tools for trades — and can manage enquiries, bookings, and follow-ups for you if you don't want to.</p>
+            <p>Choose DIY tools — or let FixBlox manage enquiries, bookings, and follow-ups for you.</p>
             
             <div class="hero-badges">
                 <span class="badge">💻 Modern Tech Stack</span>
@@ -636,7 +636,7 @@ export default function HomePage() {
             </div>
 
             <div class="hero-cta">
-                <a href="#apps" class="btn btn-primary">Explore Our Apps</a>
+                <a href="/websites/managed-services" class="btn btn-primary">See how it works</a>
                 <a href="/contact" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
@@ -679,6 +679,7 @@ export default function HomePage() {
                     <span class="app-badge badge-live">LIVE NOW</span>
                     <span class="app-icon">🌐</span>
                     <h3>Websites & SEO for Trades</h3>
+                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Win trust and enquiries from day one</p>
                     <p>Modern, mobile-friendly websites built specifically for trade businesses. Boost visibility, improve search rankings, and convert more enquiries with fully optimised local SEO and service pages.</p>
                     <ul class="app-features">
                         <li>SEO-optimised website build</li>
@@ -694,6 +695,7 @@ export default function HomePage() {
                     <span class="app-badge badge-live">LIVE NOW</span>
                     <span class="app-icon">📊</span>
                     <h3>QuoteFlow</h3>
+                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Convert enquiries into clear, fast quotes</p>
                     <p>Instant quote calculator for tradespeople. Generate accurate pricing in seconds, capture high-quality enquiries, and manage all jobs from one simple dashboard.</p>
                     <ul class="app-features">
                         <li>Instant quote calculator</li>
@@ -709,6 +711,7 @@ export default function HomePage() {
                     <span class="app-badge badge-live">LIVE NOW</span>
                     <span class="app-icon">🛠️</span>
                     <h3>Trades Digital Solutions</h3>
+                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Streamline lead capture and job management</p>
                     <p>Tailored digital tools built for tradespeople. Improve lead generation, automate enquiries, and streamline day-to-day job management with industry-focused systems.</p>
                     <ul class="app-features">
                         <li>Instant quote pages</li>
@@ -727,6 +730,7 @@ export default function HomePage() {
                     <span class="app-badge badge-addon">ADD-ON</span>
                     <span class="app-icon">🤖</span>
                     <h3>AI Customer Assistant</h3>
+                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Never miss calls while you're on the tools</p>
                     <p>24/7 AI chatbot designed to handle customer questions, bookings, and automatic follow-ups even while you're busy on the job.</p>
                     <ul class="app-features">
                         <li>24/7 customer support</li>
@@ -742,6 +746,7 @@ export default function HomePage() {
                     <span class="app-badge badge-addon">ADD-ON</span>
                     <span class="app-icon">💬</span>
                     <h3>WhatsApp Integration</h3>
+                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Connect instantly with customers</p>
                     <p>Direct customer communication through WhatsApp. Send quotes, share updates, and collect enquiries instantly from your website or QuoteFlow page.</p>
                     <ul class="app-features">
                         <li>Direct messaging</li>
@@ -757,6 +762,7 @@ export default function HomePage() {
                     <span class="app-badge badge-soon">COMING SOON</span>
                     <span class="app-icon">🔧</span>
                     <h3>JobTracker</h3>
+                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Keep jobs organized and customers informed</p>
                     <p>
                         Smart job scheduling and team coordination for tradespeople.<br>
                         Manage jobs, assign tasks, keep your team organised,<br>
@@ -779,8 +785,9 @@ export default function HomePage() {
     <section class="managed-services-section">
         <div class="container">
             <div class="managed-services-content">
-                <h2>Managed Services (Optional)</h2>
-                <p class="intro-line">Too busy on the tools to stay on top of enquiries?</p>
+                <h2>Managed Services</h2>
+                <p class="intro-line">Choose how hands-on you want to be.</p>
+                <p style="font-size: 1.1rem; color: #0066FF; font-weight: 600; margin-bottom: 20px;">Managed Services from £250/month</p>
                 <p class="body-text">FixBlox doesn't just give you software. We can also handle the day-to-day enquiry flow for your business — replying to customers, managing bookings, sending quotes, and following up so work doesn't slip through the cracks.</p>
                 
                 <div class="managed-services-comparison">
@@ -809,7 +816,7 @@ export default function HomePage() {
                     <li>We follow up missed enquiries</li>
                 </ul>
                 <p class="managed-services-reassurance">(No general VA work. This is focused on enquiries and bookings only.)</p>
-                <a href="/websites/managed-services" class="managed-services-cta">See how Managed Services work →</a>
+                <a href="/websites/managed-services" class="managed-services-cta">See how it works</a>
             </div>
         </div>
     </section>
