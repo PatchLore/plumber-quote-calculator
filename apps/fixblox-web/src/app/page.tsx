@@ -151,6 +151,94 @@ export default function HomePage() {
             color: #0066FF;
         }
 
+        /* Pricing Snapshot Section */
+        .pricing-snapshot {
+            background: #f8f9fa;
+            padding: 50px 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .pricing-snapshot-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .pricing-snapshot-header h2 {
+            font-size: 1.8rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .pricing-snapshot-header p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .pricing-snapshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-snapshot-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-snapshot-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .pricing-snapshot-card.popular {
+            border-color: #0066FF;
+            border-width: 2px;
+        }
+
+        .pricing-snapshot-tier {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .pricing-snapshot-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0066FF;
+            margin-bottom: 8px;
+        }
+
+        .pricing-snapshot-outcome {
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin-bottom: 16px;
+            min-height: 40px;
+        }
+
+        .pricing-snapshot-cta {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #0066FF;
+            border: 1px solid #0066FF;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-snapshot-cta:hover {
+            background: #0066FF;
+            color: white;
+        }
+
         /* Stats Section */
         .stats {
             background: white;
@@ -801,6 +889,36 @@ export default function HomePage() {
         </div>
     </section>
 
+    <!-- Pricing Snapshot Section -->
+    <section class="pricing-snapshot">
+        <div class="container">
+            <div class="pricing-snapshot-header">
+                <h2>Simple Monthly Pricing</h2>
+                <p>Choose the level of support you need</p>
+            </div>
+            <div class="pricing-snapshot-grid">
+                <div class="pricing-snapshot-card">
+                    <div class="pricing-snapshot-tier">Capture</div>
+                    <div class="pricing-snapshot-price">£199<span style="font-size: 0.9rem; color: #6c757d;">/month</span></div>
+                    <div class="pricing-snapshot-outcome">Stop missing enquiries</div>
+                    <a href="#pricing" class="pricing-snapshot-cta">See details</a>
+                </div>
+                <div class="pricing-snapshot-card popular">
+                    <div class="pricing-snapshot-tier">Convert</div>
+                    <div class="pricing-snapshot-price" style="font-size: 1.2rem; color: #6c757d;">Growth tier</div>
+                    <div class="pricing-snapshot-outcome">Turn more enquiries into booked jobs</div>
+                    <a href="#pricing" class="pricing-snapshot-cta">See details</a>
+                </div>
+                <div class="pricing-snapshot-card">
+                    <div class="pricing-snapshot-tier">Scale</div>
+                    <div class="pricing-snapshot-price" style="font-size: 1.2rem; color: #6c757d;">Multi-van operations</div>
+                    <div class="pricing-snapshot-outcome">Your outsourced office</div>
+                    <a href="#pricing" class="pricing-snapshot-cta">See details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Section -->
     <section class="stats">
         <div class="stats-grid">
@@ -1007,7 +1125,7 @@ export default function HomePage() {
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing-section">
+    <section id="pricing" class="pricing-section">
         <div class="container">
             <div class="pricing-header">
                 <h2>Simple monthly pricing. No contracts.</h2>
@@ -1023,10 +1141,9 @@ export default function HomePage() {
                     <div class="pricing-tagline">Stop missing enquiries.</div>
                     <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Solo trades drowning in admin</p>
                     <ul class="pricing-features">
-                        <li>Inbox monitoring</li>
-                        <li>Missed call recovery</li>
-                        <li>Basic booking coordination</li>
-                        <li>Quote sending (template or price-list based)</li>
+                        <li>Never miss an enquiry</li>
+                        <li>Bookings coordinated</li>
+                        <li>Quotes sent promptly</li>
                     </ul>
                     <a href="/managed-services" class="pricing-cta pricing-cta-primary">See how Capture works</a>
                 </div>
@@ -1034,16 +1151,15 @@ export default function HomePage() {
                 <!-- Convert Tier -->
                 <div class="pricing-card popular">
                     <div class="pricing-tier-name">Convert</div>
-                    <div class="pricing-price">£449</div>
-                    <div class="pricing-period">/ month</div>
+                    <div class="pricing-price" style="font-size: 1.4rem; color: #6c757d;">Growth tier</div>
+                    <div class="pricing-period" style="visibility: hidden;">/ month</div>
                     <div class="pricing-tagline">Turn more enquiries into booked jobs.</div>
                     <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Growing trades losing quotes</p>
                     <ul class="pricing-features">
-                        <li>Everything in Capture</li>
-                        <li>Proactive quote chasing</li>
-                        <li>Diary management</li>
-                        <li>CRM updates</li>
-                        <li>Missed enquiry follow-up</li>
+                        <li>Higher conversion rates</li>
+                        <li>Quotes followed up consistently</li>
+                        <li>Diary stays organised</li>
+                        <li>Missed opportunities recovered</li>
                     </ul>
                     <a href="/managed-services" class="pricing-cta pricing-cta-primary">See how Convert works</a>
                 </div>
@@ -1051,15 +1167,14 @@ export default function HomePage() {
                 <!-- Scale Tier -->
                 <div class="pricing-card">
                     <div class="pricing-tier-name">Scale</div>
-                    <div class="pricing-price">from £899</div>
-                    <div class="pricing-period">/ month</div>
+                    <div class="pricing-price" style="font-size: 1.4rem; color: #6c757d;">Multi-van operations</div>
+                    <div class="pricing-period" style="visibility: hidden;">/ month</div>
                     <div class="pricing-tagline">Your outsourced office for growing or multi-van trade businesses.</div>
                     <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Multi-van businesses needing an office function</p>
                     <ul class="pricing-features">
-                        <li>Full enquiry handling</li>
-                        <li>Phone + inbox takeover</li>
-                        <li>Ongoing follow-ups</li>
-                        <li>Priority support</li>
+                        <li>Complete enquiry management</li>
+                        <li>Seamless operations at scale</li>
+                        <li>Dedicated support</li>
                     </ul>
                     <a href="/managed-services" class="pricing-cta pricing-cta-secondary">Talk to us</a>
                 </div>
