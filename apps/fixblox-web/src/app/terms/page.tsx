@@ -65,8 +65,29 @@ export default function TermsOfService() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">3. User Accounts and Registration</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">3.1 Account Creation</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">3. Managed Services</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              FixBlox offers optional Managed Services to assist clients with enquiry handling, booking coordination, quote sending, and follow-up administration.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Managed Services are administrative in nature. FixBlox does not provide professional, legal, financial, or trade advice as part of these services.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The client remains responsible for:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Pricing, availability, and acceptance of work</li>
+              <li>Accuracy of information provided to customers</li>
+              <li>Final business decisions and outcomes</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              FixBlox will perform Managed Services within the agreed scope and service hours. While reasonable care is taken, FixBlox does not guarantee specific business outcomes, revenue levels, or conversion results.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">4. User Accounts and Registration</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">4.1 Account Creation</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               To access certain features of our services, you may be required to create an account. You agree to:
             </p>
@@ -78,15 +99,15 @@ export default function TermsOfService() {
               <li>Notify us immediately of any unauthorized use of your account</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">3.2 Eligibility</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">4.2 Eligibility</h3>
             <p className="text-gray-700 leading-relaxed">
               You must be at least 18 years old and have the legal capacity to enter into contracts to use our services. By using our services, you represent and warrant that you meet these requirements.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">4. Acceptable Use</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">4.1 Permitted Use</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">5. Acceptable Use</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">5.1 Permitted Use</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               You may use our services only for lawful purposes and in accordance with these Terms. Our services are intended for use by trade professionals and businesses to:
             </p>
@@ -97,7 +118,7 @@ export default function TermsOfService() {
               <li>Communicate with customers</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">4.2 Prohibited Activities</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">5.2 Prohibited Activities</h3>
             <p className="text-gray-700 leading-relaxed mb-4">You agree not to:</p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Use the services for any illegal purpose or in violation of any laws</li>
@@ -114,13 +135,13 @@ export default function TermsOfService() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">5. Intellectual Property Rights</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">5.1 FixBlox Platform and Code</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">6. Intellectual Property Rights</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.1 FixBlox Platform and Code</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               The underlying platform, source code, software architecture, and core functionality of our applications remain the intellectual property of FixBlox and are protected by copyright, trademark, patent, trade secret, and other intellectual property laws. FixBlox retains all ownership rights to the base platform and code.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">5.2 Your White-Label License</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.2 Your White-Label License</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Upon full payment and delivery of your white-label solution, FixBlox grants you a perpetual, non-exclusive, non-transferable license to:
             </p>
@@ -143,25 +164,25 @@ export default function TermsOfService() {
               <li>Transfer your license to another party without written consent from FixBlox</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">5.3 Your Branding and Content</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.3 Your Branding and Content</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               You retain all rights to your business name, logo, branding materials, and any content you create or upload to your white-label application. By providing these materials to us for customization, you grant FixBlox a limited license to incorporate them into your white-label solution.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">5.4 Your Customer Data</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.4 Your Customer Data</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               You own all data collected through your white-label application, including customer information, leads, quotes, and business data. FixBlox does not claim ownership of your customer data.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">5.5 Feedback and Improvements</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.5 Feedback and Improvements</h3>
             <p className="text-gray-700 leading-relaxed">
               If you provide us with feedback, suggestions, or ideas regarding the platform or services, you grant FixBlox the right to use, incorporate, and implement such feedback in our products without any obligation or compensation to you. Any improvements, updates, or enhancements made to the base platform remain the property of FixBlox.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">6. Pricing and Payment</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.1 White-Label Pricing Model</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">7. Pricing and Payment</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.1 White-Label Pricing Model</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               FixBlox operates on a one-time payment model for white-label web application solutions. You pay once to receive a fully customized, branded application deployed for your business. Pricing varies depending on:
             </p>
@@ -176,7 +197,7 @@ export default function TermsOfService() {
               All fees will be clearly communicated in a written quote before purchase. There are no recurring subscription fees for the white-label solution itself.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.2 Payment Terms</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.2 Payment Terms</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Payment terms will be outlined in your service agreement and may include:
             </p>
@@ -189,7 +210,7 @@ export default function TermsOfService() {
               Payment methods accepted will be specified during the purchase process. All payments are processed securely.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.3 Third-Party Costs</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.3 Third-Party Costs</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               While you pay once for your white-label solution, you are responsible for ongoing third-party costs associated with operating your application, which may include:
             </p>
@@ -204,7 +225,7 @@ export default function TermsOfService() {
               These third-party costs are separate from your one-time payment to FixBlox and are paid directly to the respective service providers.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">6.4 Refunds</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.4 Refunds</h3>
             <p className="text-gray-700 leading-relaxed">
               Due to the customized nature of white-label solutions, refund policies will be specified in your individual service agreement. Generally:
             </p>
@@ -216,8 +237,8 @@ export default function TermsOfService() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">7. White-Label Delivery and Support</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.1 Customization and Deployment</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">8. White-Label Delivery and Support</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">8.1 Customization and Deployment</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Once you purchase a white-label solution, we will:
             </p>
@@ -233,7 +254,7 @@ export default function TermsOfService() {
               Timelines for customization and deployment will be outlined in your service agreement.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.2 Application Availability</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">8.2 Application Availability</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Once deployed, your white-label application operates independently under your control. If we host your application, we strive to maintain high availability. However, we do not guarantee 100% uptime and may experience occasional downtime for:
             </p>
@@ -246,7 +267,7 @@ export default function TermsOfService() {
               We will make reasonable efforts to notify you of scheduled maintenance in advance.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.3 Support and Maintenance</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">8.3 Support and Maintenance</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Support services will be provided as outlined in your individual service agreement, which may include:
             </p>
@@ -260,19 +281,19 @@ export default function TermsOfService() {
               You can contact us at info@fixblox.com or +44 7925 990923 for support during your support period.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.4 Updates and Enhancements</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">8.4 Updates and Enhancements</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Critical security updates and bug fixes will be applied to your white-label application during your support period. Major feature updates, enhancements, or version upgrades may be available as optional paid upgrades.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">7.5 Modifications to Your Application</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">8.5 Modifications to Your Application</h3>
             <p className="text-gray-700 leading-relaxed">
               Additional customization, feature additions, or design changes to your deployed white-label application may be available for an additional fee. Contact us to discuss custom development requests.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">8. Data and Privacy</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">9. Data and Privacy</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Your use of our services is also governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review our Privacy Policy to understand our practices regarding the collection, use, and disclosure of your information.
             </p>
@@ -282,13 +303,13 @@ export default function TermsOfService() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">9. Disclaimers and Limitations of Liability</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">9.1 &quot;As Is&quot; Basis</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">10. Disclaimers and Limitations of Liability</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">10.1 &quot;As Is&quot; Basis</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               THE SERVICES ARE PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">9.2 Limitation of Liability</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">10.2 Limitation of Liability</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               TO THE MAXIMUM EXTENT PERMITTED BY LAW, FIXBLOX SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:
             </p>
@@ -300,34 +321,34 @@ export default function TermsOfService() {
               <li>Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content posted, emailed, transmitted, or otherwise made available through the services</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">9.3 Limitation Amount</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">10.3 Limitation Amount</h3>
             <p className="text-gray-700 leading-relaxed">
               In no event shall our total liability to you for all damages, losses, and causes of action exceed the amount paid by you to FixBlox in the twelve (12) months prior to the claim, or £100, whichever is greater.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">10. Indemnification</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">11. Indemnification</h2>
             <p className="text-gray-700 leading-relaxed">
               You agree to defend, indemnify, and hold harmless FixBlox and its officers, directors, employees, contractors, agents, licensors, and suppliers from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys&apos; fees) arising out of or relating to your violation of these Terms or your use of the services.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">11. Third-Party Links and Services</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">12. Third-Party Links and Services</h2>
             <p className="text-gray-700 leading-relaxed">
               Our services may contain links to third-party websites or services that are not owned or controlled by FixBlox. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. We encourage you to review the terms and privacy policies of any third-party websites or services that you visit.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">12. Termination and License Revocation</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">12.1 Your White-Label License</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">13. Termination and License Revocation</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">13.1 Your White-Label License</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Once you have paid in full and received your white-label application, your perpetual license to use that application remains in effect indefinitely, subject to compliance with these Terms. You may stop using the application at any time.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">12.2 License Revocation by FixBlox</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">13.2 License Revocation by FixBlox</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               We reserve the right to revoke your license and access to your white-label application immediately, without prior notice or refund, if:
             </p>
@@ -339,7 +360,7 @@ export default function TermsOfService() {
               <li>The application is being used in a manner that creates security risks or legal liability for FixBlox</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">12.3 Hosted Services Termination</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">13.3 Hosted Services Termination</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               If FixBlox hosts your white-label application, we may terminate hosting services with 30 days&apos; written notice if:
             </p>
@@ -352,37 +373,37 @@ export default function TermsOfService() {
               In such cases, we will provide you with your application data and reasonable assistance to migrate to your own hosting environment.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">12.4 Data Export</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">13.4 Data Export</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Upon termination or discontinuation, you have the right to export your customer data from the application. We will provide reasonable assistance with data export during your support period or for a reasonable fee thereafter.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">12.5 Effect of Termination</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">13.5 Effect of Termination</h3>
             <p className="text-gray-700 leading-relaxed">
               Upon termination, all provisions of these Terms which by their nature should survive shall survive, including but not limited to intellectual property provisions, warranty disclaimers, indemnity obligations, and limitations of liability. Your license to use the white-label application will cease, and you must stop using the application immediately.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">13. Governing Law and Dispute Resolution</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">13.1 Governing Law</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">14. Governing Law and Dispute Resolution</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">14.1 Governing Law</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               These Terms shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of law provisions.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">13.2 Dispute Resolution</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">14.2 Dispute Resolution</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Any disputes arising out of or relating to these Terms or the services shall be resolved through good faith negotiations. If the parties cannot resolve the dispute through negotiation, the dispute shall be resolved by the courts of England and Wales.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">13.3 Jurisdiction</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">14.3 Jurisdiction</h3>
             <p className="text-gray-700 leading-relaxed">
               You agree to submit to the personal jurisdiction of the courts located in England and Wales for the purpose of litigating all such claims or disputes.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">14. Changes to Terms</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">15. Changes to Terms</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We reserve the right to modify these Terms at any time. If we make material changes to these Terms, we will notify you by email (if you have provided one) or by posting a notice on our website prior to the effective date of the changes.
             </p>
@@ -392,35 +413,35 @@ export default function TermsOfService() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">15. General Provisions</h2>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">15.1 Entire Agreement</h3>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">16. General Provisions</h2>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">16.1 Entire Agreement</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               These Terms, together with our Privacy Policy and any other agreements expressly incorporated by reference, constitute the entire agreement between you and FixBlox regarding the use of the services.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">15.2 Severability</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">16.2 Severability</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               If any provision of these Terms is found to be invalid or unenforceable, that provision shall be enforced to the maximum extent possible, and the other provisions of these Terms will remain in full force and effect.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">15.3 Waiver</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">16.3 Waiver</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               No waiver of any term of these Terms shall be deemed a further or continuing waiver of such term or any other term, and FixBlox&apos;s failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">15.4 Assignment</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">16.4 Assignment</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               You may not assign or transfer these Terms or your rights hereunder, in whole or in part, without our prior written consent. We may assign these Terms at any time without notice to you.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">15.5 Force Majeure</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">16.5 Force Majeure</h3>
             <p className="text-gray-700 leading-relaxed">
               We shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including but not limited to acts of God, war, riot, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or shortages of transportation facilities, fuel, energy, labor, or materials.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">16. Contact Information</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">17. Contact Information</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               If you have any questions about these Terms, please contact us:
             </p>

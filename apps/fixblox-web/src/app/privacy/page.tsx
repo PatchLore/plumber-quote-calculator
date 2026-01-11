@@ -381,7 +381,26 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">13. California Privacy Rights (CCPA)</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">13. Managed Services & Data Processing</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              As part of our Managed Services offering, FixBlox may access and process personal data on behalf of our clients. This may include customer contact details, enquiry messages, booking information, and related communications.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              In these circumstances:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>The client remains the data controller</li>
+              <li>FixBlox acts as a data processor</li>
+              <li>Data is accessed solely to deliver the agreed services</li>
+              <li>Data is not sold, reused, or shared for marketing purposes</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              We only process personal data in accordance with client instructions, applicable data protection laws, and this Privacy Policy. Appropriate technical and organisational measures are in place to protect data from unauthorised access or misuse.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">14. California Privacy Rights (CCPA)</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               If you are a California resident, you have specific rights regarding your personal information under the California Consumer Privacy Act (CCPA):
             </p>
@@ -397,11 +416,11 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">14. UK GDPR and Data Protection</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">15. UK GDPR and Data Protection</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               If you are in the United Kingdom, the processing of your personal information is subject to the UK General Data Protection Regulation (UK GDPR) and Data Protection Act 2018.
             </p>
-            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">14.1 Legal Basis for Processing</h3>
+            <h3 className="text-xl font-semibold text-[#0A0E27] mb-3">15.1 Legal Basis for Processing</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               We process your personal information on the following legal bases:
             </p>
@@ -414,7 +433,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">15. Changes to This Privacy Policy</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">16. Changes to This Privacy Policy</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by:
             </p>
@@ -429,7 +448,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">16. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-[#0A0E27] mb-4">17. Contact Us</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
             </p>

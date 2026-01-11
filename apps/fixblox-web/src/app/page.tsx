@@ -795,7 +795,7 @@ export default function HomePage() {
             </div>
 
             <div class="hero-cta">
-                <a href="/websites/managed-services" class="btn btn-primary">See how it works</a>
+                <a href="/managed-services" class="btn btn-primary">See how it works</a>
                 <a href="/contact" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
@@ -976,7 +976,7 @@ export default function HomePage() {
                     <li>We follow up missed enquiries</li>
                 </ul>
                 <p class="managed-services-reassurance">(No general VA work. This is focused on enquiries and bookings only.)</p>
-                <a href="/websites/managed-services" class="managed-services-cta">See how it works</a>
+                <a href="/managed-services" class="managed-services-cta">See how it works</a>
                 
                 <!-- ReviewFlow Teaser -->
                 <div style="margin-top: 50px; padding-top: 40px; border-top: 2px solid #e9ecef; text-align: left;">
@@ -1021,13 +1021,14 @@ export default function HomePage() {
                     <div class="pricing-price">£199</div>
                     <div class="pricing-period">/ month</div>
                     <div class="pricing-tagline">Stop missing enquiries.</div>
+                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Solo trades drowning in admin</p>
                     <ul class="pricing-features">
                         <li>Inbox monitoring</li>
                         <li>Missed call recovery</li>
                         <li>Basic booking coordination</li>
                         <li>Quote sending (template or price-list based)</li>
                     </ul>
-                    <a href="/websites/managed-services" class="pricing-cta pricing-cta-primary">See how Capture works</a>
+                    <a href="/managed-services" class="pricing-cta pricing-cta-primary">See how Capture works</a>
                 </div>
 
                 <!-- Convert Tier -->
@@ -1036,6 +1037,7 @@ export default function HomePage() {
                     <div class="pricing-price">£449</div>
                     <div class="pricing-period">/ month</div>
                     <div class="pricing-tagline">Turn more enquiries into booked jobs.</div>
+                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Growing trades losing quotes</p>
                     <ul class="pricing-features">
                         <li>Everything in Capture</li>
                         <li>Proactive quote chasing</li>
@@ -1043,7 +1045,7 @@ export default function HomePage() {
                         <li>CRM updates</li>
                         <li>Missed enquiry follow-up</li>
                     </ul>
-                    <a href="/websites/managed-services" class="pricing-cta pricing-cta-primary">See how Convert works</a>
+                    <a href="/managed-services" class="pricing-cta pricing-cta-primary">See how Convert works</a>
                 </div>
 
                 <!-- Scale Tier -->
@@ -1052,13 +1054,14 @@ export default function HomePage() {
                     <div class="pricing-price">from £899</div>
                     <div class="pricing-period">/ month</div>
                     <div class="pricing-tagline">Your outsourced office for growing or multi-van trade businesses.</div>
+                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Multi-van businesses needing an office function</p>
                     <ul class="pricing-features">
                         <li>Full enquiry handling</li>
                         <li>Phone + inbox takeover</li>
                         <li>Ongoing follow-ups</li>
                         <li>Priority support</li>
                     </ul>
-                    <a href="/websites/managed-services" class="pricing-cta pricing-cta-secondary">Talk to us</a>
+                    <a href="/managed-services" class="pricing-cta pricing-cta-secondary">Talk to us</a>
                 </div>
             </div>
 
