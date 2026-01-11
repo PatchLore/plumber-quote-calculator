@@ -460,28 +460,52 @@ export default function HomePage() {
         .managed-services-content h2 {
             font-size: 2.2rem;
             color: #2d3748;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .managed-services-content .subheading {
+            font-size: 1rem;
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
         .managed-services-content .intro-line {
             font-size: 1.2rem;
             color: #2d3748;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .managed-services-content .pricing-line {
+            font-size: 1.1rem;
+            color: #0066FF;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
         .managed-services-content .body-text {
             font-size: 1.1rem;
             color: #6c757d;
             line-height: 1.7;
-            margin-bottom: 30px;
-            text-align: left;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .managed-services-list {
             list-style: none;
-            text-align: left;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .managed-services-list li {
@@ -489,7 +513,8 @@ export default function HomePage() {
             color: #495057;
             font-size: 1.1rem;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
             gap: 12px;
         }
 
@@ -504,17 +529,34 @@ export default function HomePage() {
 
         .managed-services-comparison {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-            text-align: left;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .managed-services-comparison {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        .comparison-column {
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
         }
 
         .comparison-column h4 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #2d3748;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            text-align: center;
         }
 
         .comparison-column.old-way h4 {
@@ -528,14 +570,17 @@ export default function HomePage() {
         .comparison-list {
             list-style: none;
             margin: 0;
+            padding: 0;
+            text-align: center;
         }
 
         .comparison-list li {
-            padding: 8px 0;
+            padding: 10px 0;
             color: #495057;
             font-size: 1rem;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
             gap: 10px;
         }
 
@@ -560,7 +605,70 @@ export default function HomePage() {
             font-size: 0.9rem;
             color: #6c757d;
             font-style: italic;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .reviewflow-section {
+            margin-top: 60px;
+            padding: 40px 24px;
+            border-top: 2px solid #e9ecef;
+            text-align: center;
+            background: #f8f9fa;
+            border-radius: 12px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reviewflow-section h3 {
+            font-size: 1.6rem;
+            color: #2d3748;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .reviewflow-section p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .reviewflow-list {
+            list-style: none;
+            margin: 0 0 24px 0;
+            padding: 0;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reviewflow-list li {
+            padding: 10px 0;
+            color: #495057;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .reviewflow-list li span:first-child {
+            color: #0066FF;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .reviewflow-label {
+            font-size: 0.85rem;
+            color: #6c757d;
+            font-style: italic;
+            margin-top: 16px;
+            text-align: center;
         }
 
         .managed-services-cta {
@@ -1078,9 +1186,9 @@ export default function HomePage() {
         <div class="container">
             <div class="managed-services-content">
                 <h2>Managed Services</h2>
-                <p style="font-size: 1rem; color: #6c757d; margin-bottom: 20px; font-style: italic;">(We run your enquiry and booking flow for you)</p>
+                <p class="subheading">(We run your enquiry and booking flow for you)</p>
                 <p class="intro-line">Choose how hands-on you want to be.</p>
-                <p style="font-size: 1.1rem; color: #0066FF; font-weight: 600; margin-bottom: 20px;">Managed Services from £250/month</p>
+                <p class="pricing-line">Managed Services from £250/month</p>
                 <p class="body-text">FixBlox doesn't just give you software. We can also handle the day-to-day enquiry flow for your business — replying to customers, managing bookings, sending quotes, and following up so work doesn't slip through the cracks.</p>
                 
                 <div class="managed-services-comparison">
@@ -1112,26 +1220,26 @@ export default function HomePage() {
                 <a href="/managed-services" class="managed-services-cta">See how it works</a>
                 
                 <!-- ReviewFlow Teaser -->
-                <div style="margin-top: 50px; padding-top: 40px; border-top: 2px solid #e9ecef; text-align: left;">
-                    <h3 style="font-size: 1.6rem; color: #2d3748; margin-bottom: 15px;">ReviewFlow (Coming Soon)</h3>
-                    <p style="font-size: 1.1rem; color: #6c757d; line-height: 1.7; margin-bottom: 20px;">
+                <div class="reviewflow-section">
+                    <h3>ReviewFlow (Coming Soon)</h3>
+                    <p>
                         After a job is completed, FixBlox can automatically request reviews from happy customers — via SMS and email — helping you build a strong Google and trade-directory presence without chasing anyone.
                     </p>
-                    <ul style="list-style: none; margin-bottom: 20px; padding-left: 0;">
-                        <li style="padding: 8px 0; color: #495057; font-size: 1rem; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="color: #0066FF; font-weight: bold; font-size: 1.2rem; line-height: 1; margin-top: 2px;">•</span>
+                    <ul class="reviewflow-list">
+                        <li>
+                            <span>•</span>
                             <span>Automatic post-job review requests</span>
                         </li>
-                        <li style="padding: 8px 0; color: #495057; font-size: 1rem; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="color: #0066FF; font-weight: bold; font-size: 1.2rem; line-height: 1; margin-top: 2px;">•</span>
+                        <li>
+                            <span>•</span>
                             <span>Google and trade-platform friendly</span>
                         </li>
-                        <li style="padding: 8px 0; color: #495057; font-size: 1rem; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="color: #0066FF; font-weight: bold; font-size: 1.2rem; line-height: 1; margin-top: 2px;">•</span>
+                        <li>
+                            <span>•</span>
                             <span>Optional managed follow-up</span>
                         </li>
                     </ul>
-                    <p style="font-size: 0.85rem; color: #6c757d; font-style: italic; margin-top: 15px;">
+                    <p class="reviewflow-label">
                         Planned upgrade — available to managed clients first.
                     </p>
                 </div>
