@@ -199,6 +199,21 @@ export default function HomePage() {
         .pricing-snapshot-card.popular {
             border-color: #0066FF;
             border-width: 2px;
+            position: relative;
+        }
+
+        .pricing-snapshot-card.popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0066FF;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
         }
 
         .pricing-snapshot-tier {
@@ -893,26 +908,26 @@ export default function HomePage() {
     <section class="pricing-snapshot">
         <div class="container">
             <div class="pricing-snapshot-header">
-                <h2>Simple Monthly Pricing</h2>
-                <p>Choose the level of support you need</p>
+                <h2>Simple monthly pricing. No contracts.</h2>
+                <p>Choose the level of support you need. Upgrade or downgrade anytime.</p>
             </div>
             <div class="pricing-snapshot-grid">
                 <div class="pricing-snapshot-card">
                     <div class="pricing-snapshot-tier">Capture</div>
-                    <div class="pricing-snapshot-price">£199<span style="font-size: 0.9rem; color: #6c757d;">/month</span></div>
+                    <div class="pricing-snapshot-price">£199<span style="font-size: 0.9rem; color: #6c757d;"> / month</span></div>
                     <div class="pricing-snapshot-outcome">Stop missing enquiries</div>
                     <a href="#pricing" class="pricing-snapshot-cta">See details</a>
                 </div>
                 <div class="pricing-snapshot-card popular">
                     <div class="pricing-snapshot-tier">Convert</div>
-                    <div class="pricing-snapshot-price" style="font-size: 1.2rem; color: #6c757d;">Growth tier</div>
+                    <div class="pricing-snapshot-price">£449<span style="font-size: 0.9rem; color: #6c757d;"> / month</span></div>
                     <div class="pricing-snapshot-outcome">Turn more enquiries into booked jobs</div>
                     <a href="#pricing" class="pricing-snapshot-cta">See details</a>
                 </div>
                 <div class="pricing-snapshot-card">
                     <div class="pricing-snapshot-tier">Scale</div>
-                    <div class="pricing-snapshot-price" style="font-size: 1.2rem; color: #6c757d;">Multi-van operations</div>
-                    <div class="pricing-snapshot-outcome">Your outsourced office</div>
+                    <div class="pricing-snapshot-price">from £899<span style="font-size: 0.9rem; color: #6c757d;"> / month</span></div>
+                    <div class="pricing-snapshot-outcome">Outsourced office for multi-van trade businesses</div>
                     <a href="#pricing" class="pricing-snapshot-cta">See details</a>
                 </div>
             </div>
