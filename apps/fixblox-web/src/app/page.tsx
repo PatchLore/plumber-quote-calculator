@@ -1139,11 +1139,11 @@ export default function HomePage() {
                     <div class="pricing-price">£199</div>
                     <div class="pricing-period">/ month</div>
                     <div class="pricing-tagline">Stop missing enquiries.</div>
-                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Solo trades drowning in admin</p>
+                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px; line-height: 1.5;">For solo tradespeople who are getting enquiries but struggle to keep up with replies and bookings.</p>
                     <ul class="pricing-features">
-                        <li>Never miss an enquiry</li>
-                        <li>Bookings coordinated</li>
-                        <li>Quotes sent promptly</li>
+                        <li>Every enquiry captured and acknowledged</li>
+                        <li>Bookings scheduled without double-booking</li>
+                        <li>Quotes sent to customers promptly</li>
                     </ul>
                     <a href="/managed-services" class="pricing-cta pricing-cta-primary">See how Capture works</a>
                 </div>
@@ -1151,15 +1151,15 @@ export default function HomePage() {
                 <!-- Convert Tier -->
                 <div class="pricing-card popular">
                     <div class="pricing-tier-name">Convert</div>
-                    <div class="pricing-price" style="font-size: 1.4rem; color: #6c757d;">Growth tier</div>
-                    <div class="pricing-period" style="visibility: hidden;">/ month</div>
+                    <div class="pricing-price">£449</div>
+                    <div class="pricing-period">/ month</div>
                     <div class="pricing-tagline">Turn more enquiries into booked jobs.</div>
-                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Growing trades losing quotes</p>
+                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px; line-height: 1.5;">For growing trades that send quotes but lose work because follow-ups don't happen consistently.</p>
                     <ul class="pricing-features">
-                        <li>Higher conversion rates</li>
-                        <li>Quotes followed up consistently</li>
-                        <li>Diary stays organised</li>
-                        <li>Missed opportunities recovered</li>
+                        <li>More enquiries convert to booked jobs</li>
+                        <li>Quotes followed up until decision made</li>
+                        <li>Diary managed to prevent conflicts</li>
+                        <li>Missed opportunities identified and recovered</li>
                     </ul>
                     <a href="/managed-services" class="pricing-cta pricing-cta-primary">See how Convert works</a>
                 </div>
@@ -1167,14 +1167,14 @@ export default function HomePage() {
                 <!-- Scale Tier -->
                 <div class="pricing-card">
                     <div class="pricing-tier-name">Scale</div>
-                    <div class="pricing-price" style="font-size: 1.4rem; color: #6c757d;">Multi-van operations</div>
-                    <div class="pricing-period" style="visibility: hidden;">/ month</div>
+                    <div class="pricing-price">from £899</div>
+                    <div class="pricing-period">/ month</div>
                     <div class="pricing-tagline">Your outsourced office for growing or multi-van trade businesses.</div>
-                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px;">Multi-van businesses needing an office function</p>
+                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px; line-height: 1.5;">For multi-van businesses or growing operations that need a dedicated office function to handle enquiries and bookings.</p>
                     <ul class="pricing-features">
-                        <li>Complete enquiry management</li>
-                        <li>Seamless operations at scale</li>
-                        <li>Dedicated support</li>
+                        <li>Complete enquiry flow managed end-to-end</li>
+                        <li>Operations scale smoothly as you grow</li>
+                        <li>Dedicated support with priority response</li>
                     </ul>
                     <a href="/managed-services" class="pricing-cta pricing-cta-secondary">Talk to us</a>
                 </div>
