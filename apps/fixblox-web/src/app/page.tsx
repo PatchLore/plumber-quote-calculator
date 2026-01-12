@@ -1,19 +1,41 @@
-'use client'
-
 import type { Metadata } from 'next'
 
-// Note: Metadata is handled in layout.tsx, but we ensure proper H1 structure
+export const metadata: Metadata = {
+  title: 'FixBlox | Stop Missing Enquiries & Book More Trade Jobs',
+  description:
+    'FixBlox helps UK trades capture enquiries, handle missed calls and book more trade jobs faster — without extra admin, late-night replies or chasing messages.',
+  alternates: {
+    canonical: 'https://www.fixblox.com/',
+  },
+}
+
 export default function HomePage() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'FixBlox',
+    url: 'https://www.fixblox.com/',
+    areaServed: 'GB',
+    description:
+      'FixBlox helps UK trades capture enquiries, handle missed calls and book more jobs with less admin.',
+    serviceType: [
+      'Call handling for trades',
+      'Trade website UK',
+      'Enquiry follow-up for trades',
+    ],
+  }
+
   return (
     <>
-      <div dangerouslySetInnerHTML={{
-        __html: `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FixBlox - Talk to FixBlox</title>
+      <script
+        type="application/ld+json"
+        // JSON-LD should be kept minimal and human-aligned (no hype, no keyword stuffing).
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+
+      <main
+        dangerouslySetInnerHTML={{
+          __html: `
     <style>
         * {
             margin: 0;
@@ -21,8 +43,11 @@ export default function HomePage() {
             box-sizing: border-box;
         }
 
-        body {
+        :root {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
             line-height: 1.6;
             color: #333;
             background: #f8f9fa;
@@ -382,6 +407,15 @@ export default function HomePage() {
             font-size: 1.6rem;
             color: #2d3748;
             margin-bottom: 15px;
+        }
+
+        .app-card-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .app-card-link:hover {
+            text-decoration: underline;
         }
 
         .app-card p {
@@ -983,8 +1017,6 @@ export default function HomePage() {
             }
         }
     </style>
-</head>
-<body>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
@@ -1015,7 +1047,10 @@ export default function HomePage() {
     <section class="stats">
         <div class="container">
             <div class="section-header" style="margin-bottom: 30px;">
-                <h2 style="font-size: 2.2rem; color: #2d3748; margin-bottom: 12px;">You’re busy working. Enquiries come in anyway.</h2>
+                <h2 style="font-size: 2.2rem; color: #2d3748; margin-bottom: 12px;">Problem</h2>
+                <p style="font-size: 1.1rem; color: #6c757d; max-width: 800px; margin-left:auto; margin-right:auto;">
+                    You’re busy working. Enquiries come in anyway.
+                </p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
@@ -1051,9 +1086,11 @@ export default function HomePage() {
 
             <!-- Option Cards -->
             <div class="apps-grid-primary">
-                <a class="app-card" href="/contact">
+                <div class="app-card">
                     <span class="app-icon">🌐</span>
-                    <h3>Professional Website (£199 one-off)</h3>
+                    <h2 style="font-size: 1.6rem; color: #2d3748; margin-bottom: 15px;">
+                        <a class="app-card-link" href="/websites">Professional Website (£199 one-off)</a>
+                    </h2>
                     <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">For newer trades, small teams, or anyone without a proper site.</p>
                     <p>Clear and professional. Built to help customers contact you.</p>
                     <ul class="app-features">
@@ -1062,12 +1099,12 @@ export default function HomePage() {
                         <li>A professional first impression that helps you win work</li>
                     </ul>
                     <p style="margin-bottom: 25px;">You tell us what you do and where you work.<br>We put it together properly.</p>
-                    <div class="app-cta cta-primary">Talk to FixBlox</div>
-                </a>
+                    <a href="/contact" class="app-cta cta-primary">Talk to FixBlox</a>
+                </div>
 
-                <a class="app-card" href="/contact">
+                <div class="app-card">
                     <span class="app-icon">📞</span>
-                    <h3>Call Handling (£70/month + one-off setup)</h3>
+                    <h2 style="font-size: 1.6rem; color: #2d3748; margin-bottom: 15px;">Call Handling (£70/month + one-off setup)</h2>
                     <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">For trades who miss calls because they’re doing the work.</p>
                     <p>So enquiries get handled while you stay on the job.</p>
                     <ul class="app-features">
@@ -1076,8 +1113,8 @@ export default function HomePage() {
                         <li>You get the details you need, without back-and-forth</li>
                     </ul>
                     <p style="margin-bottom: 25px;">You stay on the job.<br>Enquiries still get handled.</p>
-                    <div class="app-cta cta-primary">Talk to FixBlox</div>
-                </a>
+                    <a href="/contact" class="app-cta cta-primary">Talk to FixBlox</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1173,10 +1210,9 @@ export default function HomePage() {
             <a href="/contact" class="btn btn-primary">Talk to FixBlox</a>
         </div>
     </section>
-</body>
-</html>
         `
-      }} />
+        }}
+      />
     </>
   )
 }
