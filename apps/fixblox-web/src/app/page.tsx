@@ -1053,7 +1053,7 @@ export default function HomePage() {
             <div class="apps-grid-primary">
                 <a class="app-card" href="/contact">
                     <span class="app-icon">🌐</span>
-                    <h3>Simple Website (£199 one-off)</h3>
+                    <h3>Professional Website (£199 one-off)</h3>
                     <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">For newer trades, small teams, or anyone without a proper site.</p>
                     <p>Clear and professional. Built to help customers contact you.</p>
                     <ul class="app-features">
@@ -1105,7 +1105,7 @@ export default function HomePage() {
             </div>
             <div class="pricing-snapshot-grid">
                 <div class="pricing-snapshot-card">
-                    <div class="pricing-snapshot-tier">Simple Website</div>
+                    <div class="pricing-snapshot-tier">Professional Website</div>
                     <div class="pricing-snapshot-price">£199 one-off</div>
                     <div class="pricing-snapshot-outcome"></div>
                 </div>
@@ -1159,7 +1159,7 @@ export default function HomePage() {
 
                 <div class="pricing-card">
                     <div class="pricing-tier-name">Can I start small?</div>
-                    <div class="pricing-tagline" style="font-weight: 400;">Yes. Many trades start with Call Handling or a Simple Website, then move to Managed Enquiry Operations as they get busier.</div>
+                    <div class="pricing-tagline" style="font-weight: 400;">Yes. Many trades start with Call Handling or a Professional Website, then move to Managed Enquiry Operations as they get busier.</div>
                 </div>
             </div>
         </div>
