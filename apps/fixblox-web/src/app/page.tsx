@@ -13,7 +13,7 @@ export default function HomePage() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FixBlox - Our Applications</title>
+    <title>FixBlox - Talk to FixBlox</title>
     <style>
         * {
             margin: 0;
@@ -995,407 +995,172 @@ export default function HomePage() {
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Turn enquiries into booked jobs — without the admin.</h1>
-            <p>FixBlox is EnquiryOps for trades.<br>We handle enquiries, bookings, quotes, and follow-ups — or give you the tools to do it yourself.</p>
+            <h1>Stop missing enquiries. Book more jobs.</h1>
+            <p>If you’re on the tools, you can’t always answer the phone.<br>FixBlox captures enquiries and gets them followed up fast — so work gets booked without you living on your phone.</p>
             
             <div class="hero-badges">
-                <span class="badge">💻 Modern Tech Stack</span>
-                <span class="badge">📱 Mobile-First Design</span>
-                <span class="badge">🚀 Quick Setup</span>
-                <span class="badge">💼 Trade-Specific</span>
+                <span class="badge">Fewer missed enquiries</span>
+                <span class="badge">Faster follow-up</span>
+                <span class="badge">More jobs booked</span>
+                <span class="badge">Less admin</span>
             </div>
 
             <div class="hero-cta">
-                <a href="/managed-services" class="btn btn-primary">See how it works</a>
-                <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="/contact" class="btn btn-primary">Talk to FixBlox</a>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Snapshot Section -->
-    <section class="pricing-snapshot">
-        <div class="container">
-            <div class="pricing-snapshot-header">
-                <h2>Simple monthly pricing. No contracts.</h2>
-                <p>Choose the level of support you need. Upgrade or downgrade anytime.</p>
-            </div>
-            <div class="pricing-snapshot-grid">
-                <div class="pricing-snapshot-card">
-                    <div class="pricing-snapshot-tier">Capture</div>
-                    <div class="pricing-snapshot-price">£199<span style="font-size: 0.9rem; color: #6c757d;"> / month</span></div>
-                    <div class="pricing-snapshot-outcome">Stop missing enquiries</div>
-                    <a href="#pricing" class="pricing-snapshot-cta">See details</a>
-                </div>
-                <div class="pricing-snapshot-card popular">
-                    <div class="pricing-snapshot-tier">Convert</div>
-                    <div class="pricing-snapshot-price">£449<span style="font-size: 0.9rem; color: #6c757d;"> / month</span></div>
-                    <div class="pricing-snapshot-outcome">Turn more enquiries into booked jobs</div>
-                    <a href="#pricing" class="pricing-snapshot-cta">See details</a>
-                </div>
-                <div class="pricing-snapshot-card">
-                    <div class="pricing-snapshot-tier">Scale</div>
-                    <div class="pricing-snapshot-price">from £899<span style="font-size: 0.9rem; color: #6c757d;"> / month</span></div>
-                    <div class="pricing-snapshot-outcome">Outsourced office for multi-van trade businesses</div>
-                    <a href="#pricing" class="pricing-snapshot-cta">See details</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
+    <!-- Problem Section -->
     <section class="stats">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h3>Built for Trades</h3>
-                <p>Across the UK</p>
-            </div>
-            <div class="stat-item">
-                <h3>24/7</h3>
-                <p>Always Available</p>
-            </div>
-            <div class="stat-item">
-                <h3>100%</h3>
-                <p>Cloud-Powered</p>
-            </div>
-            <div class="stat-item">
-                <h3>New</h3>
-                <p>Platform</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Apps Section -->
-    <section class="apps-section" id="apps" style="scroll-margin-top: 100px;">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Web Applications</h2>
-                <p>Industry-specific solutions designed to help your trade business grow</p>
+            <div class="section-header" style="margin-bottom: 30px;">
+                <h2 style="font-size: 2.2rem; color: #2d3748; margin-bottom: 12px;">You’re busy working. Enquiries come in anyway.</h2>
             </div>
-
-            <!-- Primary Apps -->
-            <div class="apps-grid-primary">
-                <!-- Websites & SEO for Trades -->
-                <a class="app-card" href="/contact">
-                    <span class="app-badge badge-live">LIVE NOW</span>
-                    <span class="app-icon">🌐</span>
-                    <h3>Websites & SEO for Trades</h3>
-                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Win trust and enquiries from day one</p>
-                    <p>Modern, mobile-friendly websites built specifically for trade businesses. Boost visibility, improve search rankings, and convert more enquiries with fully optimised local SEO and service pages.</p>
-                    <ul class="app-features">
-                        <li>SEO-optimised website build</li>
-                        <li>Google Business optimisation</li>
-                        <li>Service area pages</li>
-                        <li>Local keyword targeting</li>
-                    </ul>
-                    <div class="app-cta cta-primary">Learn More →</div>
-                </a>
-
-                <!-- QuoteFlow -->
-                <a class="app-card" href="/contact">
-                    <span class="app-badge badge-live">LIVE NOW</span>
-                    <span class="app-icon">📊</span>
-                    <h3>QuoteFlow</h3>
-                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Convert enquiries into clear, fast quotes</p>
-                    <p>Instant quote calculator for tradespeople. Generate accurate pricing in seconds, capture high-quality enquiries, and manage all jobs from one simple dashboard.</p>
-                    <ul class="app-features">
-                        <li>Instant quote calculator</li>
-                        <li>Lead capture & notifications</li>
-                        <li>Admin dashboard included</li>
-                        <li>Mobile responsive</li>
-                    </ul>
-                    <div class="app-cta cta-primary">Learn More →</div>
-                </a>
-
-                <!-- Trades Digital Solutions -->
-                <a class="app-card" href="/contact">
-                    <span class="app-badge badge-live">LIVE NOW</span>
-                    <span class="app-icon">🛠️</span>
-                    <h3>Trades Digital Solutions</h3>
-                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Streamline lead capture and job management</p>
-                    <p>Tailored digital tools built for tradespeople. Improve lead generation, automate enquiries, and streamline day-to-day job management with industry-focused systems.</p>
-                    <ul class="app-features">
-                        <li>Instant quote pages</li>
-                        <li>WhatsApp lead tools</li>
-                        <li>Review funnel setup</li>
-                        <li>Lead tracking dashboards</li>
-                    </ul>
-                    <div class="app-cta cta-primary">Learn More →</div>
-                </a>
-            </div>
-
-            <!-- Secondary Apps (Add-ons & Coming Soon) -->
-            <div class="apps-grid-secondary">
-                <!-- AI Customer Assistant -->
-                <a class="app-card" href="/contact">
-                    <span class="app-badge badge-addon">ADD-ON</span>
-                    <span class="app-icon">🤖</span>
-                    <h3>AI Customer Assistant</h3>
-                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Never miss calls while you're on the tools</p>
-                    <p>24/7 AI chatbot designed to handle customer questions, bookings, and automatic follow-ups even while you're busy on the job.</p>
-                    <ul class="app-features">
-                        <li>24/7 customer support</li>
-                        <li>Appointment booking</li>
-                        <li>Instant responses</li>
-                        <li>FAQ automation</li>
-                    </ul>
-                    <div class="app-cta cta-secondary">Contact Us →</div>
-                </a>
-                
-                <!-- WhatsApp Integration -->
-                <a class="app-card" href="/contact">
-                    <span class="app-badge badge-addon">ADD-ON</span>
-                    <span class="app-icon">💬</span>
-                    <h3>WhatsApp Integration</h3>
-                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Connect instantly with customers</p>
-                    <p>Direct customer communication through WhatsApp. Send quotes, share updates, and collect enquiries instantly from your website or QuoteFlow page.</p>
-                    <ul class="app-features">
-                        <li>Direct messaging</li>
-                        <li>Quote delivery</li>
-                        <li>Status updates</li>
-                        <li>Lead capture tools</li>
-                    </ul>
-                    <div class="app-cta cta-secondary">Contact Us →</div>
-                </a>
-                
-                <!-- JobTracker -->
-                <a class="app-card" href="/contact">
-                    <span class="app-badge badge-soon">COMING SOON</span>
-                    <span class="app-icon">🔧</span>
-                    <h3>JobTracker</h3>
-                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">Keep jobs organized and customers informed</p>
-                    <p>
-                        Smart job scheduling and team coordination for tradespeople.<br>
-                        Manage jobs, assign tasks, keep your team organised,<br>
-                        track project progress, and notify customers instantly—<br>
-                        all from one simple dashboard.
-                    </p>
-                    <ul class="app-features">
-                        <li>Job scheduling calendar</li>
-                        <li>Team management</li>
-                        <li>Real-time updates</li>
-                        <li>Customer notifications</li>
-                    </ul>
-                    <div class="app-cta cta-disabled">Get Notified →</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Managed Services Section -->
-    <section class="managed-services-section">
-        <div class="container">
-            <div class="managed-services-content">
-                <h2>Managed Services</h2>
-                <p class="subheading">(We run your enquiry and booking flow for you)</p>
-                <p class="intro-line">Choose how hands-on you want to be.</p>
-                <p class="pricing-line">Managed Services from £250/month</p>
-                <p class="body-text">FixBlox doesn't just give you software. We can also handle the day-to-day enquiry flow for your business — replying to customers, managing bookings, sending quotes, and following up so work doesn't slip through the cracks.</p>
-                
-                <div class="managed-services-comparison">
-                    <div class="comparison-column old-way">
-                        <h4>Old way (DIY):</h4>
-                        <ul class="comparison-list">
-                            <li>Missed or late replies</li>
-                            <li>Forgotten follow-ups</li>
-                            <li>Enquiries that never turn into jobs</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-column fixblox-managed">
-                        <h4>FixBlox Managed:</h4>
-                        <ul class="comparison-list">
-                            <li>Every enquiry handled</li>
-                            <li>Bookings scheduled properly</li>
-                            <li>Quotes sent and chased</li>
-                        </ul>
-                    </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 style="font-size: 1.5rem;">Missed calls</h3>
+                    <p>You miss calls while you’re on a job</p>
                 </div>
-
-                <ul class="managed-services-list">
-                    <li>We reply to new enquiries</li>
-                    <li>We manage bookings and calendars</li>
-                    <li>We send and chase quotes</li>
-                    <li>We follow up missed enquiries</li>
-                </ul>
-                <p class="managed-services-reassurance">(No general VA work. This is focused on enquiries and bookings only.)</p>
-                <a href="/managed-services" class="managed-services-cta">See how it works</a>
-                
-                <!-- ReviewFlow Teaser -->
-                <div class="reviewflow-section">
-                    <h3>ReviewFlow (Coming Soon)</h3>
-                    <p>
-                        After a job is completed, FixBlox can automatically request reviews from happy customers — via SMS and email — helping you build a strong Google and trade-directory presence without chasing anyone.
-                    </p>
-                    <ul class="reviewflow-list">
-                        <li>
-                            <span>•</span>
-                            <span>Automatic post-job review requests</span>
-                        </li>
-                        <li>
-                            <span>•</span>
-                            <span>Google and trade-platform friendly</span>
-                        </li>
-                        <li>
-                            <span>•</span>
-                            <span>Optional managed follow-up</span>
-                        </li>
-                    </ul>
-                    <p class="reviewflow-label">
-                        Planned upgrade — available to managed clients first.
-                    </p>
+                <div class="stat-item">
+                    <h3 style="font-size: 1.5rem;">Messages everywhere</h3>
+                    <p>Messages are split across WhatsApp, Facebook, texts and voicemail</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="font-size: 1.5rem;">Admin at night</h3>
+                    <p>You end up doing admin at night</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="font-size: 1.5rem;">Slow replies</h3>
+                    <p>Slow replies mean the customer books someone else</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
-        <div class="container">
-            <div class="pricing-header">
-                <h2>Simple monthly pricing. No contracts.</h2>
-                <p>Choose the level of support you need. Upgrade or downgrade anytime.</p>
-            </div>
-
-            <div class="pricing-grid">
-                <!-- Capture Tier -->
-                <div class="pricing-card">
-                    <div class="pricing-tier-name">Capture</div>
-                    <div class="pricing-price">£199</div>
-                    <div class="pricing-period">/ month</div>
-                    <div class="pricing-tagline">Stop missing enquiries.</div>
-                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px; line-height: 1.5;">For solo tradespeople who are getting enquiries but struggle to keep up with replies and bookings.</p>
-                    <ul class="pricing-features">
-                        <li>Every enquiry captured and acknowledged</li>
-                        <li>Bookings scheduled without double-booking</li>
-                        <li>Quotes sent to customers promptly</li>
-                    </ul>
-                    <a href="/managed-services" class="pricing-cta pricing-cta-primary">See how Capture works</a>
-                </div>
-
-                <!-- Convert Tier -->
-                <div class="pricing-card popular">
-                    <div class="pricing-tier-name">Convert</div>
-                    <div class="pricing-price">£449</div>
-                    <div class="pricing-period">/ month</div>
-                    <div class="pricing-tagline">Turn more enquiries into booked jobs.</div>
-                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px; line-height: 1.5;">For growing trades that send quotes but lose work because follow-ups don't happen consistently.</p>
-                    <ul class="pricing-features">
-                        <li>More enquiries convert to booked jobs</li>
-                        <li>Quotes followed up until decision made</li>
-                        <li>Diary managed to prevent conflicts</li>
-                        <li>Missed opportunities identified and recovered</li>
-                    </ul>
-                    <a href="/managed-services" class="pricing-cta pricing-cta-primary">See how Convert works</a>
-                </div>
-
-                <!-- Scale Tier -->
-                <div class="pricing-card">
-                    <div class="pricing-tier-name">Scale</div>
-                    <div class="pricing-price">from £899</div>
-                    <div class="pricing-period">/ month</div>
-                    <div class="pricing-tagline">Your outsourced office for growing or multi-van trade businesses.</div>
-                    <p style="font-size: 0.875rem; color: #6c757d; font-style: italic; margin-bottom: 20px; line-height: 1.5;">For multi-van businesses or growing operations that need a dedicated office function to handle enquiries and bookings.</p>
-                    <ul class="pricing-features">
-                        <li>Complete enquiry flow managed end-to-end</li>
-                        <li>Operations scale smoothly as you grow</li>
-                        <li>Dedicated support with priority response</li>
-                    </ul>
-                    <a href="/managed-services" class="pricing-cta pricing-cta-secondary">Talk to us</a>
-                </div>
-            </div>
-
-            <p class="pricing-reassurance">
-                Pricing depends on enquiry volume and complexity.<br>
-                We'll confirm fit before onboarding.
+            <p style="text-align:center; margin-top: 30px; color:#6c757d; font-size: 1.05rem; max-width: 800px; margin-left:auto; margin-right:auto;">
+                It’s not the quality of your work. It’s the follow-up.
             </p>
         </div>
     </section>
 
-    <!-- Why FixBlox -->
-    <section class="why-section">
+    <!-- How FixBlox Helps -->
+    <section class="apps-section" id="apps" style="scroll-margin-top: 100px;">
         <div class="container">
             <div class="section-header">
-                <h2>Why Tradespeople Choose FixBlox</h2>
-                <p>We build powerful tools that help you win more jobs and run your business efficiently</p>
+                <h2>How FixBlox Helps</h2>
+                <p>Two simple ways to stop enquiries slipping through the cracks.</p>
             </div>
-            
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">🎯</div>
-                    <h3>Built for Traders</h3>
-                    <p>Industry-specific solutions designed by people who understand your business. Each app is tailored to the unique needs of your trade.</p>
+
+            <!-- Option Cards -->
+            <div class="apps-grid-primary">
+                <a class="app-card" href="/contact">
+                    <span class="app-icon">🌐</span>
+                    <h3>Simple Website (£199 one-off)</h3>
+                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">For newer trades, small teams, or anyone without a proper site.</p>
+                    <p>Clear and professional. Built to help customers contact you.</p>
+                    <ul class="app-features">
+                        <li>Clear contact details customers can actually find</li>
+                        <li>Enquiries go to one place instead of being scattered</li>
+                        <li>A professional first impression that helps you win work</li>
+                    </ul>
+                    <p style="margin-bottom: 25px;">You tell us what you do and where you work.<br>We put it together properly.</p>
+                    <div class="app-cta cta-primary">Talk to FixBlox</div>
+                </a>
+
+                <a class="app-card" href="/contact">
+                    <span class="app-icon">📞</span>
+                    <h3>Call Handling (£70/month + one-off setup)</h3>
+                    <p style="font-weight: 600; color: #2d3748; margin-bottom: 10px;">For trades who miss calls because they’re doing the work.</p>
+                    <p>So enquiries get handled while you stay on the job.</p>
+                    <ul class="app-features">
+                        <li>Missed calls are answered for you</li>
+                        <li>Enquiries are captured 24/7</li>
+                        <li>You get the details you need, without back-and-forth</li>
+                    </ul>
+                    <p style="margin-bottom: 25px;">You stay on the job.<br>Enquiries still get handled.</p>
+                    <div class="app-cta cta-primary">Talk to FixBlox</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Managed Enquiry Operations -->
+    <section class="managed-services-section">
+        <div class="container">
+            <div class="managed-services-content">
+                <h2>Managed Enquiry Operations (From £199/month)</h2>
+                <p class="intro-line">For growing trades who want enquiries handled and jobs booked without chasing messages.</p>
+                <p class="pricing-line">From £199/month</p>
+                <p class="body-text">FixBlox can take ownership of follow-ups — turning existing enquiries into booked work and cutting down the admin that eats your evenings.</p>
+                <p class="body-text" style="margin-top: -20px;">If you’re getting regular enquiries but they’re messy, slow, or slipping away, this is for you.</p>
+                <a href="/contact" class="managed-services-cta">Talk to FixBlox</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Snapshot -->
+    <section class="pricing-snapshot">
+        <div class="container">
+            <div class="pricing-snapshot-header">
+                <h2>Pricing Snapshot</h2>
+                <p></p>
+            </div>
+            <div class="pricing-snapshot-grid">
+                <div class="pricing-snapshot-card">
+                    <div class="pricing-snapshot-tier">Simple Website</div>
+                    <div class="pricing-snapshot-price">£199 one-off</div>
+                    <div class="pricing-snapshot-outcome"></div>
                 </div>
-                <div class="why-card">
-                    <div class="why-icon">⚡</div>
-                    <h3>Complete Solutions</h3>
-                    <p>From lead generation to job completion and invoicing. Everything you need to run a modern trade business in one place.</p>
+                <div class="pricing-snapshot-card">
+                    <div class="pricing-snapshot-tier">Call Handling</div>
+                    <div class="pricing-snapshot-price">£70/month (+ one-off setup)</div>
+                    <div class="pricing-snapshot-outcome"></div>
                 </div>
-                <div class="why-card">
-                    <div class="why-icon">💰</div>
-                    <h3>Simple One-Time Pricing</h3>
-                    <p>Pay once, own it forever. No subscriptions, no hidden fees. Add AI assistant and WhatsApp integration as optional add-ons.</p>
+                <div class="pricing-snapshot-card">
+                    <div class="pricing-snapshot-tier">Managed Enquiry Operations</div>
+                    <div class="pricing-snapshot-price">From £199/month</div>
+                    <div class="pricing-snapshot-outcome"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trades Section -->
-    <section class="trades-section">
+    <!-- FAQ -->
+    <section class="pricing-section" id="faq">
         <div class="container">
-            <div class="section-header">
-                <h2>Built for Every Trade</h2>
-                <p>Whether you're a plumber, electrician, builder, or contractor — we have solutions for you</p>
+            <div class="pricing-header">
+                <h2>FAQ</h2>
+                <p></p>
             </div>
-            
-                <div class="trades-grid">
-                <div class="trade-badge">
-                    <div class="trade-icon">🔧</div>
-                    <p>Plumbers</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-tier-name">Who is FixBlox for?</div>
+                    <div class="pricing-tagline" style="font-weight: 400;">UK trades who get enquiries but don’t always have time to answer calls or keep on top of messages.</div>
                 </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">⚡</div>
-                    <p>Electricians</p>
+
+                <div class="pricing-card">
+                    <div class="pricing-tier-name">Do you answer calls in my business name?</div>
+                    <div class="pricing-tagline" style="font-weight: 400;">Yes. Calls are handled as your business, in a straightforward and professional way.</div>
                 </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🏗️</div>
-                    <p>Builders</p>
+
+                <div class="pricing-card">
+                    <div class="pricing-tier-name">Is this replacing my admin?</div>
+                    <div class="pricing-tagline" style="font-weight: 400;">It can reduce a lot of the chasing and back-and-forth. You stay in control — we fit around how you work.</div>
                 </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🛠️</div>
-                    <p>Contractors</p>
+
+                <div class="pricing-card">
+                    <div class="pricing-tier-name">What don’t you do?</div>
+                    <div class="pricing-tagline" style="font-weight: 400;">We don’t sell anything to log into. We also don’t run your whole business — we focus on enquiries and bookings.</div>
                 </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🏠</div>
-                    <p>Renovators</p>
+
+                <div class="pricing-card">
+                    <div class="pricing-tier-name">How do we get started?</div>
+                    <div class="pricing-tagline" style="font-weight: 400;">Have a quick chat with us. We’ll ask a few questions and recommend the simplest next step.</div>
                 </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🌡️</div>
-                    <p>HVAC</p>
+
+                <div class="pricing-card">
+                    <div class="pricing-tier-name">Can I start small?</div>
+                    <div class="pricing-tagline" style="font-weight: 400;">Yes. Many trades start with Call Handling or a Simple Website, then move to Managed Enquiry Operations as they get busier.</div>
                 </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🪟</div>
-                    <p>Glaziers</p>
-                </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🎨</div>
-                    <p>Decorators</p>
-                </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🚿</div>
-                    <p>Bathroom Fitters</p>
-                </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🚪</div>
-                    <p>Joiners / Carpenters</p>
-                </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🌳</div>
-                    <p>Landscapers / Gardeners</p>
-                </div>
-                <div class="trade-badge">
-                    <div class="trade-icon">🧱</div>
-                    <p>Bricklayers / Masons</p>
-                </div>
-                
             </div>
         </div>
     </section>
@@ -1403,9 +1168,9 @@ export default function HomePage() {
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>Ready to Modernize Your Trade Business?</h2>
-            <p>Start generating more leads and streamline your trade business operations with professional web solutions</p>
-            <a href="/quoteflow" class="btn btn-primary">Start with QuoteFlow</a>
+            <h2>Fewer missed enquiries.<br>More booked jobs.<br>Less admin at night.</h2>
+            <p></p>
+            <a href="/contact" class="btn btn-primary">Talk to FixBlox</a>
         </div>
     </section>
 </body>
